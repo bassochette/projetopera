@@ -82,6 +82,6 @@ app.use(require('./middleware/errorHandler')(errorOptions));
 /**
  * Run server.
  */
-var server = http.createServer(app).listen(app.get('port'), function(){
-    console.log("\n microscope server listening on port " + app.get('port'));
+var server = http.createServer(app).listen(80, function(){
+    console.log("\n microscope server listening on port " + 80);
 });
