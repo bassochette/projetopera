@@ -1,7 +1,7 @@
 <h2 class="muted">Inventaire</h2>
 
 
-<%- link_to('nouvelle oeuvre', '/oeuvre/new', {class : 'btn btn-primary'}) %>
+<%- link_to('nouvelle oeuvre', '/oeuvre/new', {class : 'btn btnAdd'}) %>
 
 <table class="table table-striped">
     <thead>
@@ -24,7 +24,7 @@
     <tbody>
 
         <% oeuvres.forEach(function(oeuvre){ %>
-            <tr onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
+            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
                
               
                 <td><%- oeuvre.oeuvreId %></td>

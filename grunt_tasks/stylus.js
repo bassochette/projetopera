@@ -12,7 +12,8 @@ module.exports = {
 			compress : true
 		},
 		files: {
-			'<%= config.public %>/styles/application.css': '<%= config.assets %>/stylus/application.styl'
+			'<%= config.public %>/styles/application.css': '<%= config.assets %>/stylus/application.styl',
+			'<%= config.public %>/styles/tinymce.css': '<%= config.assets %>/stylus/tinymce.styl'
 		}	
 	}
 };
