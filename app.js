@@ -20,7 +20,7 @@ var membership = new Membership(passport, LocalStrategy);
  * main application configuration.
  */
 app.configure(function(){
-    app.set('port', process.env.PORT || 3000);
+    app.set('port', 80);
     app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
     app.use(express.static(path.join(__dirname, 'public')));
 

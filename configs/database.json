@@ -1,8 +1,8 @@
 {
   "name": "opera",
   "user": "root",
-  "password": "root",
+  "password": "lesfleursfane2000",
   "host": "localhost",
-  "port": 8889,
+  "port": 3636,
   "dialect": "mysql"
 }
