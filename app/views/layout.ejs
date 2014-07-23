@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head> 	
+    <title>A musée</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="stylesheet" href="/styles/bootstrap.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/styles/animate.css">
+    <link rel="stylesheet" type="text/css" href="/styles/application.css">
+  </head>
+  <body>
+
+
+	<%- partial("shared/_menu") %>
+			
+	<div class="container">
+			<div class="row">
+
+				<% if(flash !== undefined && flash != ""){ %>
+					<div class="alert alert-warning"><%- flash %></div>
+				<% } %>
+
+				<%- body %>
+			</div>
+	</div>
+
+	<%- partial("shared/_footer") %>
+	
+	 <script src="/scripts/vendors/jquery.js"></script>
+	 <script src="/scripts/vendors/bootstrap.js"></script>
+	 <script src="/scripts/myFlatForms.js"></script> 
+  </body>
+</html>

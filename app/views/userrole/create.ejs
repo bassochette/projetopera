@@ -1,0 +1,12 @@
+<h2 class="text-success">Create userRole</h2>
+
+<% form_for("userRole", {controller: '/userRole', action: '/create'}, function(f){ %>
+	
+	<%- f.hidden_field("id") %>
+
+	
+
+	<%- f.submit("Save", {class : 'btn btn-success'}) %>
+<% }) %>
+
+<%- link_to('back to list', '/userRole', {class : 'btn btn-primary'}) %>

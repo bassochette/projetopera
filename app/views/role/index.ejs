@@ -1,0 +1,27 @@
+<h2 class="muted">Index</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>id</td>
+            
+          <td>action</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% roles.forEach(function(role){ %>
+            <tr>
+                <td><%- role.id %></td>
+                
+                <td>
+                    <%- link_to('show', '/role/show/'+role.id, {class : 'btn btn-info'}) %> |
+                    <%- link_to('edit', '/role/edit/'+role.id, {class : 'btn btn-warning'}) %> |
+                    <%- link_to('delete', '/role/delete/'+role.id, {class : 'btn btn-danger'}) %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- link_to('new role', '/role/new', {class : 'btn btn-primary'}) %>

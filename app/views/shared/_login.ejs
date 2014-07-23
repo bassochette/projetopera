@@ -1,0 +1,11 @@
+<% if(!req.user){ %>
+  
+	<li><a href="/account/login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+	
+  
+<% }else { %>
+  
+	
+	<li><a href="/account/logout" class="menu"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
+
+<% } %>

@@ -1,0 +1,12 @@
+<h2 class="text-success">Create champs</h2>
+
+<% form_for("champs", {controller: '/champs', action: '/create'}, function(f){ %>
+	
+	<%- f.hidden_field("id") %>
+
+	
+
+	<%- f.submit("Save", {class : 'btn btn-success'}) %>
+<% }) %>
+
+<%- link_to('back to list', '/champs', {class : 'btn btn-primary'}) %>

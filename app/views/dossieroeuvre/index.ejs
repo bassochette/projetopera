@@ -1,0 +1,27 @@
+<h2 class="muted">Index</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>id</td>
+            
+          <td>action</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% dossierOeuvres.forEach(function(dossierOeuvre){ %>
+            <tr>
+                <td><%- dossierOeuvre.id %></td>
+                
+                <td>
+                    <%- link_to('show', '/dossierOeuvre/show/'+dossierOeuvre.id, {class : 'btn btn-info'}) %> |
+                    <%- link_to('edit', '/dossierOeuvre/edit/'+dossierOeuvre.id, {class : 'btn btn-warning'}) %> |
+                    <%- link_to('delete', '/dossierOeuvre/delete/'+dossierOeuvre.id, {class : 'btn btn-danger'}) %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- link_to('new dossierOeuvre', '/dossierOeuvre/new', {class : 'btn btn-primary'}) %>

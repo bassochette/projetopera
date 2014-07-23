@@ -1,0 +1,12 @@
+<h2 class="text-warning">Edit role</h2>
+
+<% form_for("role", {controller: '/role', action: '/edit'}, function(f){ %>
+  
+  <%- f.hidden_field("id") %>
+
+  
+
+  <%- f.submit("Edit", {class : 'btn btn-warning'}) %>
+<% }) %>
+
+<%- link_to('back to list', '/role', {class : 'btn btn-primary'}) %>

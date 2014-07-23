@@ -1,0 +1,152 @@
+.text-justify {
+  text-align: justify;
+}
+.navbar.navbar-default.navbar-static-top.nav-menu {
+  background-color: #2ecc71;
+}
+.navbar.navbar-default.navbar-static-top.nav-menu a {
+  color: #fff;
+}
+.loginContainer {
+  margin-top: 200px;
+  background-color: #336e7b;
+  border: none;
+  padding: 20px 20px 20px 20px;
+}
+form.flatForm input {
+  border: none;
+  height: 40px;
+  background-color: #22313f;
+  color: #fff;
+}
+form.flatForm button {
+  border-radius: 0;
+  background-color: #2c3e50;
+  color: #fff;
+  height: 40px;
+}
+#loginTitle {
+  color: #fff;
+  margin-bottom: 25px;
+}
+#loginTitle#capitalA {
+  font-size: 60px;
+}
+input {
+  border: none;
+  width: 100%;
+  height: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+textarea {
+  border: none;
+  padding: 1% 1% 1% 1%;
+  background-color: #f2f1ef;
+  outline: none;
+  resize: none;
+  min-height: 200px;
+  width: 90%;
+  overflow: auto;
+}
+textarea:focus {
+  background-color: #f2f1ef;
+  box-shadow: none;
+  border: none;
+  opacity: 0.9;
+  border: 1px solid #abb7b7 !important;
+}
+.invItems {
+  margin: 12px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #000;
+  opacity: 1;
+  min-height: 60px;
+  overflow: visible;
+}
+.invItems:hover {
+  opacity: 0.9;
+}
+.invMisc input,
+.invItems input {
+  margin: 0px 0px 0px 0px;
+  background-color: #f2f1ef;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+.invMisc input:focus,
+.invItems input:focus {
+  background-color: #f2f1ef;
+  opcaity: 0.8;
+  box-shadow: none;
+  border: none;
+}
+.invItems.invCaroussel {
+  min-height: 200px;
+  border: 1px solid #000 !important;
+  margin: 10px 0px 0px 0px;
+}
+.invMisc {
+  margin: 10px 10px 10px 10px;
+  min-height: 50px;
+}
+.propertyList {
+  margin: 1% 1% 1% 1%;
+}
+p.invDescriptor,
+p.invItemsDescriptor,
+p.invMiscDescriptor {
+  margin: 0px 0px 0px 0px;
+  font-size: 12px;
+  position: absolue;
+  top: 0px;
+  left: 0px;
+}
+input.invMiscValue {
+  font-size: 15px;
+  border: none;
+  background-color: #abb7b7;
+}
+input.invMiscValue:focus {
+  border: none !important;
+  border-shadow: none;
+  opacity: 0.8;
+}
+.invObs {
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+}
+#editMenu {
+  background-color: #d2d7d3;
+  min-width: 20px;
+  min-height: 20px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin-top: 60px;
+  margin-right: 40px;
+  z-index: 100;
+  opacity: 0.6;
+}
+#editMenu:hover {
+  opacity: 0.9;
+}
+.navbar.navbar-default.navFooter.navbar-static-bottom {
+  background-color: #2ecc71;
+  color: #fff;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  opacity: 0.8;
+}
+body {
+  background-color: #f2f1ef;
+}
+.navbar.nav-menu {
+  background-color: #2ecc71;
+  color: #fff !important;
+}

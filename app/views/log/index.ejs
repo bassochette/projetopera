@@ -1,0 +1,27 @@
+<h2 class="muted">Index</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>id</td>
+            
+          <td>action</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% logs.forEach(function(log){ %>
+            <tr>
+                <td><%- log.id %></td>
+                
+                <td>
+                    <%- link_to('show', '/log/show/'+log.id, {class : 'btn btn-info'}) %> |
+                    <%- link_to('edit', '/log/edit/'+log.id, {class : 'btn btn-warning'}) %> |
+                    <%- link_to('delete', '/log/delete/'+log.id, {class : 'btn btn-danger'}) %>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<%- link_to('new log', '/log/new', {class : 'btn btn-primary'}) %>

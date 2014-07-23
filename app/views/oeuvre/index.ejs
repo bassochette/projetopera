@@ -1,0 +1,47 @@
+<h2 class="muted">Inventaire</h2>
+
+
+<%- link_to('nouvelle oeuvre', '/oeuvre/new', {class : 'btn btn-primary'}) %>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            
+            <td>Numéro identification</td>
+
+            <td>designation</td>
+            
+            <td>auteur</td>
+            
+            <td>materiaux</td>
+            
+            <td>technique</td>
+            
+            <td>datation</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% oeuvres.forEach(function(oeuvre){ %>
+            <tr onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
+               
+              
+                <td><%- oeuvre.oeuvreId %></td>
+
+                <td><%- oeuvre.designation %></td>
+                
+                <td><%- oeuvre.auteur %></td>
+                
+                <td><%- oeuvre.materiaux %></td>
+                
+                <td><%- oeuvre.techniques %></td>
+                
+                <td><%- oeuvre.datation %></td>
+                
+                
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+

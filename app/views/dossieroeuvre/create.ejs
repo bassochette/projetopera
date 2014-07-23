@@ -1,0 +1,12 @@
+<h2 class="text-success">Create dossierOeuvre</h2>
+
+<% form_for("dossierOeuvre", {controller: '/dossierOeuvre', action: '/create'}, function(f){ %>
+	
+	<%- f.hidden_field("id") %>
+
+	
+
+	<%- f.submit("Save", {class : 'btn btn-success'}) %>
+<% }) %>
+
+<%- link_to('back to list', '/dossierOeuvre', {class : 'btn btn-primary'}) %>

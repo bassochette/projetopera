@@ -1,0 +1,15 @@
+<h2 class="text-danger">Delete</h2>
+<fieldset>
+    <legend>role</legend>
+    
+      
+
+    <% form_for('role', {controller : '/role', action: '/delete'}, function(f){ %>
+        <%- f.hidden_field("id") %>
+        <p>
+            <%- f.submit("Delete", {class : 'btn btn-danger'}) %>
+        </p>
+    <% }) %>
+</fieldset>
+
+<%- link_to('back to list', '/role', {class : 'btn btn-primary'}) %>
