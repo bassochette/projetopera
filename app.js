@@ -20,7 +20,7 @@ var membership = new Membership(passport, LocalStrategy);
  * main application configuration.
  */
 app.configure(function(){
-    app.set('port', 80);
+    app.set('port', process.env.PORT || 3000);
     app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
     app.use(express.static(path.join(__dirname, 'public')));
 
@@ -82,6 +82,6 @@ app.use(require('./middleware/errorHandler')(errorOptions));
 /**
  * Run server.
  */
-var server = http.createServer(app).listen(80, function(){
-    console.log("\n microscope server listening on port " + 80);
+var server = http.createServer(app).listen(app.get('port'), function(){
+    console.log("\n microscope server listening on port " + app.get('port'));
 });
