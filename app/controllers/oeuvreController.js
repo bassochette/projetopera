@@ -34,7 +34,7 @@ var membershipFilters = require('../../middleware/membershipFilters');
         app.get('/:id', this.show);
 
         //inventaire
-        //app.get('/oeuvre',  this.index);
+        app.get('/oeuvre',  this.index);
         app.get('/oeuvre/list',  this.index);
         //app.get('/oeuvre/search', this.index);
         app.get('/oeuvre/show/:id', this.show);
@@ -47,7 +47,7 @@ var membershipFilters = require('../../middleware/membershipFilters');
         //app.post('/oeuvre/delete',  this.destroy);
 
         // verrou
-        app.post('/oeuvre/verouiller/:id');
+        //app.post('/oeuvre/verouiller/:id');
     };
 
     /**
