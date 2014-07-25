@@ -15,7 +15,7 @@
 
 	<%- partial("shared/_menu") %>
 			
-	<div class="container">
+	<div class="container" id="app">
 			<div class="row">
 
 				<% if(flash !== undefined && flash != ""){ %>
@@ -24,6 +24,7 @@
 
 				<%- body %>
 			</div>
+		<%- partial("userreport/create") %>
 	</div>
 
 	<%- partial("shared/_footer") %>

@@ -40,7 +40,9 @@
         this.champs = this.db.import(modelsPath + 'champs');
         // model CDN pour les fichier joints
 
-        //this.logs = this.db.import(modelsPath + 'log');
+        //bug reporting
+        this.userReport = this.db.import(modelsPath + 'userReport');
+
 
     };
 
@@ -61,6 +63,7 @@
         //gestion dossier oeuvre
         this.oeuvre.hasMany(this.champs, {through: this.dossierOeuvre});
         this.champs.hasMany(this.oeuvre, {through: this.dossierOeuvre});
+
 
     };
 

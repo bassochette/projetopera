@@ -128,35 +128,71 @@ input.invMiscValue:focus {
   padding: 20px 20px 20px 20px;
 }
 #editMenu {
-  background-color: #d2d7d3;
+  background-color: none;
   min-width: 20px;
   min-height: 20px;
   position: fixed;
   top: 0px;
   right: 0px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 40px;
-  z-index: 10;
-  opacity: 0.6;
+  z-index: 1000;
+  opacity: 1;
 }
 #editMenu:hover {
-  opacity: 0.9;
+  opacity: 0.5;
+}
+.popover {
+  min-width: 300px;
+  margin-right: 1000px;
+}
+.popover:hover {
+  opacity: 1 !important;
+}
+div.userReport {
+  background-color: none;
+  color: #000;
+  z-index: 1000;
+  opacity: 1;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+div.userReport:hover {
+  opacity: 0.5;
+}
+div.userReport input,
+div.userReport select,
+div.userReport textarea {
+  width: 100%;
+  font-size: 15px;
+  margin: 5px 2px 5px 2px;
 }
 .navbar.navbar-default.navFooter.navbar-static-bottom {
   background-color: #2ecc71;
   color: #fff;
   margin-top: 50px !important;
+  margin-left: 0px;
   margin-bottom: 0px;
   width: 100% !important;
   font-size: 10px;
-  height: 20px !important;
   opacity: 1;
 }
 body {
   background-color: #f2f1ef;
-  margin: 20px 20px 20px 20px;
 }
 .navbar.nav-menu {
   background-color: #2ecc71;
   color: #fff !important;
+}
+.btn.btnAdd {
+  background-color: #2ecc71;
+  color: #fff;
+}
+#app {
+  margin-left: 40px !important;
+  margin-right: 40px;
+  overflow: hidden;
 }
