@@ -28,7 +28,7 @@ var UserReportDAL = require('../dal/userReportDAL');
     * @param {app} - express app.
     */
     UserReportController.prototype.routes = function(app) {
-        app.get('/userReport', this.index);
+        app.get('/userReport', this.list);
         app.post('/userReport/create', this.create);
         app.get('/userReport/delete/:id', this.delete);
         app.post('/userReport/delete', this.destroy);
@@ -40,7 +40,7 @@ var UserReportDAL = require('../dal/userReportDAL');
     * @param {req} http request.
     * @param {res} http response.
     */
-    UserReportController.prototype.index = function(req, res) {
+    UserReportController.prototype.list = function(req, res) {
         userReportDAL.getAll(function (userReports) {
             res.render('userReport/index', { 'userReports': userReports });
         });
@@ -72,6 +72,8 @@ var UserReportDAL = require('../dal/userReportDAL');
             userReportDAL.save(userReport, function (data) {
            
                 //console.log("demande prise en compte: "+JSON.stringify(data));
+                
+                req.flash("flash", "Votre demande à bien était prise en compte. Vous pouvez visualiser la liste des demandes <a href='/userReport'> ICI </a>");
                 res.redirect("/");
             });
         }
