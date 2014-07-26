@@ -14,7 +14,7 @@ var membershipFilters = require('../../middleware/membershipFilters');
     * Attributes.
     */
     var oeuvreDAL = new OeuvreDAL();
-    var filter = new membershipFilters();
+    var filters = new membershipFilters();
     /**
     * Constructor.
     * @param {app} - express app.
@@ -30,24 +30,24 @@ var membershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.routes = function(app) {
 
         //* dev
-        app.get('/', this.index);
-        app.get('/:id', this.show);
+        app.get('/', filters.authorize, this.index);
+        //app.get('/:id', this.show);
 
         //inventaire
-        //app.get('/oeuvre',  this.index);
-        app.get('/oeuvre/list',  this.index);
+        app.get('/oeuvre', filters.authorize,  this.index);
+        app.get('/oeuvre/list',  filters.authorize, this.index);
         //app.get('/oeuvre/search', this.index);
-        app.get('/oeuvre/show/:id', this.show);
+        app.get('/oeuvre/show/:id', filters.authorize,  this.show);
 
         // CRUD
-        app.get('/oeuvre/new', this.new);
-        app.post('/oeuvre/create',  this.create);
-        app.post('/oeuvre/update',  this.update);
+        app.get('/oeuvre/new', filters.authorize, this.new);
+        app.post('/oeuvre/create', filters.authorize, this.create);
+        app.post('/oeuvre/update', filters.authorize, this.update);
         //app.get('/oeuvre/delete/:id',  this.delete);
         //app.post('/oeuvre/delete',  this.destroy);
 
         // verrou
-        app.post('/oeuvre/verouiller/:id');
+        //app.post('/oeuvre/verouiller/:id');
     };
 
     /**
@@ -120,8 +120,10 @@ var membershipFilters = require('../../middleware/membershipFilters');
             console.log("entity :"+entity);
             if(entity){
                 oeuvreDAL.update(entity, oeuvre, function (oeuvre) {
-                    console.log("redirection vers: /"+oeuvre);
-                    res.redirect('/'+oeuvre.id);
+                    console.log("redirection vers: /"+oeuvre.id);
+                    console.log(JSON.stringify(oeuvre));
+                    req.flash('flash', 'Modifications enregistré.');
+                    res.redirect('/oeuvre/show/'+oeuvre.id);
                 });
             }
             else{

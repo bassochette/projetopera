@@ -1,22 +1,2 @@
-<row id="loginContainer">
-<div class="loginContainer col-sm-4 col-sm-offset-3"> 
-
-	<h1 id="loginTitle" class="col-sm-10">
-		<span>A<span>musée
-	</h1>
-
-	<form role="form" class="flatForm form-horizontal" method="POST" action="/account/login">
-		<div class="form-group"> 
-			<input id="username" placeholder="Nom d'utilisateur" class="col-sm-10 col-sm-offset-1"></input>
-		</div>	
-		<div class="form-group">
-			<input type="password" id="password" placeholder="mot de passe" class="col-sm-10 col-sm-offset-1"></input>
-		</div>
-		<div class="form-group"> 
-			<button type="submit" class="btn btn-login col-sm-10 col-sm-offset-1"> Connexion</button>
-		</div>
-	</form>
-
-</div>
-</row>
+<%- partial("account/login") %>
 

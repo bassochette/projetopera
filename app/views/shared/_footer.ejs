@@ -1,3 +1,7 @@
+<% if(!req.user) { %>
+
+	
+<% } else { %>
 <!-- TODO: limité la visibilité au utilisateurs connecté --> 
 <nav class="navbar navbar-default navFooter navbar-static-bottom" role="navigation">
 
@@ -12,3 +16,5 @@
 		</row>
 	</div>	
 </nav>
+	
+<% } %>

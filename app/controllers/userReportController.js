@@ -4,7 +4,7 @@
 * Module dependencies.
 */
 var UserReportDAL = require('../dal/userReportDAL');
-
+var MembershipFilters = require('../../middleware/membershipFilters');
 /**
 * userReportController class
 */
@@ -14,7 +14,7 @@ var UserReportDAL = require('../dal/userReportDAL');
     * Attributes.
     */
     var userReportDAL = new UserReportDAL();
-
+    var filters = new MembershipFilters();
     /**
     * Constructor.
     * @param {app} - express app.
@@ -28,10 +28,10 @@ var UserReportDAL = require('../dal/userReportDAL');
     * @param {app} - express app.
     */
     UserReportController.prototype.routes = function(app) {
-        app.get('/userReport', this.list);
-        app.post('/userReport/create', this.create);
-        app.get('/userReport/delete/:id', this.delete);
-        app.post('/userReport/delete', this.destroy);
+        app.get('/userReport', filters.authorize, this.list);
+        app.post('/userReport/create',filters.authorize, this.create);
+        app.get('/userReport/delete/:id',filters.authorize, this.delete);
+        app.post('/userReport/delete',filters.authorize, this.destroy);
     };
 
     /**
