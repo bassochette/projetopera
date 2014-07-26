@@ -27,8 +27,10 @@
 		
 	</div>
 
-	
-	<%- partial('userreport/create') %>
+	<% if(req.user){ %>
+		<%- partial('userreport/create') %>
+	<% } %>
+
 	<%- partial("shared/_includes") %>
   </body>
   <%- partial("shared/_footer") %>

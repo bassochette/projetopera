@@ -30,16 +30,14 @@ var membershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.routes = function(app) {
 
         //* 
-        app.get('', filters.authorize, this.index);
+        //app.get('*', filters.authorize, this.index);
         app.get('/', filters.authorize, this.index);
-        //app.get('/:id', this.show);
+       
 
         //inventaire
 
         app.get('/oeuvre', filters.authorize,  this.index);
         app.get('/oeuvre/list',  filters.authorize, this.index);
-
-        //app.get('/oeuvre/search', this.index);
         app.get('/oeuvre/show/:id', filters.authorize,  this.show);
 
         // CRUD
@@ -107,9 +105,13 @@ var membershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.update = function(req, res) {
         var oeuvre = req.body.oeuvre;
         var id = req.body.oeuvre.id;
-        console.log("update oeuvre: "+req.body.oeuvre.oeuvreId);
-
         
+        console.log("#################################################################");
+        console.log("# update oeuvre: "+req.body.oeuvre.oeuvreId);
+
+        console.log("# date acq: "+oeuvre.dateAcquisition);
+        console.log("# date inscription in: "+oeuvre.dateInscriptionInventaire);
+
         oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition.year, 
             oeuvre.dateAcquisition.month, 
             oeuvre.dateAcquisition.day);
@@ -118,13 +120,16 @@ var membershipFilters = require('../../middleware/membershipFilters');
             oeuvre.dateInscriptionInventaire.month, 
             oeuvre.dateInscriptionInventaire.day); 
 
+        console.log("# date acq post traitement: "+oeuvre.dateAcquisition);
+        console.log("# date inscription inv post traitement: "+oeuvre.dateInscriptionInventaire);
+        console.log("###################################################################");
+        //console.log("Oeuvre recu pour modifiaction: "+JSON.stringify(oeuvre));
 
         oeuvreDAL.get(oeuvre.id, function(entity){
-            console.log("entity :"+entity);
+            
             if(entity){
                 oeuvreDAL.update(entity, oeuvre, function (oeuvre) {
-                    console.log("redirection vers: /"+oeuvre.id);
-                    console.log(JSON.stringify(oeuvre));
+                    //console.log("Oeuvre sauvegardé: "+JSON.stringify(oeuvre));
                     req.flash('flash', 'Modifications enregistré.');
                     res.redirect('/oeuvre/show/'+oeuvre.id);
                 });
