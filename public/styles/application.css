@@ -8,22 +8,24 @@
   color: #fff;
 }
 .loginContainer {
-  margin-top: 200px;
-  background-color: #336e7b;
+  margin-top: 10%;
+  nargin-left: 25%;
+  min-width: 25%;
+  background-color: #2ecc71;
   border: none;
   padding: 20px 20px 20px 20px;
 }
 form.flatForm input {
   border: none;
-  height: 40px;
-  background-color: #22313f;
-  color: #fff;
+  height: 50px;
+  background-color: #f2f1ef;
+  color: #000;
 }
 form.flatForm button {
   border-radius: 0;
-  background-color: #2c3e50;
-  color: #fff;
-  height: 40px;
+  background-color: #dcc6e0;
+  color: #000;
+  height: 50px;
 }
 #loginTitle {
   color: #fff;
@@ -65,6 +67,9 @@ textarea:focus {
   border: none;
   opacity: 0.9;
   border: 1px solid #abb7b7 !important;
+}
+div.invL {
+  margin-left: 50px !important;
 }
 .invItems {
   margin: 12px 10px 10px 10px;
@@ -128,35 +133,80 @@ input.invMiscValue:focus {
   padding: 20px 20px 20px 20px;
 }
 #editMenu {
-  background-color: #d2d7d3;
+  background-color: none;
   min-width: 20px;
   min-height: 20px;
   position: fixed;
   top: 0px;
   right: 0px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 40px;
-  z-index: 10;
-  opacity: 0.6;
+  z-index: 1000;
+  opacity: 1;
 }
 #editMenu:hover {
-  opacity: 0.9;
+  opacity: 0.5;
+}
+.popover {
+  min-width: 300px;
+  margin-right: 1000px;
+}
+.popover:hover {
+  opacity: 1 !important;
+}
+div.userReport {
+  background-color: none;
+  color: #000;
+  z-index: 1000;
+  opacity: 1;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+div.userReport:hover {
+  opacity: 0.5;
+}
+div.userReport input,
+div.userReport select,
+div.userReport textarea {
+  width: 100%;
+  font-size: 15px;
+  margin: 5px 2px 5px 2px;
 }
 .navbar.navbar-default.navFooter.navbar-static-bottom {
   background-color: #2ecc71;
   color: #fff;
-  margin-top: 50px !important;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
   margin-bottom: 0px;
+  position: absolute;
+  left: 0;
+  height: 60px;
+  bottom: 0;
   width: 100% !important;
   font-size: 10px;
-  height: 20px !important;
   opacity: 1;
+}
+html {
+  position: relative;
+  min-height: 100%;
 }
 body {
   background-color: #f2f1ef;
-  margin: 20px 20px 20px 20px;
+  margin-bottom: 60px;
 }
 .navbar.nav-menu {
   background-color: #2ecc71;
   color: #fff !important;
+}
+.btn.btnAdd {
+  background-color: #2ecc71;
+  color: #fff;
+}
+#app {
+  margin-left: 40px !important;
+  margin-right: 40px;
+  overflow: hidden;
 }

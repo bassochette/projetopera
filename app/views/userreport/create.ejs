@@ -1,0 +1,34 @@
+<!-- faire un appel AJAX --> 
+<div class="userReport ">
+	<button type="button"
+			id="userReport" 	
+			class="btn btn-danger"
+			onClick="popReport()" 
+			data-toggle="popover"
+			data-container="body"
+			data-placement="top"
+			title="Votre avis m'interesse!"
+			data-html="true"
+			
+						 >
+		<span class="glyphicon glyphicon-envelope"></span>
+	</button>
+</div>
+
+<div id="popoverContentReport" class="hide" >
+	<form  id="userReportForm" method='post' action='/userReport/create' enctype='application/x-www-form-urlencoded' >
+			 
+		<input id="userReport[id]" name="userReport[id]" type="hidden" value=""/>
+		<input id="userReport[uid]" name="userReport[uid]" type=hidden value='1'>
+		<input id="titre" name="userReport[titre]" type='text' placeholder='Sujet'/>
+		<select id="userReport[type]" name="userReport[type]">
+			<option value='bug'>Bug</option>
+			<option value='question'>Question</option>
+			<option value='idee'>Idée</option>
+		</select>
+		<textarea  id="userReport[message]" name="userReport[message]" placeholder='Votre message à mon intention.'></textarea>
+		<button class="btn btnAdd" type="submit">Envoyer</button>
+		<p>Vous serez redirigé à l'acceuil. Veuillez m'excusez pour cet élément perturbateur dans vos test mais d'ici peu cela ne sera plus le cas.</p>
+	</form>
+	
+</div>

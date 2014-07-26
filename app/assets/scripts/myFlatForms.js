@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//Inialisation tinymce pour les textarea wysiwyg
 	tinymce.init({
-		selector: "textarea.wysiwig",
+		selector: "textarea.wysiwyg",
 		plugins: ["autoresize", "lists", "table"],
 
 		css: "/styles/tinymce.css",
