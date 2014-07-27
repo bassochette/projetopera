@@ -42,7 +42,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     */
     UserReportController.prototype.list = function(req, res) {
         userReportDAL.getAll(function (userReports) {
-            res.render('userReport/index', { 'userReports': userReports });
+            res.render('userreport/index', { 'userReports': userReports });
         });
     };
 
