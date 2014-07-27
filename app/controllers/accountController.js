@@ -39,8 +39,8 @@ var UserDal           = require('../dal/userDal');
         app.get('/account/changePassword', filters.authorize, this.changePassword);
         app.post('/account/changePassword', filters.authorize, this.changePassword_post);
         */
-        //app.get('/account/register', this.register);
-        //app.post('/account/register', this.register_post);
+        app.get('/account/register', this.register);
+        app.post('/account/register', this.register_post);
         
     };
 
