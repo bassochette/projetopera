@@ -1,6 +1,7 @@
 <div class="row">
 <form method="POST" action="/oeuvre/update" enctype='application/x-www-form-urlencoded'>
 	<input type="hidden" id="oeuvre[id]" name="oeuvre[id]" value="<%- oeuvre.id %>"></input>
+
 <div class="row">
 	<!-- Menu fiche inventaire --> 
 	<div id="editMenu">
@@ -9,12 +10,12 @@
 		</button>
 
 	</div>
-	<div class="col-sm-4">
+	<div class="invL col-sm-4">
 		<div class="invItems invCaroussel">
 			carroussel photo + drag & drop
 		</div>
 	</div>
-	<div class="col-sm-8 ">
+	<div class="inv col-sm-7 ">
 		<!-- Information fondamentale sticky si possible-->
 		<div class="row">
 			<div class="row">
@@ -56,7 +57,7 @@
 <div class="row">
 		<!-- autres info -->
 		<div class="row">
-			<div class="col-sm-5 invMisc">
+			<div class="col-sm-5 invMisc invL">
 				<table class="table propertyList">
 					<tr>
 						<th></th>
@@ -114,7 +115,7 @@
 						var zp = function (val){
        						return (val <= 9 ? '0' + val : '' + val);
    						}
-
+   						
    						return  d.getFullYear()+"-"+zp((d.getMonth()+1))+"-"+d.getDate();
 					}
 				%>
@@ -181,9 +182,9 @@
 		</div>
 		<!-- Observations --> 
 		<div class="row">
-			<div class="col-sm-10 .invObs">
+			<div class="col-sm-10 invL invObs">
 				<p class="invDescriptor">Observation:</p>
-				<textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwig" ><%- oeuvre.observations %></textarea>
+				<textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwyg" ><%- oeuvre.observations %></textarea>
 			</div>
 
 		</div>

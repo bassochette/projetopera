@@ -1,6 +1,7 @@
 /**
 * homeController class
 */
+
 (function () {
 
     /**
@@ -16,7 +17,7 @@
      * @param  {express} app
      */
     HomeController.prototype.routes = function(app) {
-        
+       // app.get("/", this.index);
         
     };
 
@@ -27,7 +28,7 @@
      * @param  {response} res
      */
     HomeController.prototype.index = function(req, res) {
-        res.render('home/index');
+        res.render('account/login');
     };
 
     module.exports = HomeController;

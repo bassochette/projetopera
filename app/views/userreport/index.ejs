@@ -1,0 +1,37 @@
+<h2 class="muted">Liste des requètes utilisateurs</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+           
+            
+            	<td>uid</td>
+        	
+            	<td>type</td>
+        	
+            	<td>titre</td>
+        	
+            	<td>message</td>
+        	
+          
+        </tr>
+    </thead>
+    <tbody>
+
+        <% userReports.forEach(function(userReport){ %>
+            <tr>
+                
+                
+                    <td><%- userReport.uid %></td>
+                
+                    <td><%- userReport.type %></td>
+                
+                    <td><%- userReport.titre %></td>
+                
+                    <td><%- userReport.message %></td>
+                
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
