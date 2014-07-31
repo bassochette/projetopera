@@ -1,9 +1,10 @@
 /**
 * homeController class
 */
-
+var MembershipFilters = require('../../middleware/membershipFilters');
 (function () {
 
+    var filters = new MembershipFilters();
     /**
     * Constructor.
     * @param {app} - express app.
@@ -17,7 +18,7 @@
      * @param  {express} app
      */
     HomeController.prototype.routes = function(app) {
-       // app.get("/", this.index);
+        app.get("/", filters.authorize, this.index);
         
     };
 
@@ -28,7 +29,7 @@
      * @param  {response} res
      */
     HomeController.prototype.index = function(req, res) {
-        res.render('account/login');
+        res.render('home/index');
     };
 
     module.exports = HomeController;

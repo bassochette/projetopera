@@ -7,7 +7,7 @@
     <thead>
         <tr>
             
-            
+            <td></td>
             <td>Numéro identification</td>
 
             <td>designation</td>
@@ -26,7 +26,15 @@
         <% oeuvres.forEach(function(oeuvre){ %>
             <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
                
-              
+                <td>
+                    <%if(oeuvre.verrou){%>
+                        <!--
+                        <img src="/images/glyphicons/glyphicons_203_lock.png" alt="verrouillé">
+                    -->
+                        <div class="glyphicon glyphicon-lock"></div>
+                    <%}%>
+                </td>
+
                 <td><%- oeuvre.oeuvreId %></td>
 
                 <td><%- oeuvre.designation %></td>

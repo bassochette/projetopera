@@ -32,7 +32,7 @@ var UserDal           = require('../dal/userDal');
        // app.get('/', this.login);
         app.get('/account/login', this.login);
         app.post('/account/login',
-            passport.authenticate('local', { successRedirect: '/oeuvre/list', failureRedirect: '/account/login'}), 
+            passport.authenticate('local', { successRedirect: '/', failureRedirect: '/account/login'}), 
             this.redirectHome);
         app.get('/account/logout', this.logout);
         /*

@@ -80,5 +80,15 @@ var DbContext = require('../../db/dbContext');
         })
     };
 
+    
+    oeuvreDAL.prototype.verrouillage = function(oeuvreId, callback){
+        dbContext.oeuvre.find(oeuvreId).success(function(oeuvre){
+            //oeuvre.
+            oeuvre.set("verrou", true);
+            oeuvre.save();
+            callback(oeuvre.id);
+        });
+    }
+    
     module.exports = oeuvreDAL;
 })();
