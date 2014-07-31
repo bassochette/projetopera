@@ -4,7 +4,7 @@
 * Module dependencies.
 */
 var OeuvreDAL = require('../dal/oeuvreDAL');
-var membershipFilters = require('../../middleware/membershipFilters');
+var MembershipFilters = require('../../middleware/membershipFilters');
 /**
 * oeuvreController class
 */
@@ -14,7 +14,7 @@ var membershipFilters = require('../../middleware/membershipFilters');
     * Attributes.
     */
     var oeuvreDAL = new OeuvreDAL();
-    var filters = new membershipFilters();
+    var filters = new MembershipFilters();
     /**
     * Constructor.
     * @param {app} - express app.
@@ -23,16 +23,13 @@ var membershipFilters = require('../../middleware/membershipFilters');
         this.routes(app);
     }
 
+
     /**
     * oeuvreController routes.
     * @param {app} - express app.
     */
     OeuvreController.prototype.routes = function(app) {
 
-        //* 
-        //app.get('*', filters.authorize, this.index);
-        app.get('/', filters.authorize, this.index);
-       
 
         //inventaire
 
@@ -48,7 +45,7 @@ var membershipFilters = require('../../middleware/membershipFilters');
         //app.post('/oeuvre/delete',  this.destroy);
 
         // verrou
-        //app.post('/oeuvre/verouiller/:id');
+        app.get('/oeuvre/verrouiller/:id', filters.authorize, this.verrouillage);
     };
 
     /**
@@ -65,6 +62,17 @@ var membershipFilters = require('../../middleware/membershipFilters');
           
 
     };
+
+
+    OeuvreController.prototype.verrouillage = function(req, res){
+
+        var oeuvreId = req.params.id;
+        oeuvreDAL.verrouillage(oeuvreId, function(oeuvreId){
+            req.flash('flash', 'Oeuvre verrouillé.');
+            res.redirect('/oeuvre/show/'+oeuvreId);
+        });
+
+    }
 
     /**
     * [httpget]

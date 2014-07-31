@@ -1,0 +1,190 @@
+<div class="row">
+
+<div class="row">
+	
+	<div class="invL col-sm-4">
+		<div class="invItems invCaroussel">
+			carroussel photo 
+		</div>
+	</div>
+	<div class="inv col-sm-7 ">
+		<!-- Information fondamentale sticky si possible-->
+		<div class="row">
+			<div class="row">
+				<div class="col-sm-4 invItems">
+					<p class="invItemsDescriptor"><span class="glyphicon glyphicon-lock"></span>  Identifiant inventaire:</p>
+					<p> <%- oeuvre.oeuvreId %></p>
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="col-sm-4 invItems">
+					<p class="invItemsDescriptor">Auteur: </p>
+					<p><%- oeuvre.auteur %></p>
+				</div>
+				<div class="col-sm-4 invItems">
+					<p class="invItemsDescriptor">Désignation:</p>
+					<p><%- oeuvre.designation %></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3 invItems">
+					<p class="invItemsDescriptor">Datation:</p>
+					<p><%- oeuvre.datation %></p>
+				</div>
+				<div class="col-sm-3 invItems">
+					<p class="invItemsDescriptor">Matériaux:</p>
+					<p><%- oeuvre.materiaux %></p>
+				</div>
+				<div class="col-sm-3 invItems">
+					<p class="invItemsDescriptor">Mesures:</p>
+					<p><%- oeuvre.mesures %></p> 
+				</div>
+			
+			</div>
+		</div>
+</div>
+
+<!-- Detail de l'inventaire --> 
+<div class="row">
+		<!-- autres info -->
+		<div class="row">
+			<div class="col-sm-5 invMisc invL">
+				<table class="table propertyList">
+					<tr>
+						<th></th>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Provenance: 
+							</p>
+							<p><%- oeuvre.provenance %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Technique de réalisation: 
+							</p> 
+							<p><%- oeuvre.techniques %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								État: 
+							</p>
+							<p><%- oeuvre.indicationEtat %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Marques et inscriptions: 
+							</p>
+							<p><%- oeuvre.marquesInscription %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								fonction d'usage: 
+							</p>
+							<p><%- oeuvre.fonction %></p>
+						</td>
+					</tr>
+
+				</table>
+				
+			</div>
+			<div class="col-sm-5  invMisc">
+
+				<%	
+					// sale
+					function formatDate(data){
+						var d = new Date(data);
+						var zp = function (val){
+       						return (val <= 9 ? '0' + val : '' + val);
+   						}
+   						
+   						return  d.getFullYear()+"-"+zp((d.getMonth()+1))+"-"+d.getDate();
+					}
+				%>
+
+				<table class="table propertyList">
+					<tr>
+						<th>
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Mode d'aquisition:
+							</p>
+							<p><%- oeuvre.modeAcquisition %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Nom donateur/legs/vendeur:
+							</p>
+							<p><%- oeuvre.nomDonnateur %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Date d'acquisition:
+							</p>
+							<p> <%- formatDate(oeuvre.dateAcquisition) %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Avis des instances scientifiques:
+							</p>
+							<p><%- oeuvre.avisScientifique %></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Prix d'achat:
+							</p>
+							<p><%- oeuvre.prix %></p>
+						</td>
+						
+					</tr>
+					<tr>
+						<td>
+							<p class="invMiscDescriptor">
+								Date d'inscription à l'inventaire:
+							</p>
+							<p><%- formatDate(oeuvre.dateInscriptionInventaire) %></p>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+		<!-- Observations --> 
+		<div class="row">
+			<div class="col-sm-10 invL invObs">
+				<p class="invDescriptor">Observation:</p>
+				<p  ><%- oeuvre.observations %></p>
+			</div>
+
+		</div>
+		
+
+		
+	</div>
+
+</row>
+	
+</div>
+
+
