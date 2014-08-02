@@ -120,6 +120,8 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         console.log("# date acq: "+oeuvre.dateAcquisition);
         console.log("# date inscription in: "+oeuvre.dateInscriptionInventaire);
 
+        oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
+        /*
         oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition.year, 
             oeuvre.dateAcquisition.month, 
             oeuvre.dateAcquisition.day);
@@ -127,7 +129,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire.year, 
             oeuvre.dateInscriptionInventaire.month, 
             oeuvre.dateInscriptionInventaire.day); 
-
+    */
         console.log("# date acq post traitement: "+oeuvre.dateAcquisition);
         console.log("# date inscription inv post traitement: "+oeuvre.dateInscriptionInventaire);
         console.log("###################################################################");

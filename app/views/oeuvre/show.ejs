@@ -1,10 +1,47 @@
-<% if(oeuvre.verrou){ %>
-	<%- partial("./show_locked") %>
+<div id="content">
+<!-- nav tabs --> 
+<ul id="tab" class="nav nav-tabs" role="tablist" data-tabs="tabs">
+	<li ><a href="#inventaire" role="tab" data-toggle="tab">Fiche inventaire</a></li>
+	<li><a href="#dossierOeuvre" role="tab" data-toggle="tab">Dossier d'oeuvre</a></li>
+</ul>
 
-<% } else { %>
-	<%- partial("./show_notlocked") %>
-<% } %>
-
-<!-- Dossier oeuvre -->
-<div class="row">
+<!-- tab pane --> 
+<div class="tab-content">
+	<div class="tab-pane active" id="inventaire">
+		<p>1</p>
+		<% if(oeuvre.verrou){ %>
+			<%- partial("./show_locked") %>
+		<% } else { %>
+			<%- partial("./show_notlocked") %>
+		<% } %>
+		
+	</div>
+	<div class="tab-pane" id="dossierOeuvre">
+		<p>2</p>
+		<%- partial("./show_dossierOeuvre") %>
+		
+	</div> 
 </div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home">
+  	<% if(oeuvre.verrou){ %>
+			<%- partial("./show_locked") %>
+		<% } else { %>
+			<%- partial("./show_notlocked") %>
+		<% } %>
+  </div>
+  <div class="tab-pane" id="profile">
+  <%- partial("./show_dossierOeuvre") %></div>
+</div>
+
+</div>
+
+

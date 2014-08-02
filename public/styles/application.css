@@ -11,6 +11,9 @@ div.glyphicons.glyphiconsVerrou {
 .navbar.navbar-default.navbar-static-top.nav-menu a {
   color: #fff;
 }
+#logo {
+  background-image: url("/images/logo.png");
+}
 .loginContainer {
   margin-top: 10%;
   nargin-left: 25%;
@@ -55,6 +58,7 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #000;
+  font-size: 15px;
 }
 textarea {
   border: none;
@@ -205,7 +209,7 @@ body {
   color: #fff;
 }
 #app {
-  margin-left: 1% !important;
-  margin-right: 1%;
+  margin-left: 10px !important;
+  margin-right: 10px;
   overflow: hidden;
 }

@@ -36,7 +36,7 @@ var DbContext = require('../../db/dbContext');
      * @param  {Function} callback
      */
     dossierOeuvreDAL.prototype.getAll = function(callback) {
-        dbContext.dossierOeuvre.findAll({order: 'id DESC'}).success(function(dossierOeuvres) {
+        dbContext.dossierOeuvre.findAll().success(function(dossierOeuvres) {
             callback(dossierOeuvres);
         });
     };

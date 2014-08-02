@@ -46,6 +46,7 @@ var DossierOeuvreDAL = require('../dal/dossierOeuvreDAL');
     */
     DossierOeuvreController.prototype.index = function(req, res) {
         dossierOeuvreDAL.getAll(function (dossierOeuvres) {
+            console.log('dossier oeuvre info: '+dossierOeuvres);
             res.render('dossierOeuvre/index', { 'dossierOeuvres': dossierOeuvres });
         });
     };
@@ -59,6 +60,7 @@ var DossierOeuvreDAL = require('../dal/dossierOeuvreDAL');
     DossierOeuvreController.prototype.show = function(req, res) {
         var dossierOeuvreId = req.params.id;
         dossierOeuvreDAL.get(dossierOeuvreId, function (dossierOeuvre) {
+
             res.render('dossierOeuvre/show', { 'dossierOeuvre': dossierOeuvre });
         });
     };
