@@ -37,10 +37,7 @@ function popReport(){
 		});
 	
 }
-$(document).ready(function(){
-	alert('toto');
-	$('#userReport[uid]').editable();
-});
+
 
 
 

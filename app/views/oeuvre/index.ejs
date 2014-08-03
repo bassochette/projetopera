@@ -1,7 +1,21 @@
-<h2 class="muted">Inventaire</h2>
+
+<div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
+
+    <form method="post" class="form-horizontal" action="/search">
+
+        <div class="form-group"> 
+            <input class="input-xl" id="searchString" name="searchString" style="height:30px;" value="<%-prevSearch%>">
+
+            <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
+            
+        </div>
+
+    </form>
 
 
-<%- link_to('Nouvelle oeuvre', '/oeuvre/new', {class : 'btn btnAdd'}) %>
+
+</div>
+
 
 <table class="table table-striped">
     <thead>

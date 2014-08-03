@@ -40,7 +40,16 @@ var DbContext = require('../../db/dbContext');
             callback(oeuvres);
         });
     };
-
+    oeuvreDAL.prototype.getParAuteur = function(callback) {
+        dbContext.oeuvre.findAll({order: 'auteur ASC'}).success(function(oeuvres) {
+            callback(oeuvres);
+        });
+    };
+    oeuvreDAL.prototype.getParNom = function(callback) {
+        dbContext.oeuvre.findAll({order: 'designation ASC'}).success(function(oeuvres) {
+            callback(oeuvres);
+        });
+    };
     /**
      * save oeuvre
      * @param  {Object}   oeuvre

@@ -13,26 +13,84 @@
   </head>
   <body>
 
+	<div id="wrapper">
 
-	<%- partial("shared/_menu") %>
-			
-	<div class="container" id="app">
-			<div class="row">
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav"> 
+				<li>
+					
+				<li>
+				<li class="sidebar-brand">
+					<a href="/">Museion</a>
+				</li>
 
-				<% if(flash !== undefined && flash != ""){ %>
-					<div class="alert alert-warning"><%- flash %></div>
+				<% if(req.user){ %>
+				<li><a href="/oeuvre">Liste des Oeuvres</a> </li>
+				<li>
+				<ul>
+					<li><a href="/oeuvre/auteur">Par auteurs(s)</a></li>
+					<li><a href="/oeuvre/nom">Par nom</a></li>
+				</ul>
+				</li>
+				<li>
+					<a href="/oeuvre/new">Nouvelle oeuvre</a>
+				</li>
+
+				<!--
+				<li>Dossiers: </li>
+				<li>
+					<UL>
+						<li><a href="#">Collection 14-18</a></li>
+						<li><a href="#">Costume Opéra</a></li>
+					</UL>
+				</li>
+				<li>
+					<button class="btn btn-info">+</button>
+					<input type="text" placeholder="Nouveau dossier" />
+				</li>
+				-->
+				<li>
+					<a href="/account/logout">Déconnexion</a>
+				</li>
 				<% } %>
+			</ul>
+		</div>
 
-				<%- body %>
+		<div class="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<% if(flash !== undefined && flash != ""	){ %>
+						<div class="alert alert-warning"><%-	 flash %>
+						</div>
+						<% } %>
+						<%- body %>
+					</div>
+				</div>
+
 			</div>
-		
-	</div>
+		</div>
 
-	<% if(req.user){ %>
-		<%- partial('userreport/create') %>
-	<% } %>
+	</div>	
 
-	<%- partial("shared/_includes") %>
+	
+
+		 		
+
+
+<!-- fondamentale --> 
+<script src="/scripts/vendors/jquery.js"></script>
+<script src="/scripts/vendors/bootstrap.js"></script>
+<script src="/scripts/bs-editable/bootstrap-editable.js"></script>
+
+<!-- Wysiwyg -->
+<script src="/scripts/tinymce/tinymce.min.js"></script>
+
+
+<!-- Truc à moi --> 
+<script src="/scripts/myFlatForms.js"></script>
+<script src="/scripts/generic.js"></script>
+	
   </body>
-  <%- partial("shared/_footer") %>
+ 
 </html>

@@ -1,55 +1,101 @@
 .text-justify {
   text-align: justify;
 }
-div.glyphicons.glyphiconsVerrou {
-  width: 100px;
-  background-image: url("/images/glyphicons/glyphicons_203_lock.png");
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.navbar.navbar-default.navbar-static-top.nav-menu {
-  background-color: #2ecc71;
+#wrapper.toggled {
+  padding-left: 250px;
 }
-.navbar.navbar-default.navbar-static-top.nav-menu a {
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #2ecc71;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+#page-content-wrapper {
+  width: 100%;
+  padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+  text-decoration: none;
+}
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
   color: #fff;
 }
-#logo {
-  background-image: url("/images/logo.png");
-}
-.loginContainer {
-  margin-top: 10%;
-  nargin-left: 25%;
-  min-width: 25%;
-  background-color: #2ecc71;
-  border: none;
-  padding: 20px 20px 20px 20px;
-}
-form.flatForm input {
-  border: none;
-  height: 50px;
-  background-color: #f2f1ef;
-  color: #000;
-}
-form.flatForm button {
-  border-radius: 0;
-  background-color: #dcc6e0;
-  color: #000;
-  height: 50px;
-}
-#loginTitle {
+.sidebar-nav li a:hover {
+  text-decoration: none;
   color: #fff;
-  margin-bottom: 25px;
+  background: rgba(255,255,255,0.2);
 }
-#loginTitle#capitalA {
-  font-size: 60px;
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
 }
-tr.darkenOnHover {
-  opacity: 1;
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
 }
-tr.darkenOnHover:hover {
-  opacity: 0.5;
-}
-a.btn.btnAdd {
-  background-color: #2ecc71;
+.sidebar-nav > .sidebar-brand a {
   color: #fff;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+@media (min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
 }
 input {
   border: none;
@@ -153,63 +199,4 @@ input.invMiscValue:focus {
 }
 #editMenu:hover {
   opacity: 0.5;
-}
-.popover {
-  min-width: 300px;
-  margin-right: 1000px;
-}
-.popover:hover {
-  opacity: 1 !important;
-}
-div.userReport {
-  background-color: none;
-  color: #000;
-  z-index: 1000;
-  opacity: 1;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  margin-bottom: 10px;
-  margin-right: 40px;
-}
-div.userReport:hover {
-  opacity: 0.5;
-}
-div.userReport input,
-div.userReport select,
-div.userReport textarea {
-  width: 100%;
-  font-size: 15px;
-  margin: 5px 2px 5px 2px;
-}
-.navbar.navbar-default.navFooter.navbar-static-bottom {
-  background-color: #2ecc71;
-  color: #fff;
-  margin-left: 0px !important;
-  padding-left: 0px !important;
-  margin-bottom: 0px;
-  position: absolute;
-  left: 0;
-  height: 60px;
-  bottom: 0;
-  width: 100% !important;
-  font-size: 10px;
-  opacity: 1;
-}
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  background-color: #f2f1ef;
-  margin-bottom: 60px;
-}
-.btn.btnAdd {
-  background-color: #2ecc71;
-  color: #fff;
-}
-#app {
-  margin-left: 10px !important;
-  margin-right: 10px;
-  overflow: hidden;
 }

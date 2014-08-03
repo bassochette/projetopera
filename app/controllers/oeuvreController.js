@@ -35,6 +35,9 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
         app.get('/oeuvre', filters.authorize,  this.index);
         app.get('/oeuvre/list',  filters.authorize, this.index);
+        app.get('/oeuvre/auteur',  filters.authorize, this.listParAuteur);
+        //app.get('/oeuvre/date',  filters.authorize, this.index);
+        app.get('/oeuvre/nom',  filters.authorize, this.listParNom);
         app.get('/oeuvre/show/:id', filters.authorize,  this.show);
 
         // CRUD
@@ -62,6 +65,23 @@ var MembershipFilters = require('../../middleware/membershipFilters');
           
 
     };
+    OeuvreController.prototype.listParAuteur = function(req, res) {
+            
+        oeuvreDAL.getParAuteur(function (oeuvres) {
+            res.render('oeuvre/index', { 'oeuvres': oeuvres });
+        });
+          
+
+    };
+    OeuvreController.prototype.listParNom = function(req, res) {
+            
+        oeuvreDAL.getParNom(function (oeuvres) {
+            res.render('oeuvre/index', { 'oeuvres': oeuvres });
+        });
+          
+
+    };
+    
 
 
     OeuvreController.prototype.verrouillage = function(req, res){
@@ -113,34 +133,17 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.update = function(req, res) {
         var oeuvre = req.body.oeuvre;
         var id = req.body.oeuvre.id;
-        
-        console.log("#################################################################");
-        console.log("# update oeuvre: "+req.body.oeuvre.oeuvreId);
-
-        console.log("# date acq: "+oeuvre.dateAcquisition);
-        console.log("# date inscription in: "+oeuvre.dateInscriptionInventaire);
 
         oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
-        /*
-        oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition.year, 
-            oeuvre.dateAcquisition.month, 
-            oeuvre.dateAcquisition.day);
-        
-        oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire.year, 
-            oeuvre.dateInscriptionInventaire.month, 
-            oeuvre.dateInscriptionInventaire.day); 
-    */
-        console.log("# date acq post traitement: "+oeuvre.dateAcquisition);
-        console.log("# date inscription inv post traitement: "+oeuvre.dateInscriptionInventaire);
-        console.log("###################################################################");
-        //console.log("Oeuvre recu pour modifiaction: "+JSON.stringify(oeuvre));
+        oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire);
+
 
         oeuvreDAL.get(oeuvre.id, function(entity){
             
             if(entity){
                 oeuvreDAL.update(entity, oeuvre, function (oeuvre) {
                     //console.log("Oeuvre sauvegardé: "+JSON.stringify(oeuvre));
-                    req.flash('flash', 'Modifications enregistré.');
+                    req.flash('flash', 'Modifications enregistrées.');
                     res.redirect('/oeuvre/show/'+oeuvre.id);
                 });
             }
@@ -168,20 +171,11 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     */
     OeuvreController.prototype.create = function(req, res) {
         var oeuvre = req.body.oeuvre;
-        
-        oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition.year, 
-            oeuvre.dateAcquisition.month, 
-            oeuvre.dateAcquisition.day);
-        
-        oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire.year, 
-            oeuvre.dateInscriptionInventaire.month, 
-            oeuvre.dateInscriptionInventaire.day);
-
-
-        
-        
+        oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
+        oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire);
+         
         oeuvreDAL.save(oeuvre, function (data) {
-            res.redirect('/');
+            res.redirect('/oeuvre/show/'+data.id);
         });
     };
 

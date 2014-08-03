@@ -1,14 +1,9 @@
 
-<!-- nav tabs --> 
-<ul id="mytab">
-	<li><a href="#inventaire" >Fiche inventaire</a></li>
-	<li><a href="#dossierOeuvre">Dossier d'oeuvre</a></li>
-</ul>
 
-<!-- tab pane --> 
-<div>
+
+
 	<div id="inventaire">
-		<p>Oeuvre id: <%- oeuvre.oeuvreId%></p>
+	
 		
 		<% if(oeuvre.verrou){ %>
 			<%- partial("./show_locked") %>
@@ -17,12 +12,8 @@
 		<% } %>
 		
 	</div>
-	<div  id="dossierOeuvre">
-		
-		<%- partial("./show_dossierOeuvre") %>
-		
-	</div> 
-</div>
+	
+
 
 
 
