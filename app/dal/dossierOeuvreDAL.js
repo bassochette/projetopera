@@ -31,6 +31,12 @@ var DbContext = require('../../db/dbContext');
         });
     };
 
+    dossierOeuvreDAL.prototype.getByOeuvreId = function(oid, callback){
+        dbContext.dossierOeuvre.find({ where: {oeuvreId: oid} }).success(function(result){
+            callback(result);
+        });
+    };
+
     /**
      * get all dossierOeuvre
      * @param  {Function} callback

@@ -48,6 +48,7 @@ var DbContext = require('../../db/dbContext');
      */
     champsDAL.prototype.save = function(champs, callback) {
         var champs = dbContext.champs.build(champs);
+        //console.log("champsDAL: "+champs);
         champs.save().success(function(champs) {
             callback(champs);
         }).error(function(error) {

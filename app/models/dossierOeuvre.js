@@ -2,7 +2,7 @@ module.exports = function (db, DataTypes) {
 
 	var dossierOeuvre = db.define('dossierOeuvre', {
 		valeur: DataTypes.TEXT,
-		type: DataTypes.ENUM('info', 'document', 'lien', 'description')
+		type: DataTypes.ENUM('info', 'date', 'lien', 'description')
 		
 	});
 	return dossierOeuvre;

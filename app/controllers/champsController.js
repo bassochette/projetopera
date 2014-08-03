@@ -4,7 +4,7 @@
 * Module dependencies.
 */
 var ChampsDAL = require('../dal/champsDAL');
-
+var MembershipFilters = require('../../middleware/membershipFilters');
 /**
 * champsController class
 */
@@ -14,6 +14,7 @@ var ChampsDAL = require('../dal/champsDAL');
     * Attributes.
     */
     var champsDAL = new ChampsDAL();
+    var filters = new MembershipFilters();
 
     /**
     * Constructor.
@@ -28,14 +29,10 @@ var ChampsDAL = require('../dal/champsDAL');
     * @param {app} - express app.
     */
     ChampsController.prototype.routes = function(app) {
-        app.get('/champs', this.index);
-        app.get('/champs/show/:id', this.show);
-        app.get('/champs/new', this.new);
-        app.post('/champs/create', this.create);
-        app.get('/champs/edit/:id', this.edit);
-        app.post('/champs/edit', this.update);
-        app.get('/champs/delete/:id', this.delete);
-        app.post('/champs/delete', this.destroy);
+        app.get('/champs', filters.authorize, this.index);
+        app.post('/champs/create', filters.authorize, this.create);
+        //app.post('/champs/edit', filters.auhorize, this.update);
+        //app.post('/champs/delete', this.destroy);
     };
 
     /**
@@ -46,35 +43,13 @@ var ChampsDAL = require('../dal/champsDAL');
     */
     ChampsController.prototype.index = function(req, res) {
         champsDAL.getAll(function (champss) {
-            res.render('champs/index', { 'champss': champss });
+            res.render('champs/index', { 'champs': champss });
         });
     };
 
-    /**
-    * [httpget]
-    * ChampsController details action.
-    * @param {req} http request.
-    * @param {res} http response.
-    */
-    ChampsController.prototype.show = function(req, res) {
-        var champsId = req.params.id;
-        champsDAL.get(champsId, function (champs) {
-            res.render('champs/show', { 'champs': champs });
-        });
-    };
 
-    /**
-    * [httpget]
-    * ChampsController edit action.
-    * @param {req} http request.
-    * @param {res} http response.
-    */
-    ChampsController.prototype.edit = function(req, res) {
-        var champsId = req.params.id;
-        champsDAL.get(champsId, function (champs) {
-            res.render('champs/edit', { 'champs': champs });
-        });
-    };
+
+    
 
     /**
     * [httppost]
@@ -98,16 +73,6 @@ var ChampsDAL = require('../dal/champsDAL');
     };    
 
     /**
-    * [httpget]
-    * champsController create action.
-    * @param {req} http request.
-    * @param {res} http response.
-    */
-    ChampsController.prototype.new = function(req, res) {
-        res.render('champs/create');  
-    };
-
-    /**
     * [httppost]
     * champsController create post action.
     * @param {req} http request.
@@ -115,22 +80,8 @@ var ChampsDAL = require('../dal/champsDAL');
     */
     ChampsController.prototype.create = function(req, res) {
         var champs = req.body.champs;
-        
         champsDAL.save(champs, function (data) {
             res.redirect('/champs');
-        });
-    };
-
-    /**
-    * [httpget]
-    * ChampsController delete action.
-    * @param {req} http request.
-    * @param {res} http response.
-    */
-    ChampsController.prototype.delete = function(req, res) {
-        var champsId = req.params.id;
-        champsDAL.get(champsId, function (champs) {
-            res.render('champs/delete', { 'champs': champs });
         });
     };
 
@@ -140,12 +91,13 @@ var ChampsDAL = require('../dal/champsDAL');
     * @param {req} http request.
     * @param {res} http response.
     */
+    /*
     ChampsController.prototype.destroy = function(req, res) {
         var champs = req.body.champs;
         champsDAL.remove(champs.id, function (data) {
             res.redirect('/champs');
         });
     };
-
+    */
     module.exports = ChampsController;
 })();

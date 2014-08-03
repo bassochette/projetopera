@@ -1,27 +1,36 @@
-<h2 class="muted">Index</h2>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <td>id</td>
-            
-          <td>action</td>
-        </tr>
-    </thead>
-    <tbody>
+<div class="col-sm-6">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="badge">pop</span>
+            <span class="nom">Nom</span>
+            <span class="type">type</span>
+        </li>  
+   
+        <% champs.forEach(function(champ){ %>
+            <li class="list-group-item">
+            <span class="badge">x</span>
+            <span class="nom" ><%- champ.nom %></span>
+            <span class="type" ><%- champ.type %></span>
+        </li> 
+        <% });%>
+    </ul> 
 
-        <% champss.forEach(function(champs){ %>
-            <tr>
-                <td><%- champs.id %></td>
-                
-                <td>
-                    <%- link_to('show', '/champs/show/'+champs.id, {class : 'btn btn-info'}) %> |
-                    <%- link_to('edit', '/champs/edit/'+champs.id, {class : 'btn btn-warning'}) %> |
-                    <%- link_to('delete', '/champs/delete/'+champs.id, {class : 'btn btn-danger'}) %>
-                </td>
-            </tr>
-        <% }); %>
-    </tbody>
-</table>
+</div>
+<div class="col-sm-4 well">
+    <form method="POST" action="/champs/create" enctype='application/x-www-form-urlencoded'>
+        <input placeholder="Nouveau champ" id="champs[nom]" name="champs[nom]"/>
+        <select id="champs[type]" name="champs[type]" >
+            <option value="info">Texte</option>
+            <option value="date">Date</option>
+            <option value="description">Texte long</option>
+            <option value="lien">Lien</option>
+        </select>
+        <button type="submit" class="btn btn-info">Ajouter</button>
+    </form>
 
-<%- link_to('new champs', '/champs/new', {class : 'btn btn-primary'}) %>
+</div>
+
+<style type="text/css" scoped>
+    @import url('/styles/champs.css')
+</style>

@@ -6,6 +6,7 @@ module.exports = {
 			{src: '<%= config.bower %>/bootstrap/dist/js/bootstrap.js', dest: '<%= config.public %>/scripts/vendors/bootstrap.js'},
 			{src: '<%= config.bower %>/jquery/jquery.js', dest: '<%= config.public %>/scripts/vendors/jquery.js'},
 			{src: '<%= config.bower %>/animate.css/animate.css', dest: '<%= config.public %>/styles/animate.css'},
+			{src: '<%= config.assets %>/stylus/bs-editable.css', dest: '<%= config.public %>/styles/bs-editable.css'}
 		]
 	},
 	release:{
