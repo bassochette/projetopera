@@ -46,27 +46,9 @@ var DbContext = require('../../db/dbContext');
             
         }).success(function (result) {
 
-            var searches = search.split(" ");
-            var searchTermCount = searches.length;
-            console.log(JSON.stringify(searches));
-
-            for(i = 0; i<searchTermCount; i++){
-                dbContext.oeuvre.findAll({
-                    where : sql.or({ designation : {like : '%'+searches[i]+'%'}},
-                    { observations : {like : '%'+searches[i]+'%'}},
-                    { techniques : {like : '%'+searches[i]+'%'}},
-                    { materiaux : {like : '%'+searches[i]+'%'}},
-                    { datation : {like : '%'+searches[i]+'%'}},
-                    { provenance : {like : '%'+searches[i]+'%'}},
-                    { auteur : {like : '%'+searches[i]+'%'}},
-                    { oeuvreId : {like : '%'+searches[i]+'%'}})
-                }).success(function(result){
-                    searchResult.push(result);
-
-                });
-
-
-            }
+            //var searches = search.split(" ");
+            //var searchTermCount = searches.length;
+            //console.log(JSON.stringify(searches));
 
             callback(result);
         });
