@@ -27,17 +27,16 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         app.post('/search', filters.authorize,  this.search);     
     };
 
+
     SearchController.prototype.search= function(req, res) {    
 
         var searchString = req.body.searchString;
-        console.log("searchString: "+searchString);
-        var searches = searchString.split(" ");
-
+        var that= this;
             
-        searchDAL.multiTermSearch(searches, function (oeuvres) {
+        searchDAL.multiTermSearch(searchString, function (oeuvres, hitmap) {
 
             if(oeuvres){
-                res.render('oeuvre/index', { 'oeuvres': oeuvres, 'prevSearch': searchString });
+                res.render('search/index', { 'oeuvres': oeuvres, 'prevSearch': searchString });
             } else {
                 req.flash('flash', 'aucun resultat');
                 res.redirect("/");
@@ -46,5 +45,8 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     
           
     }; 
+
+    
+
     module.exports = SearchController;
 })();

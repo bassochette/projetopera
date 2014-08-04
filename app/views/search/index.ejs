@@ -1,0 +1,64 @@
+
+<div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
+
+    <form method="post" class="form-horizontal" action="/search">
+
+        <div class="form-group"> 
+            <input class="input-xl" id="searchString" name="searchString" style="height:30px;" value="<%-prevSearch %>">
+
+            <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
+            
+        </div>
+
+    </form>
+
+
+
+</div>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            
+            <td></td>
+            <td>Numéro d'inventaire</td>
+
+            <td>Désignation</td>
+            
+            <td>Auteur(s)</td>
+            
+            <td>Matériaux</td>
+            
+            <td>Technique(s)</td>
+            
+            <td>Datation</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        <% oeuvres.forEach(function(oeuvre){ %>
+            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
+               
+                <td>
+                    <span class="badge"><%- oeuvre.hit %></span>
+                </td>
+
+                <td><%- oeuvre.oeuvreId %></td>
+
+                <td><%- oeuvre.designation %></td>
+                
+                <td><%- oeuvre.auteur %></td>
+                
+                <td><%- oeuvre.materiaux %></td>
+                
+                <td><%- oeuvre.techniques %></td>
+                
+                <td><%- oeuvre.datation %></td>
+                
+                
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
