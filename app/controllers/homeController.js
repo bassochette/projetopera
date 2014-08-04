@@ -19,6 +19,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
      */
     HomeController.prototype.routes = function(app) {
         app.get("/", filters.authorize, this.index);
+        app.get("/search", filters.authorize, this.index);
         
     };
 

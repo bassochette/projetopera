@@ -24,21 +24,19 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     SearchController.prototype.routes = function(app) {
-        app.post('/search', filters.authorize,  this.basicSearch);     
+        app.post('/search', filters.authorize,  this.search);     
     };
 
-    SearchController.prototype.basicSearch= function(req, res) {    
+
+    SearchController.prototype.search= function(req, res) {    
 
         var searchString = req.body.searchString;
-        console.log("searchString: "+searchString);
-        var searches = searchString.split(" ");
-        console.log(JSON.stringify(searches));
-
+        var that= this;
             
-        searchDAL.basicSearch(searchString, function (oeuvres) {
+        searchDAL.multiTermSearch(searchString, function (oeuvres, hitmap) {
 
             if(oeuvres){
-                res.render('oeuvre/index', { 'oeuvres': oeuvres, 'prevSearch': searchString });
+                res.render('search/index', { 'oeuvres': oeuvres, 'prevSearch': searchString });
             } else {
                 req.flash('flash', 'aucun resultat');
                 res.redirect("/");
@@ -47,5 +45,8 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     
           
     }; 
+
+    
+
     module.exports = SearchController;
 })();
