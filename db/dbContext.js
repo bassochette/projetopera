@@ -61,8 +61,8 @@
         this.recolement.belongsTo(this.oeuvre);
 
         //gestion dossier oeuvre
-        this.oeuvre.hasMany(this.champs, {through: this.dossierOeuvre});
         this.champs.hasMany(this.oeuvre, {through: this.dossierOeuvre});
+        this.oeuvre.hasMany(this.champs, {through: this.dossierOeuvre});
 
 
     };

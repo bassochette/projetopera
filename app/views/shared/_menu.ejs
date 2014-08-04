@@ -1,40 +1,18 @@
-<% if(!req.user) { %>
 
 	
-<% } else { %>
-<nav class="navbar navbar-default navbar-static-top nav-menu" role="navigation">
+	<div>
+		<ul>
+			<li>
+				<a href="#">Liste des Oeuvres </a>
+				<ul>
+					<li><a href="#">Par auteurs(s)</a></li>
+					<li><a href="#">Par nom</a></li>
+					<li><a href="#">Par date</a></li>
+				<ul>
+			</li>
+		</ul>
+		<span><button class="btn btn-info">+</button><input type="text" placeholder="Nouvelle Oeuvre"/></span>
+	</div>
+	<div>
 
-		<div class="container">
-
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapsable-nav">
-					<span class="sr-only">Cacher le menu</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/">Museion</a>
-			</div>
-
-
-
-			<div class="collapse navbar-collapse collapsable-nav">
-				<!-- Menu -->
-				<ul class="nav navbar-nav" id="menu">
-					<li>
-						<a href="/oeuvre/list">Liste des Oeuvres</a>
-					</li>
-					<li>
-						<a href="/oeuvre/new">Nouvelle oeuvre</a>
-					</li>
-					<li>
-						<a href="/account/logout">Deconnexion</a>
-					</li>
-				</ul>
-
-				
-
-			</div>
-		</div>
-	</nav>
-<% } %>
+	</div>

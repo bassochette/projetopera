@@ -15,11 +15,14 @@
 	</button>
 </div>
 
-<div id="popoverContentReport" class="hide" >
-	<form  id="userReportForm" method='post' action='/userReport/create' enctype='application/x-www-form-urlencoded' >
+
+<div id="popoverContentReport" class="hide">
+
+
+	<form  id="userReportForm" enctype='application/json' >
 			 
 		<input id="userReport[id]" name="userReport[id]" type="hidden" value=""/>
-		<input id="userReport[uid]" name="userReport[uid]" type=hidden value='1'>
+		<input id="userReport[uid]" name="userReport[uid]" type=hidden value='<%- req.user.id %>'>
 		<input id="titre" name="userReport[titre]" type='text' placeholder='Sujet'/>
 		<select id="userReport[type]" name="userReport[type]">
 			<option value='bug'>Bug</option>
@@ -27,8 +30,7 @@
 			<option value='idee'>Idée</option>
 		</select>
 		<textarea  id="userReport[message]" name="userReport[message]" placeholder='Votre message à mon intention.'></textarea>
-		<button class="btn btnAdd" type="submit">Envoyer</button>
-		<p>Vous serez redirigé à l'acceuil. Veuillez m'excusez pour cet élément perturbateur dans vos test mais d'ici peu cela ne sera plus le cas.</p>
+		<button class="btn btnAdd userReportSubmit">Envoyer</button>
 	</form>
 	
 </div>

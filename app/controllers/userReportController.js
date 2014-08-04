@@ -57,10 +57,10 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
         var userReport = req.body.userReport;
         
-       // console.log("userReport: "+JSON.stringify(userReport));
+        console.log("userReport: "+JSON.stringify(req.body));
 
         if(req.xhr){
-            //console.log("J'ai recu un appel ajax!");
+            console.log("J'ai recu un appel ajax!");
             userReportDAL.save(userReport, function (data) {
            
                 console.log("demande prise en compte: "+JSON.stringify(data));

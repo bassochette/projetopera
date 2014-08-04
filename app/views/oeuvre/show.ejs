@@ -1,10 +1,19 @@
-<% if(oeuvre.verrou){ %>
-	<%- partial("./show_locked") %>
 
-<% } else { %>
-	<%- partial("./show_notlocked") %>
-<% } %>
 
-<!-- Dossier oeuvre -->
-<div class="row">
-</div>
+
+
+	<div id="inventaire">
+	
+		
+		<% if(oeuvre.verrou){ %>
+			<%- partial("./show_locked") %>
+		<% } else { %>
+			<%- partial("./show_notlocked") %>
+		<% } %>
+		
+	</div>
+	
+
+
+
+

@@ -13,12 +13,8 @@
 		</button>
 
 	</div>
-	<div class="invL col-sm-4">
-		<div class="invItems invCaroussel">
-			carroussel photo + drag & drop
-		</div>
-	</div>
-	<div class="inv col-sm-7 ">
+	
+	<div class="invL col-sm-8 col-sm-offset-1">
 		<!-- Information fondamentale sticky si possible-->
 		<div class="row">
 			<div class="row">
@@ -30,7 +26,7 @@
 			<div class="row">
 			
 				<div class="col-sm-4 invItems">
-					<p class="invItemsDescriptor">Auteur: </p>
+					<p class="invItemsDescriptor">Auteur(s): </p>
 					<input id="oeuvre[auteur]" name="oeuvre[auteur]" class="flatInput" value="<%- oeuvre.auteur %>"></input>
 				</div>
 				<div class="col-sm-4 invItems">
@@ -76,7 +72,7 @@
 					<tr>
 						<td>
 							<p class="invMiscDescriptor">
-								Technique de réalisation: 
+								Technique(s) de réalisation: 
 							</p>
 							<input id="oeuvre[techniques]" name="oeuvre[techniques]" value="<%- oeuvre.techniques %>"></input> 
 						</td>
@@ -100,7 +96,7 @@
 					<tr>
 						<td>
 							<p class="invMiscDescriptor">
-								fonction d'usage: 
+								Fonction d'usage: 
 							</p>
 							<input id="oeuvre[fonction]" name="oeuvre[fonction]" value="<%- oeuvre.fonction %>"></input>
 						</td>
@@ -186,7 +182,7 @@
 		<!-- Observations --> 
 		<div class="row">
 			<div class="col-sm-10 invL invObs">
-				<p class="invDescriptor">Observation:</p>
+				<p class="invDescriptor">Observations:</p>
 				<textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwyg" ><%- oeuvre.observations %></textarea>
 			</div>
 
