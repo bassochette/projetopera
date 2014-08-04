@@ -24,18 +24,17 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     SearchController.prototype.routes = function(app) {
-        app.post('/search', filters.authorize,  this.basicSearch);     
+        app.post('/search', filters.authorize,  this.search);     
     };
 
-    SearchController.prototype.basicSearch= function(req, res) {    
+    SearchController.prototype.search= function(req, res) {    
 
         var searchString = req.body.searchString;
         console.log("searchString: "+searchString);
         var searches = searchString.split(" ");
-        console.log(JSON.stringify(searches));
 
             
-        searchDAL.basicSearch(searchString, function (oeuvres) {
+        searchDAL.multiTermSearch(searches, function (oeuvres) {
 
             if(oeuvres){
                 res.render('oeuvre/index', { 'oeuvres': oeuvres, 'prevSearch': searchString });

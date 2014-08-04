@@ -20,19 +20,9 @@ var DbContext = require('../../db/dbContext');
         
     }
 
-    /**
-    * Get a user by id.
-    * @param {userId} - user primary key.
-    * @param {callback} - callback function. 
-    */
     SearchDal.prototype.basicSearch = function (searchString, callback) {
         //utiliser un array ou découper la string en plusieurs mot
-        console.log("searchSring at DAL :"+JSON.stringify(searchString));
-
-        var search =searchString;
-        var searchResult = [];
-        var stateCounter = 0;
-
+        console.log("Recherche lancé pour: "+searchString);
         dbContext.oeuvre.findAll({ 
             where :
                 sql.or({ designation : {like : '%'+searchString+'%'}},
@@ -45,14 +35,47 @@ var DbContext = require('../../db/dbContext');
                 { oeuvreId : {like : '%'+searchString+'%'}})
             
         }).success(function (result) {
-
-            //var searches = search.split(" ");
-            //var searchTermCount = searches.length;
-            //console.log(JSON.stringify(searches));
-
+            console.log('Resultat recu pour: '+searchString);
+            console.log('hit: '+result.length);
             callback(result);
+        }).error(function(err){
+            console.log("Erreur pour recherche: "+searchString);
+            console.log("err: "+err);
         });
+
     };
+
+    SearchDal.prototype.multiTermSearch = function(searchTerms, callback){
+        
+        var results = [];
+        var counter = 0;
+        var toDo = searchTerms.length;
+        var finish= false;
+        var that= this;
+
+        searchTerms.forEach(function(searchTerm){
+            console.log("recherche demandé pour terme: "+searchTerm);
+            that.basicSearch(searchTerm, function(result){
+               
+                
+                result.forEach(function(r){
+
+                    results.push(r);
+                });
+                console.log("Taille des resultats: "+results.length);
+                counter++;
+                console.log("counter :"+counter);
+                console.log("toDo :"+toDo);
+                if(counter == toDo){
+                    callback(results);
+                }
+            });
+        });
+
+
+    };
+
+    
 
 
 

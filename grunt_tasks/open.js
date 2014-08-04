@@ -1,5 +1,5 @@
 module.exports = {
 	debug:{
-		path: 'http://localhost:3000'
+		path: 'http://localhost:3000/'
 	}
 };
