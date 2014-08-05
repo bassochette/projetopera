@@ -49,10 +49,8 @@ var DbContext = require('../../db/dbContext');
         
         var searchTerms = searchString.split(" ");
         var results = [];
-        var hitMap = {};
         var counter = 0;
         var toDo = searchTerms.length;
-        var finish= false;
         var that= this;
 
 
@@ -68,7 +66,7 @@ var DbContext = require('../../db/dbContext');
             console.log("toDo :"+toDo);
 
             if(counter == (toDo + 1) || searchTerms.length == 1){
-                
+
                 callback(results);
             }
         });
