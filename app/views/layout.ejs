@@ -3,12 +3,13 @@
   <head> 	
     <title>Museion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300|Satisfy' rel='stylesheet' type='text/css'>
     
     
     <link rel="stylesheet" href="/styles/bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/styles/animate.css">
     <link rel="stylesheet" type="text/css" href="/styles/application.css">
+
     <link href="/styles/bs-editable.css" rel="stylesheet">
   </head>
   <body>
@@ -20,36 +21,29 @@
 				<li>
 					
 				<li>
+
 				<li class="sidebar-brand">
 					<a href="/">Museion</a>
 				</li>
 
 				<% if(req.user){ %>
-				<li><a href="/oeuvre">Liste des Oeuvres</a> </li>
-				<li>
-				<ul>
-					<li><a href="/oeuvre/auteur">Par auteurs(s)</a></li>
-					<li><a href="/oeuvre/nom">Par nom</a></li>
-				</ul>
+				<li onClick="showInventaire(event)"><a onclick="showInventaire()">Liste des Oeuvres</a> 
+					
 				</li>
-				<li>
-					<a href="/oeuvre/new">Nouvelle oeuvre</a>
+				<li> 
+					<button class="btn btnAdd btnAlone btn-info" onclick="location.href='/oeuvre/new'" ><span class="glyphicon glyphicon-plus justify"></span></button>
 				</li>
+				
 
-				<!--
-				<li>Dossiers: </li>
+				
+				<li>Dossiers</li> 
 				<li>
-					<UL>
-						<li><a href="#">Collection 14-18</a></li>
-						<li><a href="#">Costume Opéra</a></li>
+					<UL id="listDossier" class="insideTheList">
+						
 					</UL>
 				</li>
-				<li>
-					<button class="btn btn-info">+</button>
-					<input type="text" placeholder="Nouveau dossier" />
-				</li>
-				-->
-				<li>
+				
+				<li class="bad">
 					<a href="/account/logout">Déconnexion</a>
 				</li>
 				<% } %>
@@ -57,11 +51,13 @@
 		</div>
 
 		<div class="page-content-wrapper">
-			<div class="container-fluid">
+			<div class="container-fluid body">
 				<div class="row">
 					<div class="col-lg-12">
+						<div id="notif" >
+						</div>
 						<% if(flash !== undefined && flash != ""	){ %>
-						<div class="alert alert-warning"><%-	 flash %>
+						<div class="alert alert-warning" ><%-flash %>
 						</div>
 						<% } %>
 						<%- body %>
@@ -88,8 +84,12 @@
 
 
 <!-- Truc à moi --> 
-<script src="/scripts/myFlatForms.js"></script>
 <script src="/scripts/generic.js"></script>
+<script src="/scripts/myFlatForms.js"></script>
+<script src="/scripts/selection.js"></script>
+<script src="/scripts/editmenu.js"></script>
+
+
 	
   </body>
  

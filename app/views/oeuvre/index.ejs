@@ -38,7 +38,7 @@
     <tbody>
 
         <% oeuvres.forEach(function(oeuvre){ %>
-            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
+            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'" draggable="true" ondragstart="dragToFolder(event, <%- oeuvre.id %>)" oeuvreid="<%- oeuvre.id %>">
                
                 <td>
                     <%if(oeuvre.verrou){%>

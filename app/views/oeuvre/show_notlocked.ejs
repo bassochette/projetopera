@@ -5,12 +5,20 @@
 <div class="row">
 	<!-- Menu fiche inventaire --> 
 	<div id="editMenu">
+		<select id="menuFolderSelect" class="menuFolderSelect" hidden="true">
+			<option value="" disabled selected>Ajouter au dossier </option>
+		</select>
+		<button class="btn btn-museion" id="menuFolder"
+				onclick="showMenuFolderList(event)">
+			<span class="glyphicon glyphicon-folder-open"></span>
+		</button>
 		<button type="submit" class="btn btn-info">
 			<span class="glyphicon glyphicon-floppy-save"></span>
 		</button>
 		<button class="btn btn-danger" onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
 			<span class="glyphicon glyphicon-lock"></span>
 		</button>
+
 
 	</div>
 	
@@ -145,7 +153,8 @@
 							<p class="invMiscDescriptor">
 								Date d'acquisition:
 							</p>
-							<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- formatDate(oeuvre.dateAcquisition) %>" type="date"></input>
+
+							<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- oeuvre.dateAcquisition %>" type="date"></input>
 						</td>
 					</tr>
 					<tr>

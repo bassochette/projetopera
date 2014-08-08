@@ -1,11 +1,46 @@
 
 <div class="col-lg-10 col-lg-offset-1"> 
 
-	<h1> Recherche </h1>
+	<p id="pageTitle"></p>
+	<!--
 	<form method="post" action="/search">
 		<input  class="input-xl" id="searchString" name="searchString"/>
 		<button class="btn btn-info" type="submit" >Rechercher</button>
 
 	</form>
+-->
+	<input  class="input-xl" id="searchString" name="searchString" placeholder="Que cherchez vous aujourd'hui?"/>
+	<button class="btn btn-info" id="submitSearch" type="submit">Rechercher</button>
 
 </div>
+<div class="searchResultZone" >
+
+<table class="table table-striped" id="searchTable" hidden="true" > 
+    <thead>
+        <tr>
+            
+            <td></td>
+            <td>Numéro d'inventaire</td>
+
+            <td>Désignation</td>
+            
+            <td>Auteur(s)</td>
+            
+            <td>Matériaux</td>
+            
+            <td>Technique(s)</td>
+            
+            <td>Datation</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody id="resultTableBody">
+
+        
+    </tbody>
+</table>
+</div>
+
+
+
+

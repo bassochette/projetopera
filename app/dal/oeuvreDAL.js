@@ -50,6 +50,13 @@ var DbContext = require('../../db/dbContext');
             callback(oeuvres);
         });
     };
+
+    oeuvreDAL.prototype.getListOeuvre = function(list, callback){
+        dbContext.oeuvre.findAll({where: {id: {in: list}}})
+                        .success(function(oeuvres){
+                            callback(oeuvres);
+                        });
+    };
     /**
      * save oeuvre
      * @param  {Object}   oeuvre
