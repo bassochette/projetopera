@@ -22,7 +22,7 @@ var DbContext = require('../../db/dbContext');
 
     SearchDal.prototype.basicSearch = function (searchString, callback) {
         //utiliser un array ou découper la string en plusieurs mot
-        console.log("Recherche lancé pour: "+searchString);
+        //console.log("Recherche lancé pour: "+searchString);
         dbContext.oeuvre.findAll({ 
             where :
                 sql.or({ designation : {like : '%'+searchString+'%'}},
@@ -50,7 +50,6 @@ var DbContext = require('../../db/dbContext');
         var searchTerms = searchString.split(" ");
         var results = [];
         var counter = 0;
-        var toDo = searchTerms.length;
         var that= this;
 
 
@@ -62,8 +61,8 @@ var DbContext = require('../../db/dbContext');
 
             //console.log("Taille des resultats: "+results.length);
             counter++;
-            console.log("counter :"+counter);
-            console.log("toDo :"+toDo);
+            //console.log("counter :"+counter);
+           // console.log("toDo :"+toDo);
 
             if(counter == (toDo + 1) || searchTerms.length == 1){
 
@@ -71,11 +70,23 @@ var DbContext = require('../../db/dbContext');
             }
         });
 
-        if(searchTerms.length > 1){ 
-            searchTerms.forEach(function(searchTerm){
+        var uniqueTerms = [];
+        //console.log("searchTerms: "+searchTerms.length);
+        searchTerms.forEach(function(el){
+            if(uniqueTerms.indexOf(el) === -1){
+                uniqueTerms.push(el)
+            }
+        });
 
-                //console.log("recherche demandé pour terme: "+searchTerm);
-                that.basicSearch(searchTerm, function(result){ 
+        var toDo = uniqueTerms.length;
+
+        //console.log("uniqueTerms: "+uniqueTerms.length);
+
+
+        if(uniqueTerms.length > 1){ 
+            uniqueTerms.forEach(function(searchTerm){
+
+                that.basicSearch(searchTerm , function(result){ 
 
                     result.forEach(function(r){
                         results.push(r);
@@ -91,7 +102,7 @@ var DbContext = require('../../db/dbContext');
                     if(counter == (toDo + 1)){
 
                         results = results.sort(function(a,b){
-                            return (a.id > b.id) ;
+                            return (a.id - b.id) ;
                         });
 
                         var tmpCounter = 0;

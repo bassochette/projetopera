@@ -2,12 +2,15 @@
 //dependance
 
 var SelectionDAL = require('../dal/selectionDAL');
+var OeuvreDAL = require('../dal/oeuvreDAL');
 var MembershipFilters = require('../../middleware/membershipFilters');
+
 
 (function (){
 
 	//attribute
 	var selectionDAL = new SelectionDAL();
+	var oeuvreDAL = new OeuvreDAL();
 	var filters = new MembershipFilters();
 
 	//contructor
@@ -18,32 +21,51 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 	SelectionAPI.prototype.routes = function(app){
 
 		
-		app.post('/selection', filters.authorize, this.selection);
-		app.post('/selection/createFolder', filters.authorize, this.addFolder);
-		app.post('/selection/rmFolder', filters.authorize, this.rmFolder);
-		app.post('/selection/addItem', filters.authorize, this.addItem);
-		app.post('/selection/rmItem', filters.authorize, this.rmItem);
+		app.post('/selectionAPI', filters.authorize, this.selection);
+		app.get('/selectionAPI/:id', filters.authorize, this.getItems);
+		app.post('/selectionAPI/createFolder', filters.authorize, this.addFolder);
+		//app.post('/selection/rmFolder', filters.authorize, this.rmFolder);
+		app.post('/selectionAPI/addItem', filters.authorize, this.addItem);
+		//app.post('/selection/rmItem', filters.authorize, this.rmItem);
 	};
 
 	
 	SelectionAPI.prototype.selection = function(req, res){
 		var uid = req.user.id;
-		//console.log("uid :"+uid);
-		selectionDAL.getUserFolders(uid , function(selection){
-			//console.log("Selection recu par l'api depuis la dal: "+JSON.stringify(selection));
-			res.send(selection);
+
+		selectionDAL.getUserFolders(uid, function(folders){
+			res.send(folders);
 		});
 
 	};
+
+	SelectionAPI.prototype.getItems = function(req, res){
+		var folderId = req.body.id;
+
+		selectionDAL.getFolderItems(req.params.id, function(items){
+			
+			//console.log("items :"+JSON.stringify(items));
+			var oeuvreIds = [];
+
+			items.forEach(function(item){
+				oeuvreIds.push(item.oeuvreId);
+			});
+
+			oeuvreDAL.getListOeuvre(oeuvreIds, function(oeuvres){
+				var data = {};
+				data.items = oeuvres;
+				//data.name = 
+				res.send(data.items);
+			});
+		});
+	};
+
 	SelectionAPI.prototype.addFolder = function(req, res){
 		var folder = {};
 		folder.nom = req.body.folderName;
 		folder.uid = req.user.id;
-		
-		//console.log(JSON.stringify(folder));
-		//console.log(JSON.stringify(req, 0, 2));
+		console.log("ajout dossier: "+folder.nom);
 		selectionDAL.saveFolder(folder, function(folder){
-			//console.log("Folder "+folder.nom+" created.");
 			res.send(folder);
 		});
 	};
@@ -51,9 +73,6 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 		var item ={};
 		item.folderId= req.body.folderId;
 		item.oeuvreId= req.body.oeuvreId;
-		//console.log("req.body: "+JSON.stringify(req.body));
-
-		//console.log("ajout oeuvre: "+item.folderId+" dans dossier:"+folderId);
 		selectionDAL.saveItem(item, function(){
 			res.send(200);
 		});

@@ -18,36 +18,32 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     * Constructor.
     * @param {app} - express app.
     */
-    function SearchController(app) {
+    function SearchAPI(app) {
         this.routes(app);
     }
 
 
-    SearchController.prototype.routes = function(app) {
-        app.post('/search', filters.authorize,  this.search);     
+    SearchAPI.prototype.routes = function(app) {
+        app.post('/searchAPI/search', filters.authorize,  this.search);     
     };
 
 
-    SearchController.prototype.search= function(req, res) {    
+    SearchAPI.prototype.search= function(req, res) {    
 
         var searchString = req.body.searchString;
+        console.log("req.body :"+JSON.stringify(req.body));
         var that= this;
             
         searchDAL.multiTermSearch(searchString, function (oeuvres, hitmap) {
 
-            if(oeuvres){
-                var title =  " "+oeuvres.length+" résultats"; 
-                res.render('oeuvre/list', { 'oeuvres': oeuvres, 'title': title });
-            } else {
-                req.flash('flash', 'aucun resultat');
-                res.redirect("/");
-            } 
+            res.send(oeuvres)
         });
+        
     
           
     }; 
 
     
 
-    module.exports = SearchController;
+    module.exports = SearchAPI;
 })();

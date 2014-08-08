@@ -26,11 +26,14 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 	SelectionController.prototype.index = function(req, res){
 
 		selectionDAL.getFolderItems(req.params.id, function(items){
-			console.log("items :"+JSON.stringify(items));
+			
+			//console.log("items :"+JSON.stringify(items));
 			var oeuvreIds = [];
+
 			items.forEach(function(item){
 				oeuvreIds.push(item.oeuvreId);
 			});
+
 			oeuvreDAL.getListOeuvre(oeuvreIds, function(oeuvres){
 				res.render('oeuvre/index', {'oeuvres': oeuvres});
 			});

@@ -70,8 +70,8 @@
 
         //gestion favoris aka selection
         this.selectionFolder.belongsTo(this.user, {foreignKey: 'uid'});
-        this.selectionItem.belongsTo(this.selectionFolder, {foreignKey: 'folderId'});
-        this.selectionItem.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId'});
+        this.selectionItem.belongsTo(this.selectionFolder, {foreignKey: 'folderId', unique: 'itemUniqueIndex'});
+        this.selectionItem.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId', unique: 'itemUniqueIndex'});
         //this.user.hasMany(this.selection, {as: 'uid'});
     };
 

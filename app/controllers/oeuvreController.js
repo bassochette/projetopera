@@ -60,7 +60,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.index = function(req, res) {
             
         oeuvreDAL.getAll(function (oeuvres) {
-            res.render('oeuvre/index', { 'oeuvres': oeuvres });
+            res.render('oeuvre/list', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
         });
           
 
@@ -68,7 +68,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.listParAuteur = function(req, res) {
             
         oeuvreDAL.getParAuteur(function (oeuvres) {
-            res.render('oeuvre/index', { 'oeuvres': oeuvres });
+            res.render('oeuvre/list', { 'oeuvres': oeuvres, 'title': 'Inventaire par Auteur(s)' });
         });
           
 
@@ -76,7 +76,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.listParNom = function(req, res) {
             
         oeuvreDAL.getParNom(function (oeuvres) {
-            res.render('oeuvre/index', { 'oeuvres': oeuvres });
+            res.render('oeuvre/list', { 'oeuvres': oeuvres , 'title': 'Inventaire par désignation'});
         });
           
 

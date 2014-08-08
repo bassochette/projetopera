@@ -1,9 +1,11 @@
 #wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    padding-left: 0px;
+    /*
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    */
 }
 
 #wrapper.toggled {
@@ -20,10 +22,12 @@
     overflow-y: auto;
     background: menuColor;
     color: menuTextColor;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    /*
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    */
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -49,13 +53,34 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: Ubuntu, sans-serif ;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-    text-decoration: none
+    text-indent: 10px;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 18px
+    text-decoration: none;
 }
+
+ul.insideTheList  
+    list-style-type: none
+    
+
+ul.insideTheList li
+    margin-left: 10px
+    font-weight: normal
+    text-indent: 0px
+    line-height: 20px
+    font-size: 12px
+
+ul.insideTheList li.liAdd
+    line-height: 30px
+    margin-left: 0px
+
+.sidebar-nav input 
+    width: 50%
 
 .sidebar-nav li a {
     display: block;
@@ -74,14 +99,53 @@
     text-decoration: none;
 }
 
+
+.bad:hover
+    background-color: #CF000F 
+
+.btnAdd
+    border-top-left-radius: 5px
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 0px
+    height: 35px
+    width: 35px
+    margin: 0px
+    /*background-color: #428BCA8*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+
+
+
+
+.btnAdd.btnAlone:hover:before
+    content: "Nouvelle Oeuvre"
+
+
+.btnAdd.btnAlone:hover
+    width: 150px
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+
+
+.inputAdd
+    height: 30px
+    width: 150px !important
+
+
 .sidebar-nav > .sidebar-brand {
     height: 65px;
-    font-size: 18px;
+    font-size: 36px;
     line-height: 60px;
 }
 
 .sidebar-nav > .sidebar-brand a {
     color: menuTextColor;
+    font-family: brandFont
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -107,7 +171,7 @@
     }
 
     #page-content-wrapper {
-        padding: 20px;
+        padding: 10px;
     }
 
     #wrapper.toggled #page-content-wrapper {

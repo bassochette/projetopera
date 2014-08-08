@@ -1,10 +1,10 @@
-
+<h3><%-title %></h3>
 <div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
 
     <form method="post" class="form-horizontal" action="/search">
 
         <div class="form-group"> 
-            <input class="input-xl" id="searchString" name="searchString" style="height:30px;" value="<%-prevSearch %>">
+            <input class="input-xl" id="searchString" name="searchString" placeholder="recherche" style="height:30px;" value="">
 
             <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
             
@@ -38,10 +38,18 @@
     <tbody>
 
         <% oeuvres.forEach(function(oeuvre){ %>
-            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'">
+            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'" draggable="true" ondragstart="dragToFolder(event, <%- oeuvre.id %>)" oeuvreid="<%- oeuvre.id %>">
                
                 <td>
-                    <span class="badge"><%- oeuvre.hit %></span>
+                    <%if(oeuvre.verrou){%>
+                        <!--
+                        <img src="/images/glyphicons/glyphicons_203_lock.png" alt="verrouillé">
+                    -->
+                        <div class="glyphicon glyphicon-lock"></div>
+                    <%}%>
+                    <%if(oeuvre.hit){%>
+                        <span class="badge"><%- oeuvre.hit %></span>
+                    <%}%>
                 </td>
 
                 <td><%- oeuvre.oeuvreId %></td>
