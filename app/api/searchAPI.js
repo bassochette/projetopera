@@ -31,12 +31,14 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     SearchAPI.prototype.search= function(req, res) {    
 
         var searchString = req.body.searchString;
-        console.log("req.body :"+JSON.stringify(req.body));
+        //console.log("req.body :"+JSON.stringify(req.body));
         var that= this;
             
         searchDAL.multiTermSearch(searchString, function (oeuvres, hitmap) {
-
-            res.send(oeuvres)
+          
+                res.send(oeuvres)
+          
+            
         });
         
     

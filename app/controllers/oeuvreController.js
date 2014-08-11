@@ -60,7 +60,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     OeuvreController.prototype.index = function(req, res) {
             
         oeuvreDAL.getAll(function (oeuvres) {
-            res.render('oeuvre/list', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
+            res.render('home/index', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
         });
           
 
@@ -175,7 +175,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire);
          
         oeuvreDAL.save(oeuvre, function (data) {
-            res.redirect('/oeuvre/show/'+data.id);
+            res.redirect('/oeuvre/new');
         });
     };
 

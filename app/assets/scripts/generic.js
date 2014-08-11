@@ -104,12 +104,13 @@ $(document).ready(function(){
 		$.ajax({
 			type: "POST",
 			dataType: "json",
-			timeout: 10000,
+			timeout: 30000,
 			data: {searchString: $("#searchString").val()},
 			url: "/searchAPI/search",
 			beforeSend: function(){
-				$("#searchTable").hide().fadeOut();
 				$("#searchResultZone").addClass("spinner spinnerGreen");
+				$("#searchTable").hide().fadeOut();
+				//alert("resultZone");
 			},
 			success: function(results){
 				$("#searchResultZone").toggleClass("spinner spinnerGreen");
