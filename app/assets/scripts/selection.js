@@ -1,3 +1,4 @@
+/*
 var populateSelection = function(callback, loadingCallBack, errorCallback){
 	$.ajax({
 		type: "POST",
@@ -127,3 +128,4 @@ $(document).ready(function(){
 
 
 });
+*/

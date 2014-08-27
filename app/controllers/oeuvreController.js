@@ -5,6 +5,7 @@
 */
 var OeuvreDAL = require('../dal/oeuvreDAL');
 var MembershipFilters = require('../../middleware/membershipFilters');
+var moment = require('moment');
 /**
 * oeuvreController class
 */
@@ -104,26 +105,20 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         
            var oeuvreId = req.params.id;
             oeuvreDAL.get(oeuvreId, function (oeuvre) {
+                //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition).format("DD/MM/YYYY");
+
+                //oeuvre.dateAcquisition = moment(oeuvre.dateAcquisition);
+                //console.log("test moment: "+oeuvre.dateAcquisition);
+                var dateAcquisition = new Date(oeuvre.dateAcquisition);
+                
+
+                console.log("dateAcquisition: "+dateAcquisition);
+                oeuvre.dateAcquisition = dateAcquisition;
+
                 res.render('oeuvre/show', { 'oeuvre': oeuvre });
             });
     };
-    /**
-    * [httpget]
-    * OeuvreController edit action.
-    * @param {req} http request.
-    * @param {res} http response.
-    *
-    * @Deprecated
-    *
-    OeuvreController.prototype.edit = function(req, res) {
-      
-            var oeuvreId = req.params.id;
-             oeuvreDAL.get(oeuvreId, function (oeuvre) {
-                res.render('oeuvre/edit', { 'oeuvre': oeuvre });
-            });
-        
-    };
-    */
+    
     /**
     * [httppost]
     * OeuvreController edit post action.
@@ -134,9 +129,11 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         var oeuvre = req.body.oeuvre;
         var id = req.body.oeuvre.id;
 
-        oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
-        oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire);
+        console.log("dateInscriptionInventaire: "+oeuvre.dateInscriptionInventaire);
+        console.log("dateAcquisition: "+oeuvre.dateAcquisition);
 
+        //oeuvre.dateAcquisition = moment(oeuvre.dateAcquisition).format("X");
+        //oeuvre.dateInscriptionInventaire = moment(oeuvre.dateInscriptionInventaire).format("X");
 
         oeuvreDAL.get(oeuvre.id, function(entity){
             
@@ -160,7 +157,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     * @param {res} http response.
     */
     OeuvreController.prototype.new = function(req, res) {
-        res.render('oeuvre/create');  
+        res.render('oeuvre/show', { oeuvre : {verrou: false}});  
     };
 
     /**
@@ -175,36 +172,10 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         oeuvre.dateInscriptionInventaire = new Date(oeuvre.dateInscriptionInventaire);
          
         oeuvreDAL.save(oeuvre, function (data) {
-            res.redirect('/oeuvre/new');
+            res.redirect('/oeuvre/show/'+data.id);
         });
     };
 
-    /**
-    * [httpget]
-    * OeuvreController delete action.
-    * @param {req} http request.
-    * @param {res} http response.
-    *
-    OeuvreController.prototype.delete = function(req, res) {
-        var oeuvreId = req.params.id;
-        oeuvreDAL.get(oeuvreId, function (oeuvre) {
-            res.render('oeuvre/delete', { 'oeuvre': oeuvre });
-        });
-    };
-    */
-    /**
-    * [httppost]
-    * OeuvreController delete post action.
-    * @param {req} http request.
-    * @param {res} http response.
-    *
-    OeuvreController.prototype.destroy = function(req, res) {
-        // Thomas Bouvos Alias bou-bou est Mort à Pékin le 14 juillet paix à son âme.
-        var oeuvre = req.body.oeuvre;
-        oeuvreDAL.remove(oeuvre.id, function (data) {
-            res.redirect('/oeuvre');
-        });
-    };
-    */
+   
     module.exports = OeuvreController;
 })();

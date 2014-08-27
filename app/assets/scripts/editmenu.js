@@ -1,16 +1,19 @@
+/*
 var showMenuFolderList = function(e){
 	e.preventDefault();
 	$('#menuFolderSelect').fadeIn();
 };
 
+
 $(document).ready(function(){
 
-	var menuSelect = $('#menuFolderSelect');
-
+	//var menuSelect = $('#menuFolderSelect');
+	/*
 	populateSelection(function(folders){
 		folders.forEach(function(folder){
 			menuSelect.append($('<option value="'+folder.id+'">'+folder.nom+'</option>'));
 		});
+
 
 //<input class="inputAdd" id="folderName" name="folderName" placeHolder="Nouveau dossier" hidden="true"/></li>');
 	/*
@@ -26,17 +29,18 @@ $(document).ready(function(){
 								id: "nvDossier",
 								placeHolder: "Nouveau dossier",
 								hidden: true
-							})); */
+							})); 
 
 
-	menuSelect.append(nouveauDossier);
+	//menuSelect.append(nouveauDossier);
 
 	}, function(){
 		//menuSelect.addClass("spinner");
 	},function(){
 		//menuSelect.toggleClass("spinner");
 	});
-
+*/
+/*
 	menuSelect.on('change', function(e){
 		e.preventDefault();
 		//alert(menuSelect.val()+", "+$("#inventaire").attr("oeuvre"));
@@ -62,6 +66,7 @@ $(document).ready(function(){
 		});
 
 		menuSelect.fadeOut();
-	})		
+	})	
+	
 });
-
+*/

@@ -1,10 +1,20 @@
 <div class="row">
-<form method="POST" action="/oeuvre/update" enctype='application/x-www-form-urlencoded'>
+
+<%
+	var formAction = "/oeuvre/create"
+	if(oeuvre.id){
+		formAction = "/oeuvre/update"
+%>
+	
+<%}%>
+
+<form method="POST" action="<%-formAction%>" enctype='application/x-www-form-urlencoded'>
 	<input type="hidden" id="oeuvre[id]" name="oeuvre[id]" value="<%- oeuvre.id %>"></input>
 
 <div class="row">
 	<!-- Menu fiche inventaire --> 
 	<div id="editMenu">
+		<% if(false){%>
 		<select id="menuFolderSelect" class="menuFolderSelect" hidden="true">
 			<option value="" disabled selected>Ajouter au dossier </option>
 		</select>
@@ -12,17 +22,25 @@
 				onclick="showMenuFolderList(event)">
 			<span class="glyphicon glyphicon-folder-open"></span>
 		</button>
+		<%}%>
 		<button type="submit" class="btn btn-info">
-			<span class="glyphicon glyphicon-floppy-save"></span>
+			<span class="glyphicon glyphicon-floppy-disk"></span>
 		</button>
+		<% if(oeuvre.id){ %>
+		<button class="btn btn-success" onClick="event.preventDefault();location.href='/oeuvre/new'">
+			<span class="glyphicon glyphicon-plus"></span>
+		</button>
+		
+		
+		
 		<button class="btn btn-danger" onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
 			<span class="glyphicon glyphicon-lock"></span>
 		</button>
+		<% } %>
 
 
 	</div>
-	
-	<div class="invL col-sm-8 col-sm-offset-1">
+	<div class="invL col-sm-7">
 		<!-- Information fondamentale sticky si possible-->
 		<div class="row">
 			<div class="row">
@@ -58,6 +76,8 @@
 			
 			</div>
 		</div>
+	</div>
+	
 </div>
 
 <!-- Detail de l'inventaire --> 
@@ -115,18 +135,6 @@
 			</div>
 			<div class="col-sm-5  invMisc">
 
-				<%	
-					// sale
-					function formatDate(data){
-						var d = new Date(data);
-						var zp = function (val){
-       						return (val <= 9 ? '0' + val : '' + val);
-   						}
-   						
-   						return  d.getFullYear()+"-"+zp((d.getMonth()+1))+"-"+d.getDate();
-					}
-				%>
-
 				<table class="table propertyList">
 					<tr>
 						<th>
@@ -154,7 +162,7 @@
 								Date d'acquisition:
 							</p>
 
-							<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- oeuvre.dateAcquisition %>" type="date"></input>
+							<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- oeuvre.dateAcquisition %>" class="datePicker"></input>
 						</td>
 					</tr>
 					<tr>
@@ -181,7 +189,7 @@
 							</p>
 
 							
-							<input id="oeuvre[dateInscriptionInventaire]" name="oeuvre[dateInscriptionInventaire]" value="<%- formatDate(oeuvre.dateInscriptionInventaire)%>" type="date"></input>
+							<input id="oeuvre[dateInscriptionInventaire]" name="oeuvre[dateInscriptionInventaire]" value="<%-oeuvre.dateInscriptionInventaire%>" class="datePicker"></input>
 						</td>
 					</tr>
 				</table>

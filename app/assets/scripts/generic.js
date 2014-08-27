@@ -94,10 +94,31 @@ var notif = function(message, type){
 				.alert();
 }
 
+var uploadImage = function(event){
+	event.preventDefault();
+	alert('hop');
+}
+
+// Extend the default picker options for all instances.
+$.extend($.fn.pickadate.defaults, {
+    monthsFull: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+    weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
+    today: 'aujourd\'hui',
+    clear: 'effacer',
+    format: 'yyyy-mm-dd'
+})
 
 $(document).ready(function(){
-
 	
+	$('.datePicker').pickadate({
+		selectMonths: true,
+		selectYears: 200,
+		max: true
+
+	});
+	//DAN anniv 17 septembre
+
+	//$('#imagesUploadForm').on('submit', uploadImage;
 
 	$("#submitSearch").on('click', function(){
 
