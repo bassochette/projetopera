@@ -18,7 +18,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
      * @param  {express} app
      */
     HomeController.prototype.routes = function(app) {
-        app.get("/", filters.authorize, this.index);
+        app.get("/", filters.authorize, this.new);
         app.get("/search", filters.authorize, this.index);
         
     };
@@ -31,7 +31,10 @@ var MembershipFilters = require('../../middleware/membershipFilters');
      */
     HomeController.prototype.index = function(req, res) {
         res.render('home/index');
+        
     };
-
+    HomeController.prototype.new = function(req, res){
+        res.redirect('/oeuvre/new');
+    };
     module.exports = HomeController;
 })();

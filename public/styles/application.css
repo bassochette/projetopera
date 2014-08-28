@@ -88,6 +88,11 @@ ul.insideTheList li.liAdd {
 .sidebar-nav li a:focus {
   text-decoration: none;
 }
+.sidebar-nav li.bad {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
 .bad:hover {
   background-color: #cf000f;
 }
@@ -381,6 +386,33 @@ form.flatForm input {
   color: navbarTextColor;
   margin-bottom: 25px;
   font-family: Satisfy, cursive;
+}
+div#car.row {
+  height: 300px;
+}
+div#carouselContainer {
+  min-height: 100%;
+  max-height: 300px !important;
+  margin-top: 15px;
+  margin-left: 15px;
+  overflow: hidden;
+}
+form#imageUploadForm {
+  background-color: none;
+  margin-left: 40px;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media  {
+  img {
+    width: auto;
+    height: auto;
+  }
+}
+.uploadImage {
+  margin-top: 60px;
 }
 body {
   font-family: Ubuntu, sans-serif;

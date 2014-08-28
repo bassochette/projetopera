@@ -38,7 +38,9 @@
         //this.recolement = this.db.import(modelsPath + 'recolement');
         this.dossierOeuvre = this.db.import(modelsPath + 'dossierOeuvre');
         this.champs = this.db.import(modelsPath + 'champs');
+
         // model CDN pour les fichier joints
+        this.image = this.db.import(modelsPath + 'image');
 
         //gestion des favoris
         this.selectionFolder = this.db.import(modelsPath + 'selectionFolder');
@@ -63,6 +65,7 @@
         // gestion de l'inventaire
         //this.oeuvre.belongsTo(this.museum);
         //this.recolement.belongsTo(this.oeuvre);
+        this.image.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId'});
 
         //gestion dossier oeuvre
         this.champs.hasMany(this.oeuvre, {through: this.dossierOeuvre});

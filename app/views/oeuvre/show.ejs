@@ -43,16 +43,65 @@
 
 </div>
 
-	<div id="inventaire" draggable="true" oeuvre="<%-oeuvre.id%>">
-	
-		
-		<% if(oeuvre.verrou){ %>
-			<%- partial("./show_locked") %>
-		<% } else { %>
-			<%- partial("./show_notlocked") %>
-		<% } %>
-		
+
+
+<div id="inventaire" oeuvre="<%-oeuvre.id%>">
+<% if(oeuvre.id){ %>
+<div class="row" id="car">
+	<div class="col-sm-7" id="carouselContainer" >
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			
+			<ol class="carousel-indicators">
+			</ol>
+
+			<div class="carousel-inner">
+			</div>
+
+			 <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+
+			
+		</div>
 	</div>
+	<div class="col-sm-4 uploadImage">
+		
+		<div id="uploadImage" >
+			<form id="imagesUploadForm" method="POST"  enctype="multipart/form-data" action="/images/upload" >
+				<input type="file" name="imagesUpload"></input>
+				<input type="hidden" value='<%-oeuvre.id%>' name='oeuvreId' id='oeuvreId'></input>
+				<input type="submit" value="Ajouter une image" class="btn"></button>
+			</form>
+		</div>
+
+	<!--
+		<span class="btn btn-success file-input-button">
+			<i class="glyphicon glyphicon-plus"></i>
+			<span>Ajouter une image</span>
+			<input id="fileupload" type="file" name="files[]" mutliple></input>
+		</span>
+		</br></br>
+		<div id="progress" class="progress">
+			<div class="progress-bar progress-bar-success"></div>
+		</div>
+		</br>
+		<div id="file" class="files">
+		</div>
+	</div>
+-->
+</div>
+<% }%>
+	<% if(oeuvre.verrou){ %>
+		<%- partial("./show_locked") %>
+	<% } else { %>
+		<%- partial("./show_notlocked") %>
+	<% } %>
+	
+</div>
+
 	
 
 
