@@ -26,6 +26,7 @@ $(document).ready(function(){
 						class: "item active"
 						}).append($("<img></img>",{
 							src: "/images/"+image.oeuvreId+"/"+image.hash,
+							class: "img-responsive center-block",
 							alt: image.nom
 						})).append($("<div></div>",{
 							class: "carousel-caption active"
@@ -36,6 +37,7 @@ $(document).ready(function(){
 						class: "item"
 						}).append($("<img></img>",{
 							src: "/images/"+image.oeuvreId+"/"+image.hash,
+							class: 'img-responsive center-block',
 							alt: image.nom
 						})).append($("<div></div>",{
 							class: "carousel-caption"

@@ -39,7 +39,7 @@ var  util = require('util');
         console.log("[iamgesAPI][image] requested "+oeuvreId+"/"+digest);
 
         imagesDAL.getBinaryByDigest(oeuvreId, digest, function(info, binary){
-            //res.writeHead(200, { contentType: info.type});
+            res.writeHead(200, { contentType: info.type});
             res.end(binary);
         });
 
