@@ -91,7 +91,7 @@ ul.insideTheList li.liAdd {
 .sidebar-nav li.bad {
   position: fixed;
   bottom: 0px;
-  width: 100%;
+  width: 250px;
 }
 .bad:hover {
   background-color: #cf000f;

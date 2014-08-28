@@ -25,21 +25,22 @@ var insertResults = function(results, title){
 	results.forEach(function(result){
 		
 		//console.log("result: "+JSON.stringify(result));
+		
 		var row = $("<tr></tr>",{
-			draggable: "true",
-			ondragstart: "dragToFolder(event, "+result.id+")",
+			//draggable: "true",
+			//ondragstart: "dragToFolder(event, "+result.id+")",
 			oeuvreId: result.id
 
 		});
-
 		
+	/*
 		var folderSelect = $("<td></td>",{
 			class: 'addToFolder',
 			onclick: 'showFolderList(event, '+result.id+')'
 		}).append($('<span></span>', {
 			class: 'glyphicon glyphicon-folder-open'
 		}));
-
+	*/
 		row.addClass("darkenOnHover");
 		if(result.verrou){
 			row.append("<td><span class='glyphicon glyphicon-lock'></span></td>");
@@ -54,14 +55,15 @@ var insertResults = function(results, title){
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.techniques+"</td>");
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.datation+"</td>");
 		//row.append("<td class='addToFolder' data-toggle='modal' data-target='.folderSelectModal' ><span class='glyphicon glyphicon-folder-open'></span></td>");
-		row.append(folderSelect);
+		//row.append(folderSelect);
 
 		tableBody.append(row).fadeIn();
 	});
+	
 	resultZone.fadeIn();
 	$('#inventaire').fadeOut();
 	$("#searchTable").fadeIn();
-
+	$("table").dataTable();
 
 };
 
@@ -136,6 +138,7 @@ $(document).ready(function(){
 			success: function(results){
 				$("#searchResultZone").toggleClass("spinner spinnerGreen");
 				insertResults(results, 'résultat(s)');
+
 			},
 			error: function(err){
 				$("#searchResultZone").toggleClass("spinner spinnerGreen");
@@ -143,6 +146,8 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+
 });
 
 

@@ -23,6 +23,7 @@
     "toastr": "~2.0.1",
     "pickadate": "3.5.3",
     "moment": "~2.8.1",
-    "jquery-file-upload": "~9.7.0"
+    "jquery-file-upload": "~9.7.0",
+    "DataTables": "~1.10.2"
   }
 }

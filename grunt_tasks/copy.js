@@ -15,7 +15,9 @@ module.exports = {
 			{src: '<%= config.bower %>/jquery-file-upload/css/jquery.fileupload.css', dest: '<%= config.public%>/styles/jquery.fileupload.css'},
 			{src: '<%= config.bower %>/jquery-file-upload/js/vendor/jquery.ui.widget.js', dest: '<%=config.public %>/scripts/vendors/jquery.ui.widget.js'},
 			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.iframe-transport.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.iframe-transport.js'},
-			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.fileupload.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.fileupload.js'}
+			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.fileupload.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.fileupload.js'},
+			{src: '<%= config.bower %>/DataTables/media/js/jquery.dataTables.js', dest: '<%= config.public %>/scripts/jquery.dataTables.js'},
+			{src: '<%= config.bower %>/DataTables/media/css/jquery.dataTables.css', dest: '<%= config.public %>/styles/jquery.dataTables.css'}
 
 		]
 	},
@@ -45,7 +47,8 @@ module.exports = {
 		files:[
 			// assets images
 	  		{expand: true, cwd: '<%= config.assets %>/images/', src: ['**'], dest: '<%= config.public %>/images/'},
-	  		{expand: true, cwd: '<%= config.bower %>/img/', src: ['**'], dest: '<%= config.public %>/images/'}
+	  		{expand: true, cwd: '<%= config.bower %>/img/', src: ['**'], dest: '<%= config.public %>/images/'},
+	  		{expand: true, cwd: '<%= config.bower %>/DataTables/media/images/', src: ['**'], dest:'<%=config.public %>/images/'}
 		]
 	}
 }
