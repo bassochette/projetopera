@@ -43,8 +43,8 @@ var insertResults = function(results, title){
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.designation+"</td>");
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.auteur+"</td>");
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.materiaux+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.updatedAt+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.createdAt+"</td>");
+		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.techniques+"</td>");
+		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.datation+"</td>");
 
 		tableBody.append(row).fadeIn();
 	});
