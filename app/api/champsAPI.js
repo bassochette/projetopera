@@ -2,7 +2,7 @@
 	Module dependencies
 *******/
 var MembershipFilters = require('../../middleware/membershipFilters');
-var ChampsDAL = require('../dal/ChampsDAL');
+var ChampsDAL = require('../dal/champsDAL');
 
 
 /****
