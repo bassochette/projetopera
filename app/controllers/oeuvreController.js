@@ -60,7 +60,7 @@ var moment = require('moment');
     */
     OeuvreController.prototype.index = function(req, res) {
             
-        oeuvreDAL.getAll(function (oeuvres) {
+        oeuvreDAL.getRecentlyUpdated(20, function (oeuvres) {
             res.render('home/index', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
         });
           

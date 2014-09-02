@@ -24,6 +24,7 @@ var ImagesDAL = require('../dal/imagesDAL');
         var image = req.files.imagesUpload; 
         image.oeuvreId = req.body.oeuvreId;
 
+        // Faire un putain de test!
         imagesDAL.saveImage(image, function(img){
             if(img.message){
                console.log('[imagesAPI][svg]'+img.message); 

@@ -2,9 +2,8 @@ module.exports = function (db, DataTypes) {
 
 	var dossierOeuvre = db.define('dossierOeuvre', {
 		valeur: DataTypes.TEXT,
-		type: DataTypes.ENUM('info', 'date', 'lien', 'description'),
-		oeuvreId : DataTypes.INTEGER,
-		champId : DataTypes.INTEGER
+		oeuvreId : { type: DataTypes.INTEGER, allowNull: false, unique: 'dossierOeuvreUnique'},
+		champsId : { type: DataTypes.INTEGER, allowNull: false, unique: 'dossierOeuvreUnique'}
 		
 	});
 	return dossierOeuvre;

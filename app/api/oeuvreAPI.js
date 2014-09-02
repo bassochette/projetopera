@@ -24,7 +24,8 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     OeuvreAPI.prototype.routes = function(app) {
-        app.get('/oeuvreAPI', filters.authorize,  this.oeuvres);     
+        app.get('/oeuvreAPI', filters.authorize,  this.oeuvres);  
+        app.get('/oeuvreAPI/recentlyUpdated', filters.authorize, this.recentlyUpdated);   
     };
 
 
@@ -32,11 +33,14 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
         oeuvreDAL.getAll(function(data){
             res.send(data);
-        });
-    
-          
+        }); 
     }; 
 
+    OeuvreAPI.prototype.recentlyUpdated = function(req, res){
+        oeuvreDAL.getRecentlyUpdated(20, function(data){
+            res.send(data);
+        });
+    }
     
 
     module.exports = OeuvreAPI;

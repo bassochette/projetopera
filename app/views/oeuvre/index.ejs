@@ -1,15 +1,40 @@
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $.ajax({
+                type: 'get',
+                dataType: 'json',
+                timeout: 10000,
+                url: '/oeuvreAPI/recentlyUpdated',
+                beforeSend: function(){
+                    $("#searchResultZone").addClass("spinner spinnerGreen");
+                    $("#searchTable").hide().fadeOut();
+                },
+                success: function(results){
+                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
+                    insertResults(results, 'résultat(s)');
+                },
+                error: function(err){
+                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
+                    console.log("error: "+err.message);
+                }
+
+    });
+});
+
+</script>
+
 <div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
 
-    <form method="post" class="form-horizontal" action="/search">
+    <form method="post" class="form-horizontal" action="/search" id='searchForm'>
 
         <div class="form-group"> 
-            <input class="input-xl" id="searchString" name="searchString" style="height:30px;" value="">
+            <input class="input-xl" id="searchString" name="searchString" style="height:40px;" value="">
 
-            <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
+           
             
         </div>
-
+        <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
     </form>
 
 
@@ -33,37 +58,11 @@
             <td>Technique(s)</td>
             
             <td>Datation</td>
+
         </tr>
     </thead>
     <tbody>
 
-        <% oeuvres.forEach(function(oeuvre){ %>
-            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=oeuvre.id%>'" draggable="true" ondragstart="dragToFolder(event, <%- oeuvre.id %>)" oeuvreid="<%- oeuvre.id %>">
-               
-                <td>
-                    <%if(oeuvre.verrou){%>
-                        <!--
-                        <img src="/images/glyphicons/glyphicons_203_lock.png" alt="verrouillé">
-                    -->
-                        <div class="glyphicon glyphicon-lock"></div>
-                    <%}%>
-                </td>
-
-                <td><%- oeuvre.oeuvreId %></td>
-
-                <td><%- oeuvre.designation %></td>
-                
-                <td><%- oeuvre.auteur %></td>
-                
-                <td><%- oeuvre.materiaux %></td>
-                
-                <td><%- oeuvre.techniques %></td>
-                
-                <td><%- oeuvre.datation %></td>
-                
-                
-            </tr>
-        <% }); %>
     </tbody>
 </table>
 

@@ -40,6 +40,13 @@ var DbContext = require('../../db/dbContext');
             callback(oeuvres);
         });
     };
+
+    oeuvreDAL.prototype.getRecentlyUpdated = function(n, callback){
+        dbContext.oeuvre.findAll({order: 'updatedAt DESC', limit: n}).success(function(oeuvres){
+            callback(oeuvres);
+        }); 
+    }
+
     oeuvreDAL.prototype.getParAuteur = function(callback) {
         dbContext.oeuvre.findAll({order: 'auteur ASC'}).success(function(oeuvres) {
             callback(oeuvres);

@@ -54,7 +54,7 @@ $(document).ready(function(){
 		} 
 	});
 }
-	var url = "/imagesAPI/upload";
+/*	var url = "/imagesAPI/upload";
 	$('#fileupload').fileupload({
 		url: url,
 		dataType: 'json',
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 	}).prop('disabled', !$.support.fileInput)
 	.parent().addClass($.support.fileInput ? undefined : 'disabled');
-
+*/
 	//console.log(JSON.stringify($.support.fileInput));
 	/*
 	$("#imagesUploadForm").submit(function(event){

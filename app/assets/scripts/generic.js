@@ -17,7 +17,7 @@ var insertResults = function(results, title){
 	var resultZone = $(".searchResultZone");
 
 	
-	$("#pageTitle").text(title+" "+results.length).hide().fadeIn();
+	$("#pageTitle").text(results.length+" "+title).hide().fadeIn();
 
 	var tableBody = $("#resultTableBody");
 	tableBody.empty();
@@ -27,20 +27,11 @@ var insertResults = function(results, title){
 		//console.log("result: "+JSON.stringify(result));
 		
 		var row = $("<tr></tr>",{
-			//draggable: "true",
-			//ondragstart: "dragToFolder(event, "+result.id+")",
 			oeuvreId: result.id
 
 		});
 		
-	/*
-		var folderSelect = $("<td></td>",{
-			class: 'addToFolder',
-			onclick: 'showFolderList(event, '+result.id+')'
-		}).append($('<span></span>', {
-			class: 'glyphicon glyphicon-folder-open'
-		}));
-	*/
+	
 		row.addClass("darkenOnHover");
 		if(result.verrou){
 			row.append("<td><span class='glyphicon glyphicon-lock'></span></td>");
@@ -52,10 +43,8 @@ var insertResults = function(results, title){
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.designation+"</td>");
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.auteur+"</td>");
 		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.materiaux+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.techniques+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.datation+"</td>");
-		//row.append("<td class='addToFolder' data-toggle='modal' data-target='.folderSelectModal' ><span class='glyphicon glyphicon-folder-open'></span></td>");
-		//row.append(folderSelect);
+		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.updatedAt+"</td>");
+		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.createdAt+"</td>");
 
 		tableBody.append(row).fadeIn();
 	});
@@ -63,7 +52,37 @@ var insertResults = function(results, title){
 	resultZone.fadeIn();
 	$('#inventaire').fadeOut();
 	$("#searchTable").fadeIn();
-	$("table").dataTable();
+
+	//@dataTable
+	/*
+	$("table").dataTable({
+	    searching: false,
+	    ordering:  true,
+	    language: {
+	    	"emptyTable":     "Pas de données disponibles.",
+    	    "info":           "Affichage _START_ to _END_ of _TOTAL_ entries",
+    	    "infoEmpty":      "Affichage 0 sur 0 of 0 entries",
+    	    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    	    "infoPostFix":    "",
+    	    "thousands":      "",
+    	    "decimal": 		 ",",
+    	    "lengthMenu":     "Afficher _MENU_ résultat",
+    	    "loadingRecords": "Chargement...",
+    	    "processing":     "Traitement...",
+    	    "search":         "Recherche:",
+    	    "zeroRecords":    "Aucun résultat",
+    	    "paginate": {
+    	        "first":      "Premier",
+    	        "last":       "Dernier",
+    	        "next":       "Suivant",
+    	        "previous":   "Précédent"
+    	    },
+    	    "aria": {
+    	        "sortAscending":  ": activate to sort column ascending",
+    	        "sortDescending": ": activate to sort column descending"
+    	    }
+    }
+} );*/
 
 };
 
@@ -98,7 +117,7 @@ var notif = function(message, type){
 
 var uploadImage = function(event){
 	event.preventDefault();
-	alert('hop');
+	//alert('hop');
 }
 
 // Extend the default picker options for all instances.
@@ -107,8 +126,12 @@ $.extend($.fn.pickadate.defaults, {
     weekdaysShort: ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'],
     today: 'aujourd\'hui',
     clear: 'effacer',
-    format: 'yyyy-mm-dd'
+    close: 'fermer',
+    format: 'dd-mm-yyyy',
+    formatSubmit: 'yyyy-mm-dd'
 })
+
+
 
 $(document).ready(function(){
 	
@@ -118,9 +141,25 @@ $(document).ready(function(){
 		max: true
 
 	});
+
+	
+
+	$('#inventaireTabLink').click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+		//alert('click');
+	});
+	$('#dossierOeuvreTabLink').click(function(e){
+		e.preventDefault();
+		$(this).tab('show');
+		//alert(2);
+	});
+
 	//DAN anniv 17 septembre
 
 	//$('#imagesUploadForm').on('submit', uploadImage;
+	
+	
 
 	$("#submitSearch").on('click', function(){
 

@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 	// Default task(s).
 	grunt.registerTask('default', ['build']);
 
-	grunt.registerTask('build', ['clean', 'copy:vendors', 'copy:scripts', 'copy:images', 'stylus:dev']);
+	grunt.registerTask('build', ['clean', 'copy:vendors', 'copy:scripts', 'copy:images', 'copy:fonts','stylus:dev']);
 	grunt.registerTask('build:release', ['clean', 'copy:release', 'stylus:release']);
 
 	grunt.registerTask('debug', ['build', 'concurrent:debug']);

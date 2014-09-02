@@ -79,7 +79,7 @@ module.exports = function(){
 
 		for(var i = 0; i < nbWords; i++){
 			
-			obs = obs+" "+dsprim[keysprim[random(keysprim.length)]];
+			obs = obs+" "+dsprim[keysprim[random(keysprim.length+i)-i]];
 
 		}
 		return obs;

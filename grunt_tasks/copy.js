@@ -50,5 +50,10 @@ module.exports = {
 	  		{expand: true, cwd: '<%= config.bower %>/img/', src: ['**'], dest: '<%= config.public %>/images/'},
 	  		{expand: true, cwd: '<%= config.bower %>/DataTables/media/images/', src: ['**'], dest:'<%=config.public %>/images/'}
 		]
+	},
+	fonts: {
+		files:[
+			{expand: true, cwd: '<%=config.assets %>/fonts/', src: ['**'], dest: '<%= config.public %>/fonts/'}
+		]
 	}
 }

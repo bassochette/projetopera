@@ -1,108 +1,96 @@
 
 
-<div class="searchResultZone" hidden="true">
-<div class="col-lg-10 col-lg-offset-1"> 
-
-	<p id="pageTitle"></p>
-	<!--
-	<form method="post" action="/search">
-		<input  class="input-xl" id="searchString" name="searchString"/>
-		<button class="btn btn-info" type="submit" >Rechercher</button>
-
-	</form>
--->
-	<input  class="input-xl" id="searchString" name="searchString" placeholder="Que cherchez vous aujourd'hui?"/>
-	<button class="btn btn-info" id="submitSearch" type="submit">Rechercher</button>
-
-</div>
-
-<table class="table table-striped" id="searchTable" hidden="true" > 
-    <thead>
-        <tr>
-            
-            <td></td>
-            <td>Numéro d'inventaire</td>
-
-            <td>Désignation</td>
-            
-            <td>Auteur(s)</td>
-            
-            <td>Matériaux</td>
-            
-            <td>Technique(s)</td>
-            
-            <td>Datation</td>
-            <td></td>
-        </tr>
-    </thead>
-    <tbody id="resultTableBody">
-
-        
-    </tbody>
-</table>
-
-</div>
-
 
 
 <div id="inventaire" oeuvre="<%-oeuvre.id%>">
-<% if(oeuvre.id){ %>
-<div class="row" id="car">
-	<div class="col-sm-7" id="carouselContainer" >
-		<div id="carousel" class="carousel slide" data-ride="carousel">
+
+	<!-- Navbar -->
+	<ul class="nav nav-tabs" role="tablist" id="myTabBar">
+		<li id="inventaireTab" class="active">
+			<a href="#inventaireTabContent" role="tab" data-toggle="tab" id="inventaireTabLink">Inventaire</a>
+		</li>
+		<% if(oeuvre.id){ %>
+		<li id="dossierTab" >
+			<a href="#dossierOeuvreTabContent" role="tab" data-toggle="tab" id='dossierOeuvreTabLink'>Dossier</a>
+		</li>
+
+		<!--
+		<li id="fichierTab">
+			<a href="#" role="tab" data-toggle="tab">Fichiers</a>
+		</li>
+		-->
+		<%}%>
+	</ul>
+
+
+	
+
+	<div class="tab-content">
+
+		<!-- Tab content onglet 1 -->
+		<div class="tab-pane fade in active" id="inventaireTabContent">
 			
-			<ol class="carousel-indicators">
-			</ol>
+			<!-- carousel + upload form -->
+			<% if(oeuvre.id) { %>
+				<div class="col-sm-7" id="carouselContainer" >
+					<div id="carousel" class="carousel slide" data-ride="carousel">
+						
+						<ol class="carousel-indicators">
+						</ol>
 
-			<div class="carousel-inner">
-			</div>
+						<div class="carousel-inner">
+						</div>
 
-			 <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
-			  </a>
-			  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
-			  </a>
+						 <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+						    <span class="glyphicon glyphicon-chevron-left"></span>
+						  </a>
+						  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+						    <span class="glyphicon glyphicon-chevron-right"></span>
+						  </a>
 
+						
+					</div>
+				</div>
+				<div class="col-sm-4 uploadImage">
+					
+					<div id="uploadImage" >
+						<form id="imagesUploadForm" method="POST"  enctype="multipart/form-data" action="/images/upload" >
+							<input type="file" name="imagesUpload" accept='image/*'></input>
+							<input type="hidden" value='<%-oeuvre.id%>' name='oeuvreId' id='oeuvreId'></input>
+							<input type="submit" value="Ajouter une image" class="btn"></button>
+						</form>
+					</div>
+				</div>
+			
+			<% }%>
+
+			<!-- body inventaire -->
+			<br>
+			
+			
+			<% if(oeuvre.verrou){ %>
+				<%- partial("./show_locked") %>
+			<% } else { %>
+				<%- partial("./show_notlocked") %>
+			<% } %>
+			
+
+		</div>
+
+		<!-- tab content onglet 2 --> 
+		<div class="tab-pane fade" id="dossierOeuvreTabContent">
+			<!-- dossier oeuvres -->
+			
+			<%- partial("./show_dossierOeuvre") %>
 			
 		</div>
 	</div>
-	<div class="col-sm-4 uploadImage">
-		
-		<div id="uploadImage" >
-			<form id="imagesUploadForm" method="POST"  enctype="multipart/form-data" action="/images/upload" >
-				<input type="file" name="imagesUpload"></input>
-				<input type="hidden" value='<%-oeuvre.id%>' name='oeuvreId' id='oeuvreId'></input>
-				<input type="submit" value="Ajouter une image" class="btn"></button>
-			</form>
-		</div>
-
-	<!--
-		<span class="btn btn-success file-input-button">
-			<i class="glyphicon glyphicon-plus"></i>
-			<span>Ajouter une image</span>
-			<input id="fileupload" type="file" name="files[]" mutliple></input>
-		</span>
-		</br></br>
-		<div id="progress" class="progress">
-			<div class="progress-bar progress-bar-success"></div>
-		</div>
-		</br>
-		<div id="file" class="files">
-		</div>
-	</div>
--->
-</div>
-<% }%>
-	<% if(oeuvre.verrou){ %>
-		<%- partial("./show_locked") %>
-	<% } else { %>
-		<%- partial("./show_notlocked") %>
-	<% } %>
 	
 </div>
 
-	
+
+
+
 
 
 

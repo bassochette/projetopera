@@ -68,8 +68,10 @@
         this.image.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId'});
 
         //gestion dossier oeuvre
-        this.champs.hasMany(this.oeuvre, {through: this.dossierOeuvre});
-        this.oeuvre.hasMany(this.champs, {through: this.dossierOeuvre});
+        this.oeuvre.hasMany(this.dossierOeuvre, {foreignKey: 'oeuvreId'});
+        this.dossierOeuvre.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId'})
+        this.champs.hasMany(this.dossierOeuvre, {foreignKey: 'champsId'});
+        this.dossierOeuvre.belongsTo(this.champs, {foreignKey: 'champsId'});
 
         //gestion favoris aka selection
         this.selectionFolder.belongsTo(this.user, {foreignKey: 'uid'});

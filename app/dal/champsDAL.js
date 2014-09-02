@@ -25,19 +25,21 @@ var DbContext = require('../../db/dbContext');
      * @param  {Integer}   champsId
      * @param  {Function} callback
      */
-    champsDAL.prototype.get = function(champsId, callback) {
+    champsDAL.prototype.get = function(champsId, next) {
         dbContext.champs.find(champsId).success(function(champs) {
-            callback(champs);
+            next(champs);
+        }).error(function(err){
+            next({message: err});
         });
     };
 
-    /**
-     * get all champs
-     * @param  {Function} callback
-     */
-    champsDAL.prototype.getAll = function(callback) {
-        dbContext.champs.findAll({order: 'id DESC'}).success(function(champss) {
-            callback(champss);
+    champsDAL.prototype.getAll = function(next){
+        console.log('[champsDAL][getAll] call');
+        dbContext.champs.findAll().success(function(champs){
+            console.log('[champsDAL][getAll] success');
+            next(champs);
+        }).error(function(err){
+            next({message: err});
         });
     };
 

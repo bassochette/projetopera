@@ -132,7 +132,7 @@ var util = require('util');
     imagesDAL.prototype.saveImage = function(imageSrc, callback){
 
         //sale
-        var uploadDir = path.normalize('./upload/images');
+        var uploadDir = path.normalize('upload/images');
         //var that = this;
         // créer un objet images avec les info sur le fichier
         //sauvegardé le fichier
@@ -150,15 +150,27 @@ var util = require('util');
         
         checkUnique(image.tmpPath, function(check, digest, err){
             if(err){
-                callback(err);
+                fs.unlink(image.tmpPath, function(errors){
+                    callback([err, errors]);
+                });
+                
             } else if(check) {
                 image.hash = digest;
                 image.path = path.normalize(image.basePath+'/'+image.oeuvreId+'/'+digest);
+               
                 copyToFolder(image, function(returnImg){
-                    callback(returnImg);
+                    fs.unlink(image.tmpPath, function(err){
+                        if(err){
+                            console.log(JSON.stringify(err));
+                        }
+                        callback(returnImg)
+                    });
                 });
             } else {
-                callback({message : { errno: 19000, code: 'DOUBLONFICHIER'}});
+                fs.unlink(image.tmpPath, function(err){
+                    callback({message : { errno: 19000, code: 'DOUBLONFICHIER'}});
+                });
+                
             }
         });
 

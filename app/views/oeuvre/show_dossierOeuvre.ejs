@@ -1,1 +1,40 @@
-<p class="well">Dossier d'oeuvre</p>
+
+
+
+<div id="controlDossierOeuvre" class="col-sm-12">
+
+	<div class="col-sm-6 ">
+		<h4>Ajouter un champs au dossier</h4>
+		<form id="ajoutChamps" class="formDossierOeuvre flat">
+			<select class="ajoutDossier flat" id='ajoutChampsSelect'>
+				
+				
+			</select>
+			<input placeholder='valeur' name='valeur' id='ajoutChampsValeur'></input>
+			<input id="ajoutChampsOeuvreId" name="oeuvreId" hidden="true" value="<%-oeuvre.id %>">
+			<input type="submit" class="ajoutDossierSubmit btn-info" value="ajouter">
+		</form>
+
+	</div>
+
+	<div class="col-sm-6 ">
+		<h4>Créer un champs</h4>
+		<form class="flat" id="creerChamps">
+
+			<input placeholder='nom' id='creerChampsNom' name='nom'></input>
+			<select class="flat" id='creerChampsType' name='type'>
+				<option disabled='true' selected='true'>Type</option>
+				<option value='info'>information</option>
+				<option value='description'>description</option>
+				<option value='date'>date</option>
+				<option value='lien' disabled='true'>lien</option>
+				<option value='fichier' disabled='true'>fichier</option>
+			</select>
+			<input type='submit' class='btn-info' value='créer'></input>
+		</form>
+	</div>
+<div>
+
+<div id="dossierOeuvre" class="col-sm-12">
+
+</div>

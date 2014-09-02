@@ -32,10 +32,11 @@
 		</button>
 		
 		
-		
+		<%if(req.user.isAdmin && !oeuvre.verrou){%>
 		<button class="btn btn-danger" onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
 			<span class="glyphicon glyphicon-lock"></span>
 		</button>
+		<%}%>
 		<% } %>
 
 
