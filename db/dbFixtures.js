@@ -29,7 +29,7 @@ module.exports = function(){
 
 	console.log("... running fixtures ...");
 
-	var nbLigne = 100;
+	var nbLigne = 1000;
 	var	baseId = "GEN";
 
 

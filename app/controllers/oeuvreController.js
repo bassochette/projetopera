@@ -95,6 +95,10 @@ var moment = require('moment');
 
     }
 
+    OeuvreController.prototype.delete = function(req, res){
+        
+    }
+
     /**
     * [httpget]
     * OeuvreController details action.
@@ -105,15 +109,9 @@ var moment = require('moment');
         
            var oeuvreId = req.params.id;
             oeuvreDAL.get(oeuvreId, function (oeuvre) {
-                //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition).format("DD/MM/YYYY");
-
-                //oeuvre.dateAcquisition = moment(oeuvre.dateAcquisition);
-                //console.log("test moment: "+oeuvre.dateAcquisition);
-                var dateAcquisition = new Date(oeuvre.dateAcquisition);
                 
+                //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
 
-                console.log("dateAcquisition: "+dateAcquisition);
-                oeuvre.dateAcquisition = dateAcquisition;
 
                 res.render('oeuvre/show', { 'oeuvre': oeuvre });
             });
@@ -129,8 +127,9 @@ var moment = require('moment');
         var oeuvre = req.body.oeuvre;
         var id = req.body.oeuvre.id;
 
-        console.log("dateInscriptionInventaire: "+oeuvre.dateInscriptionInventaire);
-        console.log("dateAcquisition: "+oeuvre.dateAcquisition);
+        //console.log("dateInscriptionInventaire: "+oeuvre.dateInscriptionInventaire);
+        //console.log("dateAcquisition: "+oeuvre.dateAcquisition);
+
 
         //oeuvre.dateAcquisition = moment(oeuvre.dateAcquisition).format("X");
         //oeuvre.dateInscriptionInventaire = moment(oeuvre.dateInscriptionInventaire).format("X");
