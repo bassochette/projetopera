@@ -20,13 +20,14 @@ var insertResults = function(results, title){
 	$("#pageTitle").text(results.length+" "+title).hide().fadeIn();
 
 	var tableBody = $("#resultTableBody");
-	tableBody.empty();
+	
 
-	results.forEach(function(result){
+	results.forEach(function(result, idx){
 		
-		//console.log("result: "+JSON.stringify(result));
+
+		idx === 0 ? console.log("result "+idx+": "+JSON.stringify(result.datation)) : null;
 		
-		var row = $("<tr></tr>",{
+		var row = $("<tr onclick=\"location.href='/oeuvre/show/"+result.id+"'\"></tr>",{
 			oeuvreId: result.id
 
 		});
@@ -34,19 +35,20 @@ var insertResults = function(results, title){
 	
 		row.addClass("darkenOnHover");
 		if(result.verrou){
-			row.append("<td><span class='glyphicon glyphicon-lock'></span></td>");
+			row.append($("<td><span class='glyphicon glyphicon-lock'></span></td>"));
 		} else {
-			row.append("<td></td>");	
+			row.append($("<td class='yeh'></td>"));	
 		}
 
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.oeuvreId+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.designation+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.auteur+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.materiaux+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.techniques+"</td>");
-		row.append("<td onclick=\"location.href='/oeuvre/show/"+result.id+"'\">"+result.datation+"</td>");
+		row.append($("<td >"+result.oeuvreId+"</td>"));
+		row.append($("<td >"+result.designation+"</td>"));
+		row.append($("<td >"+result.auteur+"</td>"));
+		row.append($("<td >"+result.materiaux+"</td>"));
+		row.append($("<td >"+result.techniques+"</td>"));
+		row.append($("<td >"+result.datation+"</td>"));
 
-		tableBody.append(row).fadeIn();
+
+		tableBody.append(row);
 	});
 	
 	resultZone.fadeIn();
@@ -54,35 +56,36 @@ var insertResults = function(results, title){
 	$("#searchTable").fadeIn();
 
 	//@dataTable
-	/*
+
 	$("table").dataTable({
 	    searching: false,
 	    ordering:  true,
+	    order: [1, 'desc'],
+	    paging: false,
+	    columnDefs : [{searchable: false},{},{},{},{},{},{},{ visible: false}],
 	    language: {
-	    	"emptyTable":     "Pas de données disponibles.",
-    	    "info":           "Affichage _START_ to _END_ of _TOTAL_ entries",
-    	    "infoEmpty":      "Affichage 0 sur 0 of 0 entries",
-    	    "infoFiltered":   "(filtered from _MAX_ total entries)",
-    	    "infoPostFix":    "",
-    	    "thousands":      "",
-    	    "decimal": 		 ",",
-    	    "lengthMenu":     "Afficher _MENU_ résultat",
-    	    "loadingRecords": "Chargement...",
-    	    "processing":     "Traitement...",
-    	    "search":         "Recherche:",
-    	    "zeroRecords":    "Aucun résultat",
-    	    "paginate": {
-    	        "first":      "Premier",
-    	        "last":       "Dernier",
-    	        "next":       "Suivant",
-    	        "previous":   "Précédent"
-    	    },
-    	    "aria": {
-    	        "sortAscending":  ": activate to sort column ascending",
-    	        "sortDescending": ": activate to sort column descending"
-    	    }
-    }
-} );*/
+		    "sProcessing":     "Traitement en cours...",
+		    "sSearch":         "Rechercher&nbsp;:",
+		    "sLengthMenu":     "Afficher _MENU_ &eacute;l&eacute;ments",
+		    "sInfo":           "Affichage de l'&eacute;lement _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+		    "sInfoEmpty":      "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+		    "sInfoFiltered":   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+		    "sInfoPostFix":    "",
+		    "sLoadingRecords": "Chargement en cours...",
+		    "sZeroRecords":    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+		    "sEmptyTable":     "Aucune donnée disponible dans le tableau",
+		    "oPaginate": {
+		        "sFirst":      "Premier",
+		        "sPrevious":   "Pr&eacute;c&eacute;dent",
+		        "sNext":       "Suivant",
+		        "sLast":       "Dernier"
+		    },
+		    "oAria": {
+		        "sSortAscending":  ": activer pour trier la colonne par ordre croissant",
+		        "sSortDescending": ": activer pour trier la colonne par ordre décroissant"
+		    }
+		}
+	});
 
 };
 

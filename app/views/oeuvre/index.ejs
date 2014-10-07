@@ -1,4 +1,22 @@
 
+
+<div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
+
+    <form method="post" class="form-horizontal" action="/search" id='searchForm'>
+
+        <div class="form-group"> 
+            <input class="input-xl" id="searchString" name="searchString" style="height:40px;" value="">
+
+           
+            
+        </div>
+        <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
+    </form>
+
+
+
+</div>
+
 <script type="text/javascript">
 $(document).ready(function(){
     $.ajax({
@@ -24,29 +42,12 @@ $(document).ready(function(){
 
 </script>
 
-<div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
-
-    <form method="post" class="form-horizontal" action="/search" id='searchForm'>
-
-        <div class="form-group"> 
-            <input class="input-xl" id="searchString" name="searchString" style="height:40px;" value="">
-
-           
-            
-        </div>
-        <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
-    </form>
-
-
-
-</div>
-
-
 <table class="table table-striped" id="table">
     <thead>
         <tr>
             
-            <td></td>
+            <td>V</td>
+            
             <td>Numéro d'inventaire</td>
 
             <td>Désignation</td>

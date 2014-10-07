@@ -13,7 +13,7 @@ module.exports = function (db, DataTypes) {
 			
 				avisScientifique: DataTypes.TEXT,
 			
-				prix: DataTypes.FLOAT,
+				prix: DataTypes.STRING,
 			
 				dateInscriptionInventaire: DataTypes.DATE,
 			
