@@ -41,7 +41,7 @@ var DbContext = require('../../db/dbContext');
         });
     };
 
-    oeuvreDAL.prototype.getRecentlyUpdated = function(n, callback){
+    oeuvreDAL.prototype.getRecent = function(n, callback){
         dbContext.oeuvre.findAll({order: 'updatedAt DESC', limit: n}).success(function(oeuvres){
             callback(oeuvres);
         }); 
@@ -97,19 +97,19 @@ var DbContext = require('../../db/dbContext');
      */
     oeuvreDAL.prototype.remove = function(oeuvreId, callback) {   
         dbContext.oeuvre.find(oeuvreId).success(function(oeuvre) {
-			oeuvre.destroy().success(function() {
-				callback();
+			oeuvre.destroy().success(function(data) {
+				callback(data);
 			});
         })
     };
 
     
-    oeuvreDAL.prototype.verrouillage = function(oeuvreId, callback){
+    oeuvreDAL.prototype.lock = function(oeuvreId, callback){
         dbContext.oeuvre.find(oeuvreId).success(function(oeuvre){
             //oeuvre.
             oeuvre.set("verrou", true);
             oeuvre.save();
-            callback(oeuvre.id);
+            callback(oeuvre);
         });
     }
     

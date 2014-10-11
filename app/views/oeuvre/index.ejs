@@ -1,69 +1,38 @@
+<div ng-app="oeuvre" ng-init="id=<%-id%>">
+<!--- MENU gestion des action sur l'oeuvre-->
+	<div id="editMenu" ng-controller="oeuvreMenu as menu">
 
+		<button type="submit" class="btn btn-info" ng-hide="menu.O.verrou">
+			<span class="glyphicon glyphicon-floppy-disk"></span>
+		</button>
 
-<div class="col-lg-10 col-lg-offset-1" style="margin-top:10px;"> 
+		<button class="btn btn-success" 
+				onClick="event.preventDefault();location.href='/oeuvre/new'"
+				ng-show="menu.O.id">
+			<span class="glyphicon glyphicon-plus"></span>
+		</button>
+		
+		<button class="btn btn-danger"
+				ng-hide="menu.O.verrou" 
+				onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
+			<span class="glyphicon glyphicon-lock"></span>
+		</button>
+	
+	</div>
+<!-- TAB --> 
+	
 
-    <form method="post" class="form-horizontal" action="/search" id='searchForm'>
+<!-- tab 1 -->
+<!-- IMAGE -->
+	
 
-        <div class="form-group"> 
-            <input class="input-xl" id="searchString" name="searchString" style="height:40px;" value="">
+<!-- FORMULAIRE oeuvre -->
 
-           
-            
-        </div>
-        <button id="search" class="btn btn-info"  type="submit" >Rechercher</button>
-    </form>
+	<div ng-controller="oeuvreFormulaire as form">
+		
+	<div>
 
-
+<!-- tab 2 --> 
+<!-- Dossier oeuvre --> 
 
 </div>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    $.ajax({
-                type: 'get',
-                dataType: 'json',
-                timeout: 10000,
-                url: '/oeuvreAPI/recentlyUpdated',
-                beforeSend: function(){
-                    $("#searchResultZone").addClass("spinner spinnerGreen");
-                    $("#searchTable").hide().fadeOut();
-                },
-                success: function(results){
-                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
-                    insertResults(results, 'résultat(s)');
-                },
-                error: function(err){
-                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
-                    console.log("error: "+err.message);
-                }
-
-    });
-});
-
-</script>
-
-<table class="table table-striped" id="table">
-    <thead>
-        <tr>
-            
-            <td>V</td>
-            
-            <td>Numéro d'inventaire</td>
-
-            <td>Désignation</td>
-            
-            <td>Auteur(s)</td>
-            
-            <td>Matériaux</td>
-            
-            <td>Technique(s)</td>
-            
-            <td>Datation</td>
-
-        </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
-

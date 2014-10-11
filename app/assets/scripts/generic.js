@@ -25,7 +25,7 @@ var insertResults = function(results, title){
 	results.forEach(function(result, idx){
 		
 
-		idx === 0 ? console.log("result "+idx+": "+JSON.stringify(result.datation)) : null;
+		//idx === 0 ? console.log("result "+idx+": "+JSON.stringify(result.datation)) : null;
 		
 		var row = $("<tr onclick=\"location.href='/oeuvre/show/"+result.id+"'\"></tr>",{
 			oeuvreId: result.id

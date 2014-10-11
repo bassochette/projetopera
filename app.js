@@ -53,11 +53,13 @@ app.configure(function(){
     app.use(passport.initialize());
     app.use(passport.session());
 
+    /*
     app.use(flash());
     app.use(function(req, res, next){
         res.locals.flash = req.flash('flash');
         next();
     });
+    */
     app.use(app.router);
 });
 
@@ -83,5 +85,5 @@ app.use(require('./middleware/errorHandler')(errorOptions));
  * Run server.
  */
 var server = http.createServer(app).listen(app.get('port'), function(){
-    console.log("\n microscope server listening on port " + app.get('port'));
+    console.log("\n museion listening on port " + app.get('port'));
 });

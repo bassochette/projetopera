@@ -17,7 +17,9 @@ module.exports = {
 			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.iframe-transport.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.iframe-transport.js'},
 			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.fileupload.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.fileupload.js'},
 			{src: '<%= config.bower %>/DataTables/media/js/jquery.dataTables.js', dest: '<%= config.public %>/scripts/jquery.dataTables.js'},
-			{src: '<%= config.bower %>/DataTables/media/css/jquery.dataTables.css', dest: '<%= config.public %>/styles/jquery.dataTables.css'}
+			{src: '<%= config.bower %>/DataTables/media/css/jquery.dataTables.css', dest: '<%= config.public %>/styles/jquery.dataTables.css'},
+			{src: '<%= config.bower %>/angular/angular.min.js', dest: '<%= config.public %>/scripts/vendors/angular.js'}
+
 
 		]
 	},

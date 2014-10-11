@@ -295,7 +295,7 @@ var ajouterChamps = function(oeuvreId, champsId, valeur){
 		dataType: 'json',
 		data: dossierOeuvre,
 		success: function(data){
-			alert('dossier oeuvre ajouter '+JSON.stringify(data));
+			//alert('dossier oeuvre ajouter '+JSON.stringify(data));
 
 			var f = new champsElementFactory();
 

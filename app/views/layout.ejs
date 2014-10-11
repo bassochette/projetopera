@@ -22,9 +22,7 @@
 
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav"> 
-				<li>
-					
-				<li>
+				
 
 				<li class="sidebar-brand">
 					<a href="/">Museion</a>
@@ -47,17 +45,7 @@
 					<a href="/account/logout">Déconnexion</a>
 				</li>
 				<% } %>
-
-				<!--
-				<li>Dossiers</li> 
-				<li>
-					<UL id="listDossier" class="insideTheList">
-						
-					</UL>
-				</li>
-				-->
 				
-			
 			</ul>
 		</div>
 
@@ -67,10 +55,7 @@
 					<div class="col-lg-12">
 						<div id="notif" >
 						</div>
-						<% if(flash !== undefined && flash != ""	){ %>
-						<div class="alert alert-warning" ><%-flash %>
-						</div>
-						<% } %>
+						
 						<%- body %>
 					</div>
 				</div>
@@ -88,8 +73,10 @@
 <!-- fondamentale --> 
 <script src="/scripts/vendors/jquery.js"></script>
 <script src="/scripts/vendors/bootstrap.js"></script>
+<script src-"/scripts/vendors/angular.js"></script>
+<!--
 <script src="/scripts/bs-editable/bootstrap-editable.js"></script>
-
+-->
 
 <!-- jquery data tables -->
 <script src="/scripts/jquery.dataTables.js"></script>
@@ -108,6 +95,9 @@
 <script src="/scripts/myFlatForms.js"></script>
 <script src="/scripts/carousel.js"></script>
 <script src="/scripts/dossierOeuvre.js"></script>
+
+<!-- Angular app -->
+<script type="text/javascript" src="/scripts/oeuvre/app.js"></script>
 
 
 <!-- trakcer Google Analitycs -->
