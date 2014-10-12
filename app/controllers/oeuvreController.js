@@ -60,10 +60,12 @@ var moment = require('moment');
     */
     OeuvreController.prototype.index = function(req, res) {
             
-        oeuvreDAL.getRecentlyUpdated(20, function (oeuvres) {
-            res.render('home/index', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
+        oeuvreDAL.getRecentlyUpdated(function (oeuvres) {
+            console.log("Recently updated "+oeuvres.length);
+             res.render('home/index', { 'oeuvres': oeuvres, 'title': 'Inventaire' });
         });
           
+        //res.render('home/index', { 'oeuvres': {}, 'title': 'Inventaire' });
 
     };
     OeuvreController.prototype.listParAuteur = function(req, res) {

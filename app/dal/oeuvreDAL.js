@@ -41,8 +41,8 @@ var DbContext = require('../../db/dbContext');
         });
     };
 
-    oeuvreDAL.prototype.getRecentlyUpdated = function(n, callback){
-        dbContext.oeuvre.findAll({order: 'updatedAt DESC', limit: n}).success(function(oeuvres){
+    oeuvreDAL.prototype.getRecentlyUpdated = function(callback){
+        dbContext.oeuvre.findAll({order: 'updatedAt DESC', limit: 50}).success(function(oeuvres){
             callback(oeuvres);
         }); 
     }

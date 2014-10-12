@@ -74,7 +74,7 @@ var UserDal           = require('../dal/userDal');
     * Register post action.
     */
     AccountController.prototype.register_post = function(req, res) {
-        if (req.body.password === req.body.confirmPassword && req.body.password.length > 6) {
+        if (req.body.password === req.body.confirmPassword && req.body.password.length > 1) {
             userDal.getByUsername(req.body.username, function (user) {
                 if (!user) {
                     encryptPassword(req.body.password, function(hashedpassword){
@@ -84,7 +84,7 @@ var UserDal           = require('../dal/userDal');
                         newUser.password = hashedpassword;
 
                         userDal.save(newUser, function (data) {
-                            req.flash('flash', 'you successfully sign in !');
+                            req.flash('flash', 'Enregistrement accompli avec succès!');
                             res.redirect('/account/login');
                         });
                     });
@@ -96,7 +96,7 @@ var UserDal           = require('../dal/userDal');
             });
         }
         else {
-            req.flash('flash', 'Password must be 6 length or confirmPassword error !');
+            req.flash('flash', 'Mot de passe trop court!');
             res.redirect('/account/register');
         }
     };

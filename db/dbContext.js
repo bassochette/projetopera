@@ -43,11 +43,11 @@
         this.image = this.db.import(modelsPath + 'image');
 
         //gestion des favoris
-        this.selectionFolder = this.db.import(modelsPath + 'selectionFolder');
-        this.selectionItem = this.db.import(modelsPath + 'selectionItem');
+        //this.selectionFolder = this.db.import(modelsPath + 'selectionFolder');
+        //this.selectionItem = this.db.import(modelsPath + 'selectionItem');
 
         //bug reporting
-        this.userReport = this.db.import(modelsPath + 'userReport');
+        //this.userReport = this.db.import(modelsPath + 'userReport');
 
 
     };
@@ -74,9 +74,9 @@
         this.dossierOeuvre.belongsTo(this.champs, {foreignKey: 'champsId'});
 
         //gestion favoris aka selection
-        this.selectionFolder.belongsTo(this.user, {foreignKey: 'uid'});
-        this.selectionItem.belongsTo(this.selectionFolder, {foreignKey: 'folderId', unique: 'itemUniqueIndex'});
-        this.selectionItem.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId', unique: 'itemUniqueIndex'});
+        //this.selectionFolder.belongsTo(this.user, {foreignKey: 'uid'});
+        //this.selectionItem.belongsTo(this.selectionFolder, {foreignKey: 'folderId', unique: 'itemUniqueIndex'});
+        //this.selectionItem.belongsTo(this.oeuvre, {foreignKey: 'oeuvreId', unique: 'itemUniqueIndex'});
         //this.user.hasMany(this.selection, {as: 'uid'});
     };
 

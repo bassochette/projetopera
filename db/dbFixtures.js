@@ -89,7 +89,7 @@ module.exports = function(){
 
 
 	
-	for(var i = 0; i< nbLigne; i++){
+	for(var i = 0; i < nbLigne; i++){
 
 
 		
@@ -107,13 +107,32 @@ module.exports = function(){
 				observations: genObs(200),
 				verrou: false
 		};
+
+
 		
-		dbContext.oeuvre.create(oeuvre).success(function(){
-			console.log("objet créer.");
+		dbContext.oeuvre.create(oeuvre).success(function(oeuvre){
+			console.log(oeuvre.id +" objet créer");
 		});
 	
 	}
 	
+
+	dbContext.user.create({
+		username: 'test',
+		password: '$2a$10$ip6P6K8EsxAWbvvolohxV.0qeM2tFa0pF8FToCqbCXqBxe7UCU8E.',
+		email: 'test@test.test'
+	}).success(function(){
+		console.log("Utilisateur test créer.");
+	});
+
+	dbContext.user.create({
+		username: 'admin',
+		password: '$2a$10$ip6P6K8EsxAWbvvolohxV.0qeM2tFa0pF8FToCqbCXqBxe7UCU8E.',
+		email: 'admin@test.test',
+		isAdmin: '1'
+	}).success(function(){
+		console.log("Utilisateur admin créer.");
+	});
 	
 
 }
