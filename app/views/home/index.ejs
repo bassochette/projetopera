@@ -15,7 +15,7 @@
 </div>
 <div class="searchResultZone" >
 
-<table class="table table-striped" id="searchTable" hidden="true" > 
+<table class="table table-striped" id="searchTable"  > 
     <thead>
         <tr>
             
@@ -30,14 +30,29 @@
             
             <td>Technique(s)</td>
             
-            <td>Datation</td>
+            <td>Dernière modification</td>
            
         </tr>
     </thead>
     <tbody id="resultTableBody">
-        <tr>
-        </tr>
-        
+
+        <% oeuvres.forEach(function(o){ %>
+            <tr class="darkenOnHover" onclick="location.href='/oeuvre/show/<%=o.id%>'">
+                <td>
+                <% if(o.verrou){ %>
+                    <span class="glyphicon glyphicon-lock"></span>
+                <% } else { %>
+
+                <% } %>
+                </td>
+                <td><%- o.oeuvreId %></td>
+                <td><%- o.designation %></td>
+                <td><%- o.auteur %></td>
+                <td><%- o.materiaux %></td>
+                <td><%- o.techniques %></td>
+                <td><%- o.updatedAt %></td>
+            </tr>
+       <% }); %>
     </tbody>
 </table>
 </div>

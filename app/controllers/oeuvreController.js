@@ -39,7 +39,8 @@ var moment = require('moment');
         app.get('/oeuvre/auteur',  filters.authorize, this.listParAuteur);
         //app.get('/oeuvre/date',  filters.authorize, this.index);
         app.get('/oeuvre/nom',  filters.authorize, this.listParNom);
-        app.get('/oeuvre/show/:id', filters.authorize,  this.show);
+        app.get('/oeuvre/show/:id', filters.authorize,  this.show1);
+        app.get('/oeuvre/show/2/:id', filters.authorize,  this.show2);
 
         // CRUD
         app.get('/oeuvre/new', filters.authorize, this.new);
@@ -107,7 +108,7 @@ var moment = require('moment');
     * @param {req} http request.
     * @param {res} http response.
     */
-    OeuvreController.prototype.show = function(req, res) {
+    OeuvreController.prototype.show1 = function(req, res) {
         
            var oeuvreId = req.params.id;
             oeuvreDAL.get(oeuvreId, function (oeuvre) {
@@ -115,7 +116,18 @@ var moment = require('moment');
                 //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
 
 
-                res.render('oeuvre/show', { 'oeuvre': oeuvre });
+                res.render('oeuvre/show', { 'oeuvre': oeuvre, 'tab': 1 });
+            });
+    };
+
+    OeuvreController.prototype.show2 = function(req, res) {
+        
+           var oeuvreId = req.params.id;
+            oeuvreDAL.get(oeuvreId, function (oeuvre) {
+                
+                //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
+
+                res.render('oeuvre/show', { 'oeuvre': oeuvre, 'tab': 2 });
             });
     };
     

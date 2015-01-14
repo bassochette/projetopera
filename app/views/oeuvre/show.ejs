@@ -6,11 +6,11 @@
 
 	<!-- Navbar -->
 	<ul class="nav nav-tabs" role="tablist" id="myTabBar">
-		<li id="inventaireTab" class="active">
+		<li id="inventaireTab" <% if(tab == 1) { %> class="active" <% } %>>
 			<a href="#inventaireTabContent" role="tab" data-toggle="tab" id="inventaireTabLink">Inventaire</a>
 		</li>
 		<% if(oeuvre.id){ %>
-		<li id="dossierTab" >
+		<li id="dossierTab" <% if(tab == 2) { %> class="active" <% } %> >
 			<a href="#dossierOeuvreTabContent" role="tab" data-toggle="tab" id='dossierOeuvreTabLink'>Dossier</a>
 		</li>
 
@@ -28,7 +28,7 @@
 	<div class="tab-content">
 
 		<!-- Tab content onglet 1 -->
-		<div class="tab-pane fade in active" id="inventaireTabContent">
+		<div class="tab-pane  <% if(tab == 1) { %>fade in active <% } %>" id="inventaireTabContent">
 			
 			<!-- carousel + upload form -->
 			<% if(oeuvre.id) { %>
@@ -78,7 +78,7 @@
 		</div>
 
 		<!-- tab content onglet 2 --> 
-		<div class="tab-pane fade" id="dossierOeuvreTabContent">
+		<div class="tab-pane <% if(tab == 2) { %>fade in active <% } %>" id="dossierOeuvreTabContent">
 			<!-- dossier oeuvres -->
 			
 			<%- partial("./show_dossierOeuvre") %>

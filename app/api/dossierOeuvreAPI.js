@@ -44,6 +44,7 @@ var util = require('util');
 
     DossierOeuvreAPI.prototype.majVal = function(req, res){
 
+        console.log("[API] demande de mise à jour pour :"+ JSON.stringify(req.body));
         dossierOeuvreDAL.updateValById(req.body.dossierOeuvreId, {valeur: req.body.valeur}, function(data){
             res.send(200, JSON.stringify(data));
         });
@@ -60,14 +61,17 @@ var util = require('util');
         _dossOeuvre.valeur = req.body.valeur;
 
         dossierOeuvreDAL.save(_dossOeuvre, function(dossierOeuvre){
-            // console.log('dossierOeuvre : '+JSON.stringify(dossierOeuvre));
+             console.log('dossierOeuvre : '+JSON.stringify(dossierOeuvre));
             if(!dossierOeuvre.message){
                 champsDAL.get(dossierOeuvre.champsId, function(champs){
                     console.log('champs :'+JSON.stringify(champs));
                     
+                    _dossOeuvre.id = dossierOeuvre.id;
                     _dossOeuvre.champsId = champs.id;
                     _dossOeuvre.nom = champs.nom;
                     _dossOeuvre.type = champs.type;
+
+                    console.log('[API] sending '+JSON.stringify(_dossOeuvre));
                     res.send(_dossOeuvre);
                         
                 });

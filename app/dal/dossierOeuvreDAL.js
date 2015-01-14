@@ -129,11 +129,24 @@ var DbContext = require('../../db/dbContext');
     dossierOeuvreDAL.prototype.updateValById = function(id, attributes, callback){
         
         var dossierOeuvre = {};
+
+        console.log("[DAL] Mise à jour du champs : "+JSON.stringify(attributes)+" pour oeuvre avec id :"+id);
+
         dbContext.dossierOeuvre.find({where : {id: id}}).success(function(data){
 
-            data.updateAttributes(attributes).success(function (updatedDossierOeuvre) { 
-                callback(updatedDossierOeuvre);
-            }); 
+            if(data){
+                data.updateAttributes(attributes).success(function (updatedDossierOeuvre) { 
+                    callback(updatedDossierOeuvre);
+                }).error(function(err){
+                    callback({message: err});
+                }); 
+            } else {
+
+                console.log("Erreur: impossible de mettre à jour une valeur introuvable.");
+                //callback({message: "unexpected error"});
+                throw "Impossible de mettre à jour une valeur inexistante";
+            }
+            
         }).error(function(err){
             callback({message: err});
         });

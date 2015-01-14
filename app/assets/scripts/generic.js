@@ -173,6 +173,7 @@ $(document).ready(function(){
 			data: {searchString: $("#searchString").val()},
 			url: "/searchAPI/search",
 			beforeSend: function(){
+				$("#resultTableBody").empty();
 				$("#searchResultZone").addClass("spinner spinnerGreen");
 				$("#searchTable").hide().fadeOut();
 				//alert("resultZone");

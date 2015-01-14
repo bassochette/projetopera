@@ -75,6 +75,8 @@ champsElementFactory.prototype.control = function(){
 
 champsElementFactory.prototype.formalize = function(t, id){
 
+	console.log("création element "+id+" dans le dossier.");
+	console.log("plus d''info : "+JSON.stringify(t));
 	var form =  $('<form></form>', {
 		id: 'dossier'+id
 	}).append($('<input></input>',{
@@ -96,24 +98,25 @@ champsElementFactory.prototype.formalize = function(t, id){
 		}
 		data.dossierOeuvreId = $(this).find('[name="dossierOeuvreId"]').val();
 		
-		// alert(JSON.stringify(data));
+		console.log("formalize "+JSON.stringify(data));
 		
 		$.ajax({
 			url: '/dossierOeuvreAPI/post/majVal',
 			method: 'post',
 			dataType: 'json',
-			data: data,
-			success: function(data){
-				//alert(JSON.stringify(data));
-				var strId = 'form#dossier'+data.id;
-				$(strId).find('button.formControlBtn').removeClass('toSave');
-				$(strId).find('span').removeClass('glyphicon-floppy-disk').addClass('glyphicon-ok');
-
-			},
-			error: function(err){
-				console.log(JSON.stringify(err));
-			}
+			data: data
 		})
+		.done(function(data){
+			//alert(JSON.stringify(data));
+			var strId = 'form#dossier'+data.id;
+			$(strId).find('button.formControlBtn').removeClass('toSave');
+			$(strId).find('span').removeClass('glyphicon-floppy-disk').addClass('glyphicon-ok');
+
+		})
+		.fail(function(err){
+			console.log(JSON.stringify(err));
+		});
+
 
 	});
 
@@ -229,6 +232,7 @@ function appendToWb(el){
 
 function routeToFactory(item, factory){
 	
+	console.log("routeToFactory "+JSON.stringify(item));
 
 	if( item.type == 'info'){
 
@@ -269,7 +273,7 @@ var workbench = function(data){
 	});
 
 	$('.datepicker').pickadate({
-		format: 'dd/mm/yyyy',
+		format: 'dd-mm-yyyy',
 		selectYears: 200,
 		selectMonths: true,
 		editable: true,
@@ -289,29 +293,54 @@ var ajouterChamps = function(oeuvreId, champsId, valeur){
 
 	//alert(JSON.stringify(dossierOeuvre));
 	//call 
+
+	//faire une promise
+	// *********************************
+		// OLD CODE
+	// $.ajax({
+	// 	url: '/dossierOeuvreAPI/post/ajouter',
+	// 	method: 'POST',
+	// 	dataType: 'json',
+	// 	data: dossierOeuvre,
+	// 	success: function(data){
+	// 		alert('dossier oeuvre ajouter '+JSON.stringify(data));
+
+	// 		var f = new champsElementFactory();
+
+	// 		routeToFactory(data, f);
+	// 	},
+	// 	error: function(err){
+	// 		console.log('erreur création dossierOeuvre '+JSON.stringify(err));
+	// 	}
+
+	// });
+
+	// ******************************************
+
 	$.ajax({
 		url: '/dossierOeuvreAPI/post/ajouter',
 		method: 'POST',
 		dataType: 'json',
-		data: dossierOeuvre,
-		success: function(data){
-			alert('dossier oeuvre ajouter '+JSON.stringify(data));
+		data: dossierOeuvre
+
+	})
+	.done(function(data){
+			console.log('dossier oeuvre ajouter '+JSON.stringify(data));
 
 			var f = new champsElementFactory();
 
 			routeToFactory(data, f);
-		},
-		error: function(err){
+		})
+	.fail(function(err){
 			console.log('erreur création dossierOeuvre '+JSON.stringify(err));
-		}
-
-	});
+			alert("Impossible d'ajouter ce champs, il est probablement déjà existent. Réessayez plus tard. Si le problème persiste envoyez un rapport à cette addresse: julien.prugne@gmail.com");
+		});
  
 };
 
 var creerChamps = function(nom, type){
 
-	//alert('creerChamps '+nom+' '+type);
+	console.log('creerChamps '+nom+' '+type);
 	var chmps = {};
 	chmps.nom = nom;
 	chmps.type = type;
@@ -321,8 +350,9 @@ var creerChamps = function(nom, type){
 		url: '/champsAPI/creer',
 		method: 'POST',
 		dataType: 'json',
-		data: chmps,
-		success: function(data){
+		data: chmps
+	})
+	.done(function(data){
 			//alert('success '+data);
 			console.log('Champs créer avec succès '+JSON.stringify(data));
 			//var selectAjoutDossierOeuvre = $('#ajoutChamps select');
@@ -335,13 +365,12 @@ var creerChamps = function(nom, type){
 			$('#ajoutChamps select').fadeOut().find(':selected').removeAttr('selected').parent().append(option).show().fadeIn();
 			$('#ajoutChamps input#ajoutChampsValeur').focus();
 
-		},
-		error: function(err){
+		})
+	.fail(function(err){
 			//alert('error '+err);
 			console.log('Erreur lors de la création du champs : '+JSON.stringify(message));
 			//console.log(JSON.stringify(err)));
-		}
-	});
+		});
 
 };
 
@@ -368,6 +397,7 @@ $('a#dossierOeuvreTabLink').on('shown.bs.tab', function (event) {
   		
   		ajouterChamps(oeuvreId, champsId, valeur);
 
+  		//window.location.href('/oeuvre/show/2/'+oeuvreId);
   		// vider le formulaire
   		// reloadWb();
   	});

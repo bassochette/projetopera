@@ -31,7 +31,7 @@ var engine   = require('ejs-locals');
 	};
 
 	/**
-	 * load module api controllers
+	 * load module api controller s
 	 * @param  {express} app
 	 */
 	Bootloader.prototype.loadApiControllers = function (app) {

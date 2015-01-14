@@ -3,6 +3,7 @@
  */
 var DbContext = require('../../db/dbContext');
 
+
 /**
 * oeuvreDAL class
 */
@@ -13,6 +14,7 @@ var DbContext = require('../../db/dbContext');
      */
     var dbContext = new DbContext();
 
+  
     /**
     * Constructor.
     */
@@ -27,6 +29,7 @@ var DbContext = require('../../db/dbContext');
      */
     oeuvreDAL.prototype.get = function(oeuvreId, callback) {
         dbContext.oeuvre.find(oeuvreId).success(function(oeuvre) {
+           
             callback(oeuvre);
         });
     };
