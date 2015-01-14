@@ -9,13 +9,13 @@ module.exports = function (db, DataTypes) {
 			
 				nomDonnateur: DataTypes.STRING,
 			
-				dateAcquisition: DataTypes.DATE,
+				dateAcquisition: DataTypes.STRING,
 			
 				avisScientifique: DataTypes.TEXT,
 			
 				prix: DataTypes.STRING,
 			
-				dateInscriptionInventaire: DataTypes.DATE,
+				dateInscriptionInventaire: DataTypes.STRING,
 			
 				designation: DataTypes.STRING,
 			
