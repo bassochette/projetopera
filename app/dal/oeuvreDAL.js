@@ -73,9 +73,19 @@ var DbContext = require('../../db/dbContext');
      * @param  {Function} callback
      */
     oeuvreDAL.prototype.save = function(oeuvre, callback) {
+        console.log("Ajout d'une oeuvre "+JSON.stringify(oeuvre));
+        
         var oeuvre = dbContext.oeuvre.build(oeuvre);
+        // console.log("Oeuvre construite pour l''occasion "+JSON.stringify(oeuvre));
         oeuvre.save().success(function(oeuvre) {
-            callback(oeuvre);
+            if(!oeuvre.oeuvreId){
+                console.log("Aucun identifiant n'a été fournis attribution par défaut GEN-"+oeuvre.id);
+                oeuvre.oeuvreId = "GEN-"+oeuvre.id;
+                oeuvre.save().success(function(oeuvre){
+                    callback(oeuvre);
+                });
+            }
+            
         }).error(function(error) {
             callback({message: error});
         });
