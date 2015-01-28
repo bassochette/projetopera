@@ -4,8 +4,10 @@
 * Module dependencies.
 */
 var OeuvreDAL = require('../dal/oeuvreDAL');
+var ImagesDAL = require('../dal/imagesDAL');
 var MembershipFilters = require('../../middleware/membershipFilters');
 var moment = require('moment');
+var http = require('http');
 /**
 * oeuvreController class
 */
@@ -15,6 +17,7 @@ var moment = require('moment');
     * Attributes.
     */
     var oeuvreDAL = new OeuvreDAL();
+    var imagesDAL = new ImagesDAL();
     var filters = new MembershipFilters();
     /**
     * Constructor.
@@ -91,6 +94,7 @@ var moment = require('moment');
     OeuvreController.prototype.verrouillage = function(req, res){
 
         var oeuvreId = req.params.id;
+
         oeuvreDAL.verrouillage(oeuvreId, function(oeuvreId){
             req.flash('flash', 'Oeuvre verrouillé.');
             res.redirect('/oeuvre/show/'+oeuvreId);
@@ -111,13 +115,32 @@ var moment = require('moment');
     OeuvreController.prototype.show1 = function(req, res) {
         
            var oeuvreId = req.params.id;
-            oeuvreDAL.get(oeuvreId, function (oeuvre) {
-                
-                //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
+
+           // requesting images
+           var next = function(data){
+                oeuvreDAL.get(oeuvreId, function (oeuvre) {
+                    
+                    //oeuvre.dateAcquisition = new Date(oeuvre.dateAcquisition);
+                    res.render('oeuvre/show', { 'oeuvre': oeuvre, 'tab': 1, images: data.images });
+                });
+
+           };
+
+           imagesDAL.getAllImageInfoByOeuvre(oeuvreId, function(data){
+
+                console.log('Images : '+JSON.stringify(data)); 
+                d = {};
+                d.images = data;
+                next(d);
+           });
+           
+        
+           
 
 
-                res.render('oeuvre/show', { 'oeuvre': oeuvre, 'tab': 1 });
-            });
+        
+
+           
     };
 
     OeuvreController.prototype.show2 = function(req, res) {

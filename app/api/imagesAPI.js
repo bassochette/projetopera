@@ -30,6 +30,7 @@ var  util = require('util');
         app.get('/images/:oeuvreId/:digest', filters.authorize, this.image ); 
         app.get('/imagesAPI/getAll/:oeuvreId', filters.authorize, this.getInfoByOeuvre);
         app.post('/imagesAPI/upload', filters.authorize, this.upload);   
+        app.get('/imagesAPI/delete/:id', filters.authorize, this.remove);
     };
 
     ImagesAPI.prototype.image = function(req, res){
@@ -67,7 +68,7 @@ var  util = require('util');
     ImagesAPI.prototype.upload = function(req, res){
 
         //console.log("Une image messire!");
-        console.log("[imagesAPI][upload]"+util.inspect(req.body));
+        // console.log("[imagesAPI][upload]"+util.inspect(req.body));
         var image = req.files.imagesUpload; 
         image.oeuvreId = req.body.oeuvreId;
 
@@ -80,6 +81,21 @@ var  util = require('util');
         });
         
     }
+
+    ImagesAPI.prototype.remove = function(req, res){
+        var imgId = req.params.id;
+
+        console.log('[API]request to remove image '+imgId);
+        imagesDAL.delete(imgId, function(data){
+            if(data){
+                console.log("[API]Erreur suppression image "+data.message);
+            }else{
+                console.log("[API]Image "+imgId+" deleted.");
+            }
+
+        });
+
+    };
 
     module.exports = ImagesAPI;
 })();

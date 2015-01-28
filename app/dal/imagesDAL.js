@@ -17,6 +17,7 @@ var util = require('util');
      */
     var dbContext = new DbContext();
     var sql = dbContext.db;
+    var uploadDir = path.normalize('upload/images');
     /**
     * Constructor.
     */
@@ -133,6 +134,7 @@ var util = require('util');
 
         //sale
         var uploadDir = path.normalize('upload/images');
+        // var uploadDir = this.uploadDir;
         //var that = this;
         // créer un objet images avec les info sur le fichier
         //sauvegardé le fichier
@@ -175,6 +177,28 @@ var util = require('util');
         });
 
         
+    };
+
+    imagesDAL.prototype.delete = function(imageId, next){
+
+        console.log('Starting deleting process for image with id '+imageId);
+        this.getImageInfoById(imageId, function(data){
+
+            var errors = false;
+            console.log("Suppressing image with id "+data.id+" and digest "+data.hash);
+
+            fs.unlink(data.path, function(err){
+                if(err){
+                    next({"message" : err});
+                }
+                dbContext.image.find(data.id).success(function(image) {
+                    image.destroy().success(function() {
+                        next();
+                    });
+                });
+            });
+
+        });
     };
 	
     

@@ -121,6 +121,7 @@ var DbContext = require('../../db/dbContext');
         dbContext.oeuvre.find(oeuvreId).success(function(oeuvre){
             //oeuvre.
             oeuvre.set("verrou", true);
+            oeuvre.set("dateInscriptionInventaire", new Date());
             oeuvre.save();
             callback(oeuvre.id);
         });

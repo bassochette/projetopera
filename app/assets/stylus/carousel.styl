@@ -3,11 +3,12 @@ div#car.row
 	height: 300px
 
 div#carouselContainer
-	min-height: 100%
-	max-height: 300px !important
+	height: 300px
 	margin-top: 15px
 	margin-left: 15px
-	overflow: hidden
+	overflow: visible
+
+
 	
 form#imageUploadForm
 	background-color: none
@@ -15,15 +16,25 @@ form#imageUploadForm
 	
 
 img 
-	max-width: 100%
-	min-height: 100%
-	
+	z-index: -100
+	max-width: 300px;
+
+
 
 @media 
 	img
 		width: auto
-		height:auto
+		max-height: 300px
 
 
 .uploadImage
 	margin-top: 60 px
+
+table#imagesList
+	min-width: 100%
+tr.imageLine
+	width:80%
+
+td.imageName
+	overflow: hidden
+	

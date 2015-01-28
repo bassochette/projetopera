@@ -16,6 +16,7 @@ var ImagesDAL = require('../dal/imagesDAL');
 	ImageController.prototype.routes = function(app){
 
 		app.post('/images/upload', filters.authorize, this.upload);
+		app.get('/images/delete/:oeuvreId/:id', filters.authorize, this.delete);
 	}
 
 	ImageController.prototype.upload = function(req, res){
@@ -33,6 +34,17 @@ var ImagesDAL = require('../dal/imagesDAL');
             res.redirect('/oeuvre/show/'+image.oeuvreId);
         });
 	} 
+
+	ImageController.prototype.delete = function(req, res){
+		var imageId = req.params.id;
+		var oeuvreId = req.params.oeuvreId;
+		console.log('[imgCtlr] request for deleting image: '+imageId);
+
+		imagesDAL.delete(imageId, function(){
+			// console.log('Image supprimer avec succès '+JSON.stringify(img));
+			res.redirect('/oeuvre/show/'+oeuvreId);
+		});
+	};
 
 	module.exports = ImageController;
 })();

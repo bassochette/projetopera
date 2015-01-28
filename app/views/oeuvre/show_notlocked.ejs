@@ -4,214 +4,213 @@
 	var formAction = "/oeuvre/create"
 	if(oeuvre.id){
 		formAction = "/oeuvre/update"
-%>
-	
-<%}%>
 
-<form method="POST" action="<%-formAction%>" enctype='application/x-www-form-urlencoded'>
-	<input type="hidden" id="oeuvre[id]" name="oeuvre[id]" value="<%- oeuvre.id %>"></input>
+}%>
 
-<div class="row">
-	<!-- Menu fiche inventaire --> 
-	<div id="editMenu">
-		<% if(false){%>
-		<select id="menuFolderSelect" class="menuFolderSelect" hidden="true">
-			<option value="" disabled selected>Ajouter au dossier </option>
-		</select>
-		<button class="btn btn-museion" id="menuFolder"
-				onclick="showMenuFolderList(event)">
-			<span class="glyphicon glyphicon-folder-open"></span>
-		</button>
-		<%}%>
-		<button type="submit" class="btn btn-info">
-			<span class="glyphicon glyphicon-floppy-disk"></span>
-		</button>
-		<% if(oeuvre.id){ %>
-		<button class="btn btn-success" onClick="event.preventDefault();location.href='/oeuvre/new'">
-			<span class="glyphicon glyphicon-plus"></span>
-		</button>
-		
-		
-		<%if(req.user.isAdmin && !oeuvre.verrou){%>
-		<button class="btn btn-danger" onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
-			<span class="glyphicon glyphicon-lock"></span>
-		</button>
-		<%}%>
-		<% } %>
+	<form method="POST" action="<%-formAction%>" enctype='application/x-www-form-urlencoded'>
+		<input type="hidden" id="oeuvre[id]" name="oeuvre[id]" value="<%- oeuvre.id %>"></input>
 
-
-	</div>
-	<div class="invL col-sm-7">
-		<!-- Information fondamentale sticky si possible-->
 		<div class="row">
-			<div class="row">
-				<div class="col-sm-4 invItems">
-					<p class="invItemsDescriptor">Identifiant inventaire:</p>
-					<input id="oeuvre[oeuvreId]" name="oeuvre[oeuvreId]" class="flatInput" value="<%- oeuvre.oeuvreId %>"></input>
-				</div>
-			</div>
-			<div class="row">
-			
-				<div class="col-sm-4 invItems">
-					<p class="invItemsDescriptor">Auteur(s): </p>
-					<input id="oeuvre[auteur]" name="oeuvre[auteur]" class="flatInput" value="<%- oeuvre.auteur %>"></input>
-				</div>
-				<div class="col-sm-4 invItems">
-					<p class="invItemsDescriptor">Désignation:</p>
-					<input id="oeuvre[designation]" name="oeuvre[designation]" class="flatInput" value="<%- oeuvre.designation %>"></input>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-3 invItems">
-					<p class="invItemsDescriptor">Datation:</p>
-					<input id="oeuvre[datation]" name="oeuvre[datation]" value="<%- oeuvre.datation %>"></input>
-				</div>
-				<div class="col-sm-3 invItems">
-					<p class="invItemsDescriptor">Matériaux:</p>
-					<input id="oeuvre[materiaux]" name="oeuvre[materiaux]" value="<%- oeuvre.materiaux %>"></input>
-				</div>
-				<div class="col-sm-3 invItems">
-					<p class="invItemsDescriptor">Mesures:</p>
-					<input id="oeuvre[mesures]" name="oeuvre[mesures]" value="<%- oeuvre.mesures %>"></input>
-				</div>
-			
-			</div>
-		</div>
-	</div>
-	
-</div>
-
-<!-- Detail de l'inventaire --> 
-<div class="row">
-		<!-- autres info -->
-		<div class="row">
-			<div class="col-sm-5 invMisc invL">
-				<table class="table propertyList">
-					<tr>
-						<th></th>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Provenance: 
-							</p>
-							<input id="oeuvre[provenance]" name="oeuvre[provenance]" value="<%- oeuvre.provenance %>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Technique(s) de réalisation: 
-							</p>
-							<input id="oeuvre[techniques]" name="oeuvre[techniques]" value="<%- oeuvre.techniques %>"></input> 
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								État: 
-							</p>
-							<input id="oeuvre[indicationEtat]" name="oeuvre[indicationEtat]" value="<%- oeuvre.indicationEtat %>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Marques et inscriptions: 
-							</p>
-							<input id="oeuvre[marquesInscription]" name="oeuvre[marquesInscription]" value="<%- oeuvre.marquesInscription %>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Fonction d'usage: 
-							</p>
-							<input id="oeuvre[fonction]" name="oeuvre[fonction]" value="<%- oeuvre.fonction %>"></input>
-						</td>
-					</tr>
-
-				</table>
+			<!-- Menu fiche inventaire --> 
+			<div id="editMenu">
+				<% if(false){%>
+				<select id="menuFolderSelect" class="menuFolderSelect" hidden="true">
+					<option value="" disabled selected>Ajouter au dossier </option>
+				</select>
+				<button class="btn btn-museion" id="menuFolder"
+						onclick="showMenuFolderList(event)">
+					<span class="glyphicon glyphicon-folder-open"></span>
+				</button>
+				<%}%>
+				<button type="submit" class="btn btn-info">
+					<span class="glyphicon glyphicon-floppy-disk"></span>
+				</button>
+				<% if(oeuvre.id){ %>
+				<button class="btn btn-success" onClick="event.preventDefault();location.href='/oeuvre/new'">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
 				
+				
+				<%if(req.user.isAdmin && !oeuvre.verrou){%>
+				<button class="btn btn-danger" onClick="event.preventDefault();location.href='/oeuvre/verrouiller/<%-oeuvre.id %>'">
+					<span class="glyphicon glyphicon-lock"></span>
+				</button>
+				<%}%>
+				<% } %>
+
+
 			</div>
-			<div class="col-sm-5  invMisc">
-
-				<table class="table propertyList">
-					<tr>
-						<th>
-						</th>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Mode d'aquisition:
-							</p>
-							<input id="oeuvre[modeAcquisition]" name="oeuvre[modeAcquisition]" value="<%- oeuvre.modeAcquisition%>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Nom donateur/legs/vendeur:
-							</p>
-							<input id="oeuvre[nomDonnateur]" name="oeuvre[nomDonnateur]" value="<%- oeuvre.nomDonnateur %>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Date d'acquisition:
-							</p>
-
-							<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- oeuvre.dateAcquisition %>" class="datePicker"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Avis des instances scientifiques:
-							</p>
-							<input id="oeuvre[avisScientifique]" name="oeuvre[avisScientifique]" value="<%- oeuvre.avisScientifique %>"></input>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Prix d'achat:
-							</p>
-							<input id="oeuvre[prix]" name="oeuvre[prix]" value="<%- oeuvre.prix %>"></input>
-						</td>
-						
-					</tr>
-					<tr>
-						<td>
-							<p class="invMiscDescriptor">
-								Date d'inscription à l'inventaire:
-							</p>
-
-							
-							<input id="oeuvre[dateInscriptionInventaire]" name="oeuvre[dateInscriptionInventaire]" value="<%-oeuvre.dateInscriptionInventaire%>" class="datePicker"></input>
-						</td>
-					</tr>
-				</table>
+			<div class="invL col-sm-7">
+				<!-- Information fondamentale sticky si possible-->
+				<div class="row">
+					<div class="row">
+						<div class="col-sm-4 invItems">
+							<p class="invItemsDescriptor">Identifiant inventaire:</p>
+							<input id="oeuvre[oeuvreId]" name="oeuvre[oeuvreId]" class="flatInput" value="<%- oeuvre.oeuvreId %>"></input>
+						</div>
+					</div>
+					<div class="row">
+					
+						<div class="col-sm-4 invItems">
+							<p class="invItemsDescriptor">Auteur(s): </p>
+							<input id="oeuvre[auteur]" name="oeuvre[auteur]" class="flatInput" value="<%- oeuvre.auteur %>"></input>
+						</div>
+						<div class="col-sm-4 invItems">
+							<p class="invItemsDescriptor">Désignation:</p>
+							<input id="oeuvre[designation]" name="oeuvre[designation]" class="flatInput" value="<%- oeuvre.designation %>"></input>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3 invItems">
+							<p class="invItemsDescriptor">Datation:</p>
+							<input id="oeuvre[datation]" name="oeuvre[datation]" value="<%- oeuvre.datation %>"></input>
+						</div>
+						<div class="col-sm-3 invItems">
+							<p class="invItemsDescriptor">Matériaux:</p>
+							<input id="oeuvre[materiaux]" name="oeuvre[materiaux]" value="<%- oeuvre.materiaux %>"></input>
+						</div>
+						<div class="col-sm-3 invItems">
+							<p class="invItemsDescriptor">Mesures:</p>
+							<input id="oeuvre[mesures]" name="oeuvre[mesures]" value="<%- oeuvre.mesures %>"></input>
+						</div>
+					
+					</div>
+				</div>
 			</div>
-
+			
 		</div>
-		<!-- Observations --> 
+
+		<!-- Detail de l'inventaire --> 
 		<div class="row">
-			<div class="col-sm-10 invL invObs">
-				<p class="invDescriptor">Observations:</p>
-				<textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwyg" ><%- oeuvre.observations %></textarea>
-			</div>
+				<!-- autres info -->
+				<div class="row">
+					<div class="col-sm-5 invMisc invL">
+						<table class="table propertyList">
+							<tr>
+								<th></th>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Provenance: 
+									</p>
+									<input id="oeuvre[provenance]" name="oeuvre[provenance]" value="<%- oeuvre.provenance %>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Technique(s) de réalisation: 
+									</p>
+									<input id="oeuvre[techniques]" name="oeuvre[techniques]" value="<%- oeuvre.techniques %>"></input> 
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										État: 
+									</p>
+									<input id="oeuvre[indicationEtat]" name="oeuvre[indicationEtat]" value="<%- oeuvre.indicationEtat %>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Marques et inscriptions: 
+									</p>
+									<input id="oeuvre[marquesInscription]" name="oeuvre[marquesInscription]" value="<%- oeuvre.marquesInscription %>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Fonction d'usage: 
+									</p>
+									<input id="oeuvre[fonction]" name="oeuvre[fonction]" value="<%- oeuvre.fonction %>"></input>
+								</td>
+							</tr>
 
+						</table>
+						
+					</div>
+					<div class="col-sm-5  invMisc">
+
+						<table class="table propertyList">
+							<tr>
+								<th>
+								</th>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Mode d'aquisition:
+									</p>
+									<input id="oeuvre[modeAcquisition]" name="oeuvre[modeAcquisition]" value="<%- oeuvre.modeAcquisition%>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Nom donateur/legs/vendeur:
+									</p>
+									<input id="oeuvre[nomDonnateur]" name="oeuvre[nomDonnateur]" value="<%- oeuvre.nomDonnateur %>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Date d'acquisition:
+									</p>
+
+									<input id="oeuvre[dateAcquisition]" name="oeuvre[dateAcquisition]" value="<%- oeuvre.dateAcquisition %>" class="datePicker"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Avis des instances scientifiques:
+									</p>
+									<input id="oeuvre[avisScientifique]" name="oeuvre[avisScientifique]" value="<%- oeuvre.avisScientifique %>"></input>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Prix d'achat:
+									</p>
+									<input id="oeuvre[prix]" name="oeuvre[prix]" value="<%- oeuvre.prix %>"></input>
+								</td>
+								
+							</tr>
+							<!--
+							<tr>
+								<td>
+									<p class="invMiscDescriptor">
+										Date d'inscription à l'inventaire:
+									</p>
+
+									
+									<input id="oeuvre[dateInscriptionInventaire]" name="oeuvre[dateInscriptionInventaire]" value="<%-oeuvre.dateInscriptionInventaire%>" class="datePicker"></input>
+								</td>
+							</tr>
+							-->
+						</table>
+					</div>
+
+				</div>
+				<!-- Observations --> 
+				<div class="row">
+					<div class="col-sm-10 invL invObs">
+						<p class="invDescriptor">Observations:</p>
+						<textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwyg" ><%- oeuvre.observations %></textarea>
+					</div>
+
+				</div>
+				
+
+				
 		</div>
-		
-
-		
-	</div>
-</form>
-</row>
-	
+	</form>
 </div>
-
+	
 

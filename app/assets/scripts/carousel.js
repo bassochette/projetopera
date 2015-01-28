@@ -16,30 +16,39 @@ $(document).ready(function(){
 
 			images.forEach(function(image, idx){
 
+				console.log("Image loaded : "+JSON.stringify(image));
 				carouselIndicators.append($("<li></li>",{
 					"data-target" : "#carousel",
 					"data-slide-to" : idx
 				}));
 
+				var hrefLink = "/imagesAPI/delete/"+image.id;
+				console.log('Delete link '+hrefLink);
+
 				if(idx == 0){
 					carouselInner.append($("<div></div>", { 
 						class: "item active"
-						}).append($("<img></img>",{
+						})
+					.append($("<img></img>",{
 							src: "/images/"+image.oeuvreId+"/"+image.hash,
 							class: "img-responsive center-block",
 							alt: image.nom
-						})).append($("<div></div>",{
+						}))
+						.append($("<div></div>",{
 							class: "carousel-caption active"
 						}).text(image.nom))
 					);
 				} else {
+
 					carouselInner.append($("<div></div>", { 
 						class: "item"
-						}).append($("<img></img>",{
+						})
+					.append($("<img></img>",{
 							src: "/images/"+image.oeuvreId+"/"+image.hash,
 							class: 'img-responsive center-block',
 							alt: image.nom
-						})).append($("<div></div>",{
+						}))
+					.append($("<div></div>",{
 							class: "carousel-caption"
 						}).text(image.nom))
 					);
