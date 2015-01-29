@@ -41,6 +41,19 @@ var UserDal           = require('../dal/userDal');
         */
         app.get('/account/register', this.register);
         app.post('/account/register', this.register_post);
+
+        // VF
+        app.get('/utilisateur/connexion', this.login);
+        app.post('/utilisateur/connexion',
+            passport.authenticate('local', { successRedirect: '/', failureRedirect: '/account/login'}), 
+            this.redirectHome);
+        app.get('/utilisateur/deconnexion', this.logout);
+        /*
+        app.get('/account/changePassword', filters.authorize, this.changePassword);
+        app.post('/account/changePassword', filters.authorize, this.changePassword_post);
+        */
+        app.get('/utilisateur/inscription', this.register);
+        app.post('/utilisateur/inscription', this.register_post);
         
     };
 

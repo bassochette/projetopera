@@ -63,6 +63,15 @@ var util = require('util');
                         });
     };
 
+    imagesDAL.prototype.getAllImagesInfo = function(uOffset, uLimit, next){
+
+
+        dbContext.image.findAll({limit: uLimit, offset: uOffset})
+        .success(function(data){
+            next(data);
+        });
+    };
+
     
     /**
     *   Check unicity - private

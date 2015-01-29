@@ -17,6 +17,22 @@ var ImagesDAL = require('../dal/imagesDAL');
 
 		app.post('/images/upload', filters.authorize, this.upload);
 		app.get('/images/delete/:oeuvreId/:id', filters.authorize, this.delete);
+
+		//VF
+		app.post('/images/televersement', filters.authorize, this.upload);
+		app.get('/images/suppression/:oeuvreId/:id', filters.authorize, this.delete);
+		app.get('/images/galerie', filters.authorize, this.galery);
+	}
+
+	ImageController.prototype.galery = function(req, res){
+
+		imagesDAL.getAllImagesInfo(0, 50, function(data){
+
+			console.log("[imgCtlr] giving those info "+JSON.stringify(data));
+			res.render('images/galery', {images : data} );
+		});
+		
+
 	}
 
 	ImageController.prototype.upload = function(req, res){
@@ -25,7 +41,7 @@ var ImagesDAL = require('../dal/imagesDAL');
         var image = req.files.imagesUpload; 
         image.oeuvreId = req.body.oeuvreId;
 
-        // Faire un putain de test!
+        // Faire un test!
         imagesDAL.saveImage(image, function(img){
             if(img.message){
                console.log('[imagesAPI][svg]'+img.message); 

@@ -18,27 +18,27 @@
 </div>
 
 <script type="text/javascript">
-$(document).ready(function(){
-    $.ajax({
-                type: 'get',
-                dataType: 'json',
-                timeout: 10000,
-                url: '/oeuvreAPI/recentlyUpdated',
-                beforeSend: function(){
-                    $("#searchResultZone").addClass("spinner spinnerGreen");
-                    $("#searchTable").hide().fadeOut();
-                },
-                success: function(results){
-                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
-                    insertResults(results, 'résultat(s)');
-                },
-                error: function(err){
-                    $("#searchResultZone").toggleClass("spinner spinnerGreen");
-                    console.log("error: "+err.message);
-                }
+// $(document).ready(function(){
+//     $.ajax({
+//                 type: 'get',
+//                 dataType: 'json',
+//                 timeout: 10000,
+//                 url: '/oeuvreAPI/recentlyUpdated',
+//                 beforeSend: function(){
+//                     $("#searchResultZone").addClass("spinner spinnerGreen");
+//                     $("#searchTable").hide().fadeOut();
+//                 },
+//                 success: function(results){
+//                     $("#searchResultZone").toggleClass("spinner spinnerGreen");
+//                     insertResults(results, 'résultat(s)');
+//                 },
+//                 error: function(err){
+//                     $("#searchResultZone").toggleClass("spinner spinnerGreen");
+//                     console.log("error: "+err.message);
+//                 }
 
-    });
-});
+//     });
+// });
 
 </script>
 
