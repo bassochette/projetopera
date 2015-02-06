@@ -22,9 +22,13 @@ var ChampsDAL = require('../dal/champsDAL');
 	}
 
 	ChampsAPI.prototype.routes = function(app){
-		app.get('/champsAPI/get/:id', filters.authorize, this.getChamp);
-		app.get('/champsAPI/getAll', filters.authorize, this.getAll);
-		app.post('/champsAPI/creer', filters.authorize, this.creer);
+		// app.get('/champsAPI/get/:id', filters.authorize, this.getChamp);
+		// app.get('/champsAPI/getAll', filters.authorize, this.getAll);
+		// app.post('/champsAPI/creer', filters.authorize, this.creer);
+
+		app.get('/champsAPI/get/:id', this.getChamp);
+		app.get('/champsAPI/getAll', this.getAll);
+		app.post('/champsAPI/creer', this.creer);
 
 	};
 

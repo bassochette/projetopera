@@ -1,0 +1,60 @@
+
+<div id="inventaire" ng-controller="OeuvreController as oeuvre">
+
+	<!-- Navbar -->
+
+	<ul class="nav nav-tabs" role="tablist" id="myTabBar">
+		<li id="inventaireTab" class="active" >
+			<a href="#inventaireTabContent" role="tab" data-toggle="tab" id="inventaireTabLink">Inventaire</a>
+		</li>
+		
+		<li id="dossierTab" >
+			<a href="#dossierOeuvreTabContent" role="tab" data-toggle="tab" id='dossierOeuvreTabLink'>Dossier</a>
+		</li>
+
+		<!--
+		<li id="fichierTab">
+			<a href="#" role="tab" data-toggle="tab">Fichiers</a>
+		</li>
+		-->
+	
+	</ul>
+
+	
+
+	<div class="tab-content">
+
+		<!-- Tab content onglet 1 -->
+		<div class="tab-pane fade in active" id="inventaireTabContent">
+			
+
+			<!-- carousel + upload form -->
+			<carroussel ></carroussel>
+
+			<!-- body inventaire -->
+			<inventaire>
+				
+			</inventaire>
+			<!---- ---->
+
+		</div>
+
+		<!-- tab content onglet 2 --> 
+		<div class="tab-pane fade" id="dossierOeuvreTabContent">
+			<!-- dossier oeuvres -->
+			
+			<!---- Dossier Oeuvre ----> 
+			<h3>Dossier oeuvre</h3>
+			
+		</div>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+

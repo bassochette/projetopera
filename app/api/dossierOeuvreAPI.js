@@ -28,9 +28,12 @@ var util = require('util');
     //post, del, update
 
     DossierOeuvreAPI.prototype.routes = function(app) {
-        app.get('/dossierOeuvreAPI/getByOeuvreId/:oeuvreId', filters.authorize, this.getByOeuvre);
-        app.post('/dossierOeuvreAPI/post/majVal', filters.authorize, this.majVal);
-        app.post('/dossierOeuvreAPI/post/ajouter', filters.authorize, this.ajouter); 
+        // app.get('/dossierOeuvreAPI/getByOeuvreId/:oeuvreId', filters.authorize, this.getByOeuvre);
+        // app.post('/dossierOeuvreAPI/post/majVal', filters.authorize, this.majVal);
+        // app.post('/dossierOeuvreAPI/post/ajouter', filters.authorize, this.ajouter); 
+        app.get('/dossierOeuvreAPI/getByOeuvreId/:oeuvreId', this.getByOeuvre);
+        app.post('/dossierOeuvreAPI/post/majVal', this.majVal);
+        app.post('/dossierOeuvreAPI/post/ajouter', this.ajouter); 
     };
 
     DossierOeuvreAPI.prototype.getByOeuvre = function(req, res){

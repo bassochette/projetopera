@@ -24,8 +24,10 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     OeuvreAPI.prototype.routes = function(app) {
-        app.get('/oeuvreAPI', filters.authorize,  this.oeuvres);  
-        app.get('/oeuvreAPI/recentlyUpdated', filters.authorize, this.recentlyUpdated);   
+        // app.get('/oeuvreAPI', filters.authorize,  this.oeuvres);  
+        // app.get('/oeuvreAPI/recentlyUpdated', filters.authorize, this.recentlyUpdated);   
+        app.get('/oeuvreAPI',  this.oeuvres);  
+        app.get('/oeuvreAPI/recentlyUpdated', this.recentlyUpdated);
     };
 
 

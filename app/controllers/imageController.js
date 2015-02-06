@@ -15,12 +15,13 @@ var ImagesDAL = require('../dal/imagesDAL');
 
 	ImageController.prototype.routes = function(app){
 
-		app.post('/images/upload', filters.authorize, this.upload);
+		 app.post('/images/upload', filters.authorize, this.upload);
 		app.get('/images/delete/:oeuvreId/:id', filters.authorize, this.delete);
 
 		//VF
 		app.post('/images/televersement', filters.authorize, this.upload);
 		app.get('/images/suppression/:oeuvreId/:id', filters.authorize, this.delete);
+
 		app.get('/images/galerie', filters.authorize, this.galery);
 	}
 

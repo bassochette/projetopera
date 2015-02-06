@@ -37,23 +37,23 @@ var http = require('http');
 
         //inventaire
 
-        app.get('/oeuvre', filters.authorize,  this.index);
-        app.get('/oeuvre/list',  filters.authorize, this.index);
-        app.get('/oeuvre/auteur',  filters.authorize, this.listParAuteur);
+        // app.get('/oeuvre', filters.authorize,  this.index);
+        // app.get('/oeuvre/list',  filters.authorize, this.index);
+        // app.get('/oeuvre/auteur',  filters.authorize, this.listParAuteur);
         //app.get('/oeuvre/date',  filters.authorize, this.index);
-        app.get('/oeuvre/nom',  filters.authorize, this.listParNom);
-        app.get('/oeuvre/show/:id', filters.authorize,  this.show1);
-        app.get('/oeuvre/show/2/:id', filters.authorize,  this.show2);
+        // app.get('/oeuvre/nom',  filters.authorize, this.listParNom);
+        // app.get('/oeuvre/show/:id', filters.authorize,  this.show1);
+        // app.get('/oeuvre/show/2/:id', filters.authorize,  this.show2);
 
         // CRUD
-        app.get('/oeuvre/new', filters.authorize, this.new);
-        app.post('/oeuvre/create', filters.authorize, this.create);
-        app.post('/oeuvre/update', filters.authorize, this.update);
+        // app.get('/oeuvre/new', filters.authorize, this.new);
+        // app.post('/oeuvre/create', filters.authorize, this.create);
+        // app.post('/oeuvre/update', filters.authorize, this.update);
         //app.get('/oeuvre/delete/:id',  this.delete);
         //app.post('/oeuvre/delete',  this.destroy);
 
         // verrou
-        app.get('/oeuvre/verrouiller/:id', filters.authorize, this.verrouillage);
+        // app.get('/oeuvre/verrouiller/:id', filters.authorize, this.verrouillage);
     };
 
     /**

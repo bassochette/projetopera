@@ -26,11 +26,16 @@ var  util = require('util');
 
 
     ImagesAPI.prototype.routes = function(app) {
-        app.get('/imagesAPI/:id', filters.authorize,  this.getInfo); 
-        app.get('/images/:oeuvreId/:digest', filters.authorize, this.image ); 
-        app.get('/imagesAPI/getAll/:oeuvreId', filters.authorize, this.getInfoByOeuvre);
-        app.post('/imagesAPI/upload', filters.authorize, this.upload);   
-        app.get('/imagesAPI/delete/:id', filters.authorize, this.remove);
+        // app.get('/imagesAPI/:id', filters.authorize,  this.getInfo); 
+        // app.get('/images/:oeuvreId/:digest', filters.authorize, this.image ); 
+        // app.get('/imagesAPI/getAll/:oeuvreId', filters.authorize, this.getInfoByOeuvre);
+        // app.post('/imagesAPI/upload', filters.authorize, this.upload);   
+        // app.get('/imagesAPI/delete/:id', filters.authorize, this.remove);
+        app.get('/imagesAPI/:id',  this.getInfo); 
+        app.get('/images/:oeuvreId/:digest', this.image ); 
+        app.get('/imagesAPI/getAll/:oeuvreId', this.getInfoByOeuvre);
+        app.post('/imagesAPI/upload', this.upload);   
+        app.get('/imagesAPI/delete/:id', this.remove);
     };
 
     ImagesAPI.prototype.image = function(req, res){

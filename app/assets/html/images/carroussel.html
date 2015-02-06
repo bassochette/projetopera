@@ -1,0 +1,55 @@
+<div class="col-sm-7" id="carouselContainer" >
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+		
+		<ol class="carousel-indicators">
+		</ol>
+
+		<div class="carousel-inner">
+		</div>
+
+		 <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		  </a>
+
+		
+	</div>
+</div>
+<div class="col-sm-4 manageImages">
+	
+	<div id="uploadImage">
+		<form id="imagesUploadForm" method="POST"  enctype="multipart/form-data" action="/images/upload" >
+			<input type="file" name="imagesUpload" accept='image/*'></input>
+			<input type="hidden" value='{{oeuvre.id}}' name='oeuvreId' id='oeuvreId'></input>
+			<input type="submit" value="Ajouter une image" class="btn"></button>
+		</form>
+	</div>
+	<div class="deleteImage">
+		<table id="imagesList">
+			<tr>
+				<td>Images</td>
+				<td></td>
+			</tr>
+			<!--
+			<%
+				for(var i=0; i<images.length; i++){
+					%>
+						<tr class="imageLine">
+							<td class="imageName"><%=images[i].nom%></td>
+							<td>
+								<button type="button" class="btn btn-xs btn-danger" onClick='location.href="/images/delete/<%-images[i].oeuvreId%>/<%-images[i].id%>"'>
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>	
+							</td>
+						</tr>
+					<%
+				}
+			%>
+		-->
+		</table>
+	</div>
+	
+</div>
+

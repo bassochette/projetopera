@@ -24,7 +24,9 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     SearchAPI.prototype.routes = function(app) {
-        app.post('/searchAPI/search', filters.authorize,  this.search);     
+        // app.post('/searchAPI/search', filters.authorize,  this.search);    
+        app.post('/searchAPI/search',  this.search);     
+
     };
 
 

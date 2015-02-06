@@ -17,7 +17,12 @@ module.exports = {
 			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.iframe-transport.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.iframe-transport.js'},
 			{src: '<%= config.bower %>/jquery-file-upload/js/jquery.fileupload.js', dest: '<%= config.public %>/scripts/jquery-file-upload/jquery.fileupload.js'},
 			{src: '<%= config.bower %>/DataTables/media/js/jquery.dataTables.js', dest: '<%= config.public %>/scripts/jquery.dataTables.js'},
-			{src: '<%= config.bower %>/DataTables/media/css/jquery.dataTables.css', dest: '<%= config.public %>/styles/jquery.dataTables.css'}
+			{src: '<%= config.bower %>/DataTables/media/css/jquery.dataTables.css', dest: '<%= config.public %>/styles/jquery.dataTables.css'},
+			{src: '<%= config.bower %>/angular/angular.js', dest: '<%= config.public %>/scripts/angular.js'},
+			{src: '<%= config.bower %>/angular-route/angular-route.js', dest: '<%= config.public %>/scripts/angular-route.js'},
+			{src: '<%= config.bower %>/angular-route/angular-route.min.js.map', dest: '<%= config.public %>/scripts/angular-route.min.js.map'},
+			{src: '<%= config.bower %>/angular/angular.min.js.map', dest: '<%= config.public %>/scripts/angular.min.js.map'}
+
 
 		]
 	},
@@ -41,6 +46,11 @@ module.exports = {
 		files:[
 			// assets scripts
 	  		{expand: true, cwd: '<%= config.assets %>/scripts/', src: ['**'], dest: '<%= config.public %>/scripts/'}
+		]
+	},
+	html:{
+		files: [
+			{expand: true, cwd:'<%= config.assets %>/html/', src:['**'], dest: '<%= config.public %>/html/'}
 		]
 	},
 	images:{

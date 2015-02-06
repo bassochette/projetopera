@@ -2,9 +2,11 @@
 * homeController class
 */
 var MembershipFilters = require('../../middleware/membershipFilters');
+var OeuvreDAL = require('../dal/oeuvreDAL');
 (function () {
 
     var filters = new MembershipFilters();
+    var oeuvreDAL = new OeuvreDAL();
     /**
     * Constructor.
     * @param {app} - express app.
@@ -18,8 +20,8 @@ var MembershipFilters = require('../../middleware/membershipFilters');
      * @param  {express} app
      */
     HomeController.prototype.routes = function(app) {
-        app.get("/", filters.authorize, this.new);
-        app.get("/search", filters.authorize, this.index);
+        app.get("*",  this.index);
+        // app.get("/search", filters.authorize, this.index);
         
     };
 
