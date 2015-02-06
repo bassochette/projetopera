@@ -1,7 +1,8 @@
-dev
-node_modules
-bower_components
-public
+dev/
+node_modules/
+bower_components/
+public/
 upload/images/*
 tmpUpload/*
-data_seeds
+data_seeds/
+.idea/
