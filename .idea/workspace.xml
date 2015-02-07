@@ -2,692 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ee8073-078b-4413-8ede-504c330b79ba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/api/api.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/accountController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/homeController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/imageController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/oeuvreController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/searchController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/selectionController.nope" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/userReportController.nope" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/museionServer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/accountAPI.js" afterPath="$PROJECT_DIR$/backend/api/accountAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/champsAPI.js" afterPath="$PROJECT_DIR$/backend/api/champsAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/dossierOeuvreAPI.js" afterPath="$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/imagesAPI.js" afterPath="$PROJECT_DIR$/backend/api/imagesAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/oeuvreAPI.js" afterPath="$PROJECT_DIR$/backend/api/oeuvreAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/searchAPI.js" afterPath="$PROJECT_DIR$/backend/api/searchAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/selectionAPI.js" afterPath="$PROJECT_DIR$/backend/api/selectionAPI.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Satisfy/LICENSE.txt" afterPath="$PROJECT_DIR$/frontend/fonts/Satisfy/LICENSE.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Satisfy/Satisfy-Regular.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Satisfy/Satisfy-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/UFL.txt" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/UFL.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-Bold.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-BoldItalic.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-BoldItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-Italic.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-Italic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-Light.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-Light.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-LightItalic.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-LightItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-Medium.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-Medium.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-MediumItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/fonts/Ubuntu/Ubuntu-Regular.ttf" afterPath="$PROJECT_DIR$/frontend/fonts/Ubuntu/Ubuntu-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/html/home.html" afterPath="$PROJECT_DIR$/frontend/html/home.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/html/images/carroussel.html" afterPath="$PROJECT_DIR$/frontend/html/images/carroussel.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/html/oeuvre/inventaire.html" afterPath="$PROJECT_DIR$/frontend/html/oeuvre/inventaire.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/html/oeuvre/show.html" afterPath="$PROJECT_DIR$/frontend/html/oeuvre/show.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/bs-editable/clear.png" afterPath="$PROJECT_DIR$/frontend/images/bs-editable/clear.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/bs-editable/loading.gif" afterPath="$PROJECT_DIR$/frontend/images/bs-editable/loading.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/favicon.png" afterPath="$PROJECT_DIR$/frontend/images/favicon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/glyphicons_203_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/glyphicons_203_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/glyphicons_204_unlock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/glyphicons_204_unlock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_000_glass.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_000_glass.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_001_leaf.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_001_leaf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_002_dog.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_002_dog.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_003_user.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_003_user.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_004_girl.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_004_girl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_005_car.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_005_car.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_006_user_add.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_006_user_add.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_007_user_remove.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_007_user_remove.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_008_film.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_008_film.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_009_magic.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_009_magic.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_010_envelope.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_010_envelope.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_011_camera.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_011_camera.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_012_heart.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_012_heart.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_013_beach_umbrella.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_013_beach_umbrella.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_014_train.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_014_train.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_015_print.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_015_print.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_016_bin.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_016_bin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_017_music.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_017_music.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_018_note.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_018_note.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_019_heart_empty.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_019_heart_empty.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_020_home.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_020_home.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_021_snowflake.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_021_snowflake.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_022_fire.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_022_fire.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_023_magnet.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_023_magnet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_024_parents.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_024_parents.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_025_binoculars.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_025_binoculars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_026_road.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_026_road.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_027_search.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_027_search.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_028_cars.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_028_cars.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_029_notes_2.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_029_notes_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_030_pencil.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_030_pencil.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_031_bus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_031_bus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_032_wifi_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_032_wifi_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_033_luggage.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_033_luggage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_034_old_man.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_034_old_man.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_035_woman.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_035_woman.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_036_file.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_036_file.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_037_coins.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_037_coins.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_038_airplane.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_038_airplane.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_039_notes.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_039_notes.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_040_stats.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_040_stats.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_041_charts.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_041_charts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_042_pie_chart.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_042_pie_chart.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_043_group.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_043_group.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_044_keys.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_044_keys.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_045_calendar.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_045_calendar.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_046_router.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_046_router.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_047_camera_small.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_047_camera_small.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_048_dislikes.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_048_dislikes.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_049_star.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_049_star.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_050_link.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_050_link.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_051_eye_open.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_051_eye_open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_052_eye_close.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_052_eye_close.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_053_alarm.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_053_alarm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_054_clock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_054_clock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_055_stopwatch.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_055_stopwatch.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_056_projector.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_056_projector.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_057_history.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_057_history.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_058_truck.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_058_truck.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_059_cargo.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_059_cargo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_060_compass.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_060_compass.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_061_keynote.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_061_keynote.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_062_paperclip.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_062_paperclip.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_063_power.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_063_power.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_064_lightbulb.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_064_lightbulb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_065_tag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_065_tag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_066_tags.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_066_tags.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_067_cleaning.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_067_cleaning.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_068_ruller.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_068_ruller.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_069_gift.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_069_gift.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_070_umbrella.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_070_umbrella.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_071_book.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_071_book.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_072_bookmark.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_072_bookmark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_073_wifi.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_073_wifi.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_074_cup.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_074_cup.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_075_stroller.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_075_stroller.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_076_headphones.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_076_headphones.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_077_headset.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_077_headset.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_078_warning_sign.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_078_warning_sign.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_079_signal.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_079_signal.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_080_retweet.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_080_retweet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_081_refresh.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_081_refresh.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_082_roundabout.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_082_roundabout.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_083_random.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_083_random.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_084_heat.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_084_heat.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_085_repeat.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_085_repeat.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_086_display.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_086_display.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_087_log_book.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_087_log_book.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_088_address_book.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_088_address_book.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_089_building.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_089_building.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_090_eyedropper.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_090_eyedropper.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_091_adjust.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_091_adjust.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_092_tint.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_092_tint.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_093_crop.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_093_crop.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_094_vector_path_square.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_094_vector_path_square.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_095_vector_path_circle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_095_vector_path_circle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_096_vector_path_polygon.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_096_vector_path_polygon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_097_vector_path_line.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_097_vector_path_line.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_098_vector_path_curve.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_098_vector_path_curve.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_099_vector_path_all.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_099_vector_path_all.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_100_font.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_100_font.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_101_italic.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_101_italic.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_102_bold.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_102_bold.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_103_text_underline.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_103_text_underline.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_104_text_strike.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_104_text_strike.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_105_text_height.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_105_text_height.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_106_text_width.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_106_text_width.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_107_text_resize.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_107_text_resize.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_108_left_indent.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_108_left_indent.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_109_right_indent.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_109_right_indent.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_110_align_left.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_110_align_left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_111_align_center.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_111_align_center.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_112_align_right.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_112_align_right.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_113_justify.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_113_justify.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_114_list.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_114_list.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_115_text_smaller.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_115_text_smaller.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_116_text_bigger.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_116_text_bigger.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_117_embed.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_117_embed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_118_embed_close.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_118_embed_close.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_119_table.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_119_table.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_120_message_full.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_120_message_full.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_121_message_empty.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_121_message_empty.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_122_message_in.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_122_message_in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_123_message_out.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_123_message_out.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_124_message_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_124_message_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_125_message_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_125_message_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_126_message_ban.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_126_message_ban.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_127_message_flag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_127_message_flag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_128_message_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_128_message_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_129_message_new.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_129_message_new.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_130_inbox.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_130_inbox.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_131_inbox_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_131_inbox_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_132_inbox_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_132_inbox_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_133_inbox_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_133_inbox_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_134_inbox_in.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_134_inbox_in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_135_inbox_out.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_135_inbox_out.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_136_cogwheel.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_136_cogwheel.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_137_cogwheels.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_137_cogwheels.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_138_picture.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_138_picture.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_139_adjust_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_139_adjust_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_140_database_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_140_database_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_141_database_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_141_database_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_142_database_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_142_database_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_143_database_ban.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_143_database_ban.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_144_folder_open.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_144_folder_open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_145_folder_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_145_folder_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_146_folder_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_146_folder_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_147_folder_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_147_folder_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_148_folder_flag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_148_folder_flag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_149_folder_new.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_149_folder_new.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_150_edit.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_150_edit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_151_new_window.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_151_new_window.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_152_check.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_152_check.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_153_unchecked.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_153_unchecked.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_154_more_windows.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_154_more_windows.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_155_show_big_thumbnails.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_155_show_big_thumbnails.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_156_show_thumbnails.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_156_show_thumbnails.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_157_show_thumbnails_with_lines.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_157_show_thumbnails_with_lines.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_158_show_lines.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_158_show_lines.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_159_playlist.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_159_playlist.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_160_imac.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_160_imac.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_161_macbook.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_161_macbook.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_162_ipad.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_162_ipad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_163_iphone.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_163_iphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_164_iphone_transfer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_164_iphone_transfer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_165_iphone_exchange.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_165_iphone_exchange.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_166_ipod.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_166_ipod.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_167_ipod_shuffle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_167_ipod_shuffle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_168_ear_plugs.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_168_ear_plugs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_169_record.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_169_record.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_170_step_backward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_170_step_backward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_171_fast_backward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_171_fast_backward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_172_rewind.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_172_rewind.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_173_play.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_173_play.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_174_pause.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_174_pause.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_175_stop.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_175_stop.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_176_forward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_176_forward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_177_fast_forward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_177_fast_forward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_178_step_forward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_178_step_forward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_179_eject.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_179_eject.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_180_facetime_video.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_180_facetime_video.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_181_download_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_181_download_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_182_mute.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_182_mute.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_183_volume_down.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_183_volume_down.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_184_volume_up.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_184_volume_up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_185_screenshot.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_185_screenshot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_186_move.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_186_move.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_187_more.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_187_more.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_188_brightness_reduce.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_188_brightness_reduce.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_189_brightness_increase.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_189_brightness_increase.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_190_circle_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_190_circle_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_191_circle_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_191_circle_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_192_circle_remove.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_192_circle_remove.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_193_circle_ok.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_193_circle_ok.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_194_circle_question_mark.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_194_circle_question_mark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_195_circle_info.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_195_circle_info.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_196_circle_exclamation_mark.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_196_circle_exclamation_mark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_197_remove.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_197_remove.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_198_ok.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_198_ok.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_199_ban.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_199_ban.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_200_download.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_200_download.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_201_upload.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_201_upload.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_202_shopping_cart.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_202_shopping_cart.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_203_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_203_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_204_unlock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_204_unlock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_205_electricity.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_205_electricity.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_206_ok_2.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_206_ok_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_207_remove_2.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_207_remove_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_208_cart_out.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_208_cart_out.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_209_cart_in.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_209_cart_in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_210_left_arrow.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_210_left_arrow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_211_right_arrow.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_211_right_arrow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_212_down_arrow.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_212_down_arrow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_213_up_arrow.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_213_up_arrow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_214_resize_small.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_214_resize_small.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_215_resize_full.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_215_resize_full.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_216_circle_arrow_left.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_216_circle_arrow_left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_217_circle_arrow_right.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_217_circle_arrow_right.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_218_circle_arrow_top.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_218_circle_arrow_top.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_219_circle_arrow_down.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_219_circle_arrow_down.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_220_play_button.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_220_play_button.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_221_unshare.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_221_unshare.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_222_share.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_222_share.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_223_chevron-right.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_223_chevron-right.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_224_chevron-left.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_224_chevron-left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_225_bluetooth.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_225_bluetooth.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_226_euro.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_226_euro.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_227_usd.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_227_usd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_228_gbp.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_228_gbp.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_229_retweet_2.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_229_retweet_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_230_moon.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_230_moon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_231_sun.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_231_sun.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_232_cloud.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_232_cloud.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_233_direction.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_233_direction.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_234_brush.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_234_brush.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_235_pen.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_235_pen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_236_zoom_in.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_236_zoom_in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_237_zoom_out.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_237_zoom_out.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_238_pin.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_238_pin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_239_albums.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_239_albums.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_240_rotation_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_240_rotation_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_241_flash.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_241_flash.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_242_google_maps.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_242_google_maps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_243_anchor.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_243_anchor.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_244_conversation.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_244_conversation.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_245_chat.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_245_chat.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_246_male.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_246_male.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_247_female.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_247_female.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_248_asterisk.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_248_asterisk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_249_divide.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_249_divide.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_250_snorkel_diving.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_250_snorkel_diving.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_251_scuba_diving.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_251_scuba_diving.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_252_oxygen_bottle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_252_oxygen_bottle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_253_fins.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_253_fins.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_254_fishes.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_254_fishes.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_255_boat.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_255_boat.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_256_delete.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_256_delete.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_257_sheriffs_star.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_257_sheriffs_star.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_258_qrcode.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_258_qrcode.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_259_barcode.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_259_barcode.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_260_pool.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_260_pool.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_261_buoy.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_261_buoy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_262_spade.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_262_spade.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_263_bank.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_263_bank.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_264_vcard.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_264_vcard.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_265_electrical_plug.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_265_electrical_plug.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_266_flag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_266_flag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_267_credit_card.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_267_credit_card.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_268_keyboard_wireless.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_268_keyboard_wireless.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_269_keyboard_wireless.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_269_keyboard_wireless.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_270_shield.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_270_shield.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_271_ring.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_271_ring.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_272_cake.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_272_cake.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_273_drink.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_273_drink.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_274_beer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_274_beer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_275_fast_food.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_275_fast_food.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_276_cutlery.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_276_cutlery.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_277_pizza.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_277_pizza.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_278_birthday_cake.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_278_birthday_cake.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_279_tablet.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_279_tablet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_280_settings.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_280_settings.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_281_bullets.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_281_bullets.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_282_cardio.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_282_cardio.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_283_t-shirt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_283_t-shirt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_284_pants.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_284_pants.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_285_sweater.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_285_sweater.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_286_fabric.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_286_fabric.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_287_leather.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_287_leather.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_288_scissors.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_288_scissors.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_289_bomb.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_289_bomb.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_290_skull.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_290_skull.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_291_celebration.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_291_celebration.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_292_tea_kettle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_292_tea_kettle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_293_french_press.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_293_french_press.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_294_coffe_cup.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_294_coffe_cup.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_295_pot.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_295_pot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_296_grater.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_296_grater.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_297_kettle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_297_kettle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_298_hospital.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_298_hospital.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_299_hospital_h.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_299_hospital_h.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_300_microphone.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_300_microphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_301_webcam.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_301_webcam.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_302_temple_christianity_church.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_302_temple_christianity_church.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_303_temple_islam.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_303_temple_islam.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_304_temple_hindu.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_304_temple_hindu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_305_temple_buddhist.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_305_temple_buddhist.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_306_bicycle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_306_bicycle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_307_life_preserver.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_307_life_preserver.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_308_share_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_308_share_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_309_comments.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_309_comments.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_310_flower.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_310_flower.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_311_baseball.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_311_baseball.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_312_rugby.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_312_rugby.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_313_ax.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_313_ax.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_314_table_tennis.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_314_table_tennis.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_315_bowling.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_315_bowling.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_316_tree_conifer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_316_tree_conifer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_317_tree_deciduous.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_317_tree_deciduous.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_318_more_items.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_318_more_items.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_319_sort.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_319_sort.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_320_filter.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_320_filter.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_321_gamepad.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_321_gamepad.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_322_playing_dices.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_322_playing_dices.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_323_calculator.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_323_calculator.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_324_tie.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_324_tie.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_325_wallet.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_325_wallet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_326_piano.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_326_piano.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_327_sampler.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_327_sampler.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_328_podium.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_328_podium.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_329_soccer_ball.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_329_soccer_ball.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_330_blog.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_330_blog.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_331_dashboard.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_331_dashboard.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_332_certificate.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_332_certificate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_333_bell.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_333_bell.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_334_candle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_334_candle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_335_pushpin.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_335_pushpin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_336_iphone_shake.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_336_iphone_shake.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_337_pin_flag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_337_pin_flag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_338_turtle.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_338_turtle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_339_rabbit.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_339_rabbit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_340_globe.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_340_globe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_341_briefcase.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_341_briefcase.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_342_hdd.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_342_hdd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_343_thumbs_up.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_343_thumbs_up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_344_thumbs_down.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_344_thumbs_down.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_345_hand_right.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_345_hand_right.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_346_hand_left.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_346_hand_left.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_347_hand_up.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_347_hand_up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_348_hand_down.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_348_hand_down.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_349_fullscreen.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_349_fullscreen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_350_shopping_bag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_350_shopping_bag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_351_book_open.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_351_book_open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_352_nameplate.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_352_nameplate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_353_nameplate_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_353_nameplate_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_354_vases.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_354_vases.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_355_bullhorn.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_355_bullhorn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_356_dumbbell.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_356_dumbbell.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_357_suitcase.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_357_suitcase.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_358_file_import.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_358_file_import.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_359_file_export.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_359_file_export.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_360_bug.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_360_bug.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_361_crown.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_361_crown.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_362_smoking.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_362_smoking.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_363_cloud_upload.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_363_cloud_upload.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_364_cloud_download.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_364_cloud_download.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_365_restart.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_365_restart.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_366_security_camera.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_366_security_camera.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_367_expand.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_367_expand.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_368_collapse.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_368_collapse.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_369_collapse_top.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_369_collapse_top.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_370_globe_af.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_370_globe_af.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_371_global.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_371_global.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_372_spray.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_372_spray.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_373_nails.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_373_nails.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_374_claw_hammer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_374_claw_hammer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_375_classic_hammer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_375_classic_hammer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_376_hand_saw.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_376_hand_saw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_377_riflescope.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_377_riflescope.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_378_electrical_socket_eu.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_378_electrical_socket_eu.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_379_electrical_socket_us.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_379_electrical_socket_us.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_380_message_forward.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_380_message_forward.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_381_coat_hanger.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_381_coat_hanger.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_382_dress.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_382_dress.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_383_bathrobe.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_383_bathrobe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_384_shirt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_384_shirt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_385_underwear.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_385_underwear.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_386_log_in.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_386_log_in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_387_log_out.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_387_log_out.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_388_exit.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_388_exit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_389_new_window_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_389_new_window_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_390_video_sd.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_390_video_sd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_391_video_hd.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_391_video_hd.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_392_subtitles.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_392_subtitles.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_393_sound_stereo.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_393_sound_stereo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_394_sound_dolby.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_394_sound_dolby.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_395_sound_5_1.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_395_sound_5_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_396_sound_6_1.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_396_sound_6_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_397_sound_7_1.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_397_sound_7_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_398_copyright_mark.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_398_copyright_mark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_399_registration_mark.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_399_registration_mark.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_400_radar.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_400_radar.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_401_skateboard.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_401_skateboard.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_402_golf_course.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_402_golf_course.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_403_sorting.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_403_sorting.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_404_sort-by-alphabet.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_404_sort-by-alphabet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_405_sort-by-alphabet-alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_405_sort-by-alphabet-alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_406_sort-by-order.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_406_sort-by-order.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_407_sort-by-order-alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_407_sort-by-order-alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_408_sort-by-attributes.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_408_sort-by-attributes.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_409_sort-by-attributes-alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_409_sort-by-attributes-alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_410_compressed.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_410_compressed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_411_package.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_411_package.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_412_cloud_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_412_cloud_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_413_cloud_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_413_cloud_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_414_disk_save.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_414_disk_save.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_415_disk_open.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_415_disk_open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_416_disk_saved.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_416_disk_saved.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_417_disk_remove.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_417_disk_remove.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_418_disk_import.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_418_disk_import.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_419_disk_export.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_419_disk_export.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_420_tower.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_420_tower.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_421_send.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_421_send.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_422_git_branch.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_422_git_branch.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_423_git_create.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_423_git_create.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_424_git_private.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_424_git_private.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_425_git_delete.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_425_git_delete.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_426_git_merge.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_426_git_merge.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_427_git_pull_request.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_427_git_pull_request.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_428_git_compare.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_428_git_compare.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_429_git_commit.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_429_git_commit.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_430_construction_cone.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_430_construction_cone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_431_shoe_steps.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_431_shoe_steps.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_432_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_432_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_433_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_433_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_434_redo.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_434_redo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_435_undo.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_435_undo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_436_golf.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_436_golf.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_437_hockey.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_437_hockey.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_438_pipe.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_438_pipe.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_439_wrench.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_439_wrench.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_440_folder_closed.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_440_folder_closed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_441_phone_alt.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_441_phone_alt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_442_earphone.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_442_earphone.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_443_floppy_disk.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_443_floppy_disk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_444_floppy_saved.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_444_floppy_saved.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_445_floppy_remove.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_445_floppy_remove.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_446_floppy_save.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_446_floppy_save.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_447_floppy_open.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_447_floppy_open.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_448_translate.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_448_translate.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_449_fax.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_449_fax.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_450_factory.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_450_factory.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_451_shop_window.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_451_shop_window.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_452_shop.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_452_shop.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_453_kiosk.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_453_kiosk.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_454_kiosk_wheels.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_454_kiosk_wheels.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_455_kiosk_light.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_455_kiosk_light.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_456_kiosk_food.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_456_kiosk_food.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_457_transfer.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_457_transfer.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_458_money.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_458_money.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_459_header.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_459_header.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_460_blacksmith.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_460_blacksmith.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_461_saw_blade.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_461_saw_blade.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_462_basketball.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_462_basketball.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_463_server.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_463_server.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_464_server_plus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_464_server_plus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_465_server_minus.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_465_server_minus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_466_server_ban.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_466_server_ban.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_467_server_flag.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_467_server_flag.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_468_server_lock.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_468_server_lock.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/glyphicons/png/glyphicons_469_server_new.png" afterPath="$PROJECT_DIR$/frontend/images/glyphicons/png/glyphicons_469_server_new.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/landing/ajout.png" afterPath="$PROJECT_DIR$/frontend/images/landing/ajout.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/landing/inventaire.png" afterPath="$PROJECT_DIR$/frontend/images/landing/inventaire.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/logo.png" afterPath="$PROJECT_DIR$/frontend/images/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/angularApp/controller/oeuvreCtlr.js" afterPath="$PROJECT_DIR$/frontend/scripts/angularApp/controller/oeuvreCtlr.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/angularApp/directives/oeuvreDirectives.js" afterPath="$PROJECT_DIR$/frontend/scripts/angularApp/directives/oeuvreDirectives.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/angularApp/route.js" afterPath="$PROJECT_DIR$/frontend/scripts/angularApp/route.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/app.js" afterPath="$PROJECT_DIR$/frontend/scripts/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/bootstrap-editable.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/bootstrap-editable.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/bootstrap-editable.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/bootstrap-editable.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/address/address.css" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/address/address.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/address/address.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/address/address.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/typeaheadjs/typeaheadjs.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/typeaheadjs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.css" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysiwyg-color.css" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysiwyg-color.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/bs-editable/inputs-ext/wysihtml5/wysihtml5.js" afterPath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/wysihtml5.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/carousel.js" afterPath="$PROJECT_DIR$/frontend/scripts/carousel.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/dossierOeuvre.js" afterPath="$PROJECT_DIR$/frontend/scripts/dossierOeuvre.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/editmenu.js" afterPath="$PROJECT_DIR$/frontend/scripts/editmenu.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/generic.js" afterPath="$PROJECT_DIR$/frontend/scripts/generic.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/myFlatForms.js" afterPath="$PROJECT_DIR$/frontend/scripts/myFlatForms.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/search.js" afterPath="$PROJECT_DIR$/frontend/scripts/search.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/selection.js" afterPath="$PROJECT_DIR$/frontend/scripts/selection.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/langs/readme.md" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/langs/readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/license.txt" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/license.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/advlist/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/anchor/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/autolink/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/autoresize/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/autosave/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/bbcode/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/charmap/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/code/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/code/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/colorpicker/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/colorpicker/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/contextmenu/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/directionality/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-cool.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-cool.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-cry.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-cry.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-embarassed.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-frown.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-frown.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-innocent.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-kiss.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-laughing.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-sealed.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-smile.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-smile.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-surprised.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-undecided.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-wink.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-wink.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/img/smiley-yell.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/img/smiley-yell.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/emoticons/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/example/dialog.html" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/example/dialog.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/example/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/example/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/example_dependency/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/example_dependency/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/fullpage/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/fullscreen/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/hr/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/hr/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/image/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/image/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/importcss/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/insertdatetime/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/layer/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/layer/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/legacyoutput/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/link/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/link/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/lists/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/lists/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/media/moxieplayer.swf" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/media/moxieplayer.swf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/media/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/media/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/nonbreaking/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/noneditable/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/pagebreak/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/paste/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/paste/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/preview/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/preview/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/print/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/print/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/save/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/save/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/searchreplace/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/spellchecker/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/tabfocus/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/table/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/table/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/template/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/template/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/textcolor/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/textpattern/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/textpattern/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/visualblocks/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/visualchars/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/plugins/wordcount/plugin.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/plugins/wordcount/plugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/content.inline.min.css" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/content.inline.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/content.min.css" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/content.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/readme.md" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce-small.dev.svg" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce-small.dev.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce-small.eot" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce-small.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce-small.ttf" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce-small.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce-small.woff" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce-small.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce.dev.svg" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce.dev.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce.eot" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce.svg" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce.ttf" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/fonts/tinymce.woff" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/fonts/tinymce.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/img/anchor.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/img/anchor.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/img/loader.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/img/loader.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/img/object.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/img/object.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/img/trans.gif" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/img/trans.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/skin.ie7.min.css" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/skin.ie7.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/skins/lightgray/skin.min.css" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/skins/lightgray/skin.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/themes/modern/theme.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/themes/modern/theme.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/scripts/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/frontend/scripts/tinymce/tinymce.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/application.styl" afterPath="$PROJECT_DIR$/frontend/stylus/application.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/bs-editable.css" afterPath="$PROJECT_DIR$/frontend/stylus/bs-editable.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/carousel.styl" afterPath="$PROJECT_DIR$/frontend/stylus/carousel.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/dossierOeuvre.styl" afterPath="$PROJECT_DIR$/frontend/stylus/dossierOeuvre.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/draganddrop.styl" afterPath="$PROJECT_DIR$/frontend/stylus/draganddrop.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/fonts.styl" afterPath="$PROJECT_DIR$/frontend/stylus/fonts.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/helpers.styl" afterPath="$PROJECT_DIR$/frontend/stylus/helpers.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/listing.styl" afterPath="$PROJECT_DIR$/frontend/stylus/listing.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/login.styl" afterPath="$PROJECT_DIR$/frontend/stylus/login.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/menuWrapper.styl" afterPath="$PROJECT_DIR$/frontend/stylus/menuWrapper.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/oeuvre.styl" afterPath="$PROJECT_DIR$/frontend/stylus/oeuvre.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/spinner.styl" afterPath="$PROJECT_DIR$/frontend/stylus/spinner.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/tinymce.styl" afterPath="$PROJECT_DIR$/frontend/stylus/tinymce.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/userreport.styl" afterPath="$PROJECT_DIR$/frontend/stylus/userreport.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylus/variables.styl" afterPath="$PROJECT_DIR$/frontend/stylus/variables.styl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/champsDAL.js" afterPath="$PROJECT_DIR$/backend/dal/champsDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/dossierOeuvreDAL.js" afterPath="$PROJECT_DIR$/backend/dal/dossierOeuvreDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/imagesDAL.js" afterPath="$PROJECT_DIR$/backend/dal/imagesDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/oeuvreDAL.js" afterPath="$PROJECT_DIR$/backend/dal/oeuvreDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/searchDAL.js" afterPath="$PROJECT_DIR$/backend/dal/searchDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/selectionDAL.js" afterPath="$PROJECT_DIR$/backend/dal/selectionDAL.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/dal/userDal.js" afterPath="$PROJECT_DIR$/backend/dal/userDal.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/champs.js" afterPath="$PROJECT_DIR$/backend/models/champs.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/dossierOeuvre.js" afterPath="$PROJECT_DIR$/backend/models/dossierOeuvre.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/image.js" afterPath="$PROJECT_DIR$/backend/models/image.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/log.js" afterPath="$PROJECT_DIR$/backend/models/log.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/museum.js" afterPath="$PROJECT_DIR$/backend/models/museum.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/oeuvre.js" afterPath="$PROJECT_DIR$/backend/models/oeuvre.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/recolement.js" afterPath="$PROJECT_DIR$/backend/models/recolement.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/role.js" afterPath="$PROJECT_DIR$/backend/models/role.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/selectionFolder.js" afterPath="$PROJECT_DIR$/backend/models/selectionFolder.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/selectionItem.js" afterPath="$PROJECT_DIR$/backend/models/selectionItem.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/user.js" afterPath="$PROJECT_DIR$/backend/models/user.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/userReport.js" afterPath="$PROJECT_DIR$/backend/models/userReport.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/userRole.js" afterPath="$PROJECT_DIR$/backend/models/userRole.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/account/changePassword.ejs" afterPath="$PROJECT_DIR$/backend/views/account/changePassword.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/account/login.ejs" afterPath="$PROJECT_DIR$/backend/views/account/login.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/account/register.ejs" afterPath="$PROJECT_DIR$/backend/views/account/register.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/champs_ovsolete/index.ejs" afterPath="$PROJECT_DIR$/backend/views/champs_ovsolete/index.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/champs_ovsolete/show.ejs" afterPath="$PROJECT_DIR$/backend/views/champs_ovsolete/show.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/errors/404.ejs" afterPath="$PROJECT_DIR$/backend/views/errors/404.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/errors/500.ejs" afterPath="$PROJECT_DIR$/backend/views/errors/500.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/home/index.ejs" afterPath="$PROJECT_DIR$/backend/views/home/index.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/home/searchIndex.ejs" afterPath="$PROJECT_DIR$/backend/views/home/searchIndex.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/images/galery.ejs" afterPath="$PROJECT_DIR$/backend/views/images/galery.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layout.ejs" afterPath="$PROJECT_DIR$/backend/views/layout.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/layout_mobile.ejs" afterPath="$PROJECT_DIR$/backend/views/layout_mobile.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/create.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/create.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/index.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/index.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/show.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/show.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/show_dossierOeuvre.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/show_dossierOeuvre.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/show_locked.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/show_locked.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/oeuvre/show_notlocked.ejs" afterPath="$PROJECT_DIR$/backend/views/oeuvre/show_notlocked.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/shared/_footer.ejs" afterPath="$PROJECT_DIR$/backend/views/shared/_footer.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/shared/_includes.ejs" afterPath="$PROJECT_DIR$/backend/views/shared/_includes.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/shared/_menu.ejs" afterPath="$PROJECT_DIR$/backend/views/shared/_menu.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/userreport/create.ejs" afterPath="$PROJECT_DIR$/backend/views/userreport/create.ejs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/userreport/index.ejs" afterPath="$PROJECT_DIR$/backend/views/userreport/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootloader.js" afterPath="$PROJECT_DIR$/bootloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grunt_tasks/config.js" afterPath="$PROJECT_DIR$/grunt_tasks/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grunt_tasks/copy.js" afterPath="$PROJECT_DIR$/grunt_tasks/copy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/dbContext.js" afterPath="$PROJECT_DIR$/db/dbContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/membership.js" afterPath="$PROJECT_DIR$/middleware/membership.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grunt_tasks/nodemon.js" afterPath="$PROJECT_DIR$/grunt_tasks/nodemon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grunt_tasks/stylus.js" afterPath="$PROJECT_DIR$/grunt_tasks/stylus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grunt_tasks/watch.js" afterPath="$PROJECT_DIR$/grunt_tasks/watch.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backend/api/selectionAPI.js" afterPath="$PROJECT_DIR$/backend/api/selectionAPI.nope" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/accountAPI.js" afterPath="$PROJECT_DIR$/backend/api/accountAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/champsAPI.js" afterPath="$PROJECT_DIR$/backend/api/champsAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js" afterPath="$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/imagesAPI.js" afterPath="$PROJECT_DIR$/backend/api/imagesAPI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/oeuvreAPI.js" afterPath="$PROJECT_DIR$/backend/api/oeuvreAPI.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Museion.io.iws" />
@@ -712,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
+            <state vertical-scroll-proportion="0.34456354" vertical-offset="0" max-vertical-offset="653">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
@@ -725,18 +45,8 @@
       <file leaf-file-name="accountAPI.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/api/accountAPI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1320">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oeuvreAPI.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/api/oeuvreAPI.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19392523" vertical-offset="352" max-vertical-offset="810">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1515">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -764,6 +74,11 @@
         <option value="$PROJECT_DIR$/grunt_tasks/watch.js" />
         <option value="$PROJECT_DIR$/frontend/scripts/app.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/backend/api/accountAPI.js" />
+        <option value="$PROJECT_DIR$/backend/api/champsAPI.js" />
+        <option value="$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js" />
+        <option value="$PROJECT_DIR$/backend/api/imagesAPI.js" />
+        <option value="$PROJECT_DIR$/backend/api/oeuvreAPI.js" />
       </list>
     </option>
   </component>
@@ -867,6 +182,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -933,7 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -950,10 +265,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -961,10 +280,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -980,6 +295,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <list size="0" />
@@ -1002,13 +323,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35227272" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3512748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3427762" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1017,6 +338,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1043,6 +365,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/accountAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1320">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/oeuvreAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dev/examples/MC-001-165 (drapeau St-Georges de Haarlem).jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1070,7 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.20689656" vertical-offset="225" max-vertical-offset="1335">
           <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,27 +427,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/selectionAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/searchAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/database.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,7 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16551724" vertical-offset="0" max-vertical-offset="725">
           <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,7 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,7 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10699002" vertical-offset="0" max-vertical-offset="701">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1190,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.0" vertical-offset="1245" max-vertical-offset="3000">
           <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="725">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1206,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.111386135" vertical-offset="450" max-vertical-offset="990">
           <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,7 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="428">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,15 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="428">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.91121495" vertical-offset="390" max-vertical-offset="1410">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1238,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,50 +560,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/champsAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17523365" vertical-offset="360" max-vertical-offset="1005">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14018692" vertical-offset="0" max-vertical-offset="450">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/selectionAPI.nope">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1470">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/searchAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.627907" vertical-offset="270" max-vertical-offset="870">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33411214" vertical-offset="427" max-vertical-offset="855">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state vertical-scroll-proportion="-0.10619469" vertical-offset="177" max-vertical-offset="855">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/backend/api/champsAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="327" max-vertical-offset="1200">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/api/accountAPI.js">
+    <entry file="file://$PROJECT_DIR$/backend/api/dossierOeuvreAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39823008" vertical-offset="375" max-vertical-offset="1605">
+          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/imagesAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5973451" vertical-offset="315" max-vertical-offset="1905">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/api/oeuvreAPI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19392523" vertical-offset="352" max-vertical-offset="810">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.24778761" vertical-offset="342" max-vertical-offset="1020">
+          <caret line="34" column="73" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/api/accountAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1515">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34456354" vertical-offset="0" max-vertical-offset="653">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>

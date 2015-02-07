@@ -30,7 +30,20 @@ var ChampsDAL = require('../dal/champsDAL');
 		app.get('/champsAPI/getAll', this.getAll);
 		app.post('/champsAPI/creer', this.creer);
 
+        // route v0.1.0
+        app.get("/api/champs", this.getAll);
+        app.get("/api/champs/detail/:id", this.getChamp);
+
+        app.post("/api/champs", this.creer);
+        app.put("/api/champs", this.undef);
+        app.delete("/api/champs", this.undef);
+
 	};
+
+    ChampsAPI.prototype.undef = function(){
+        return {"message":"unhandled route"};
+    };
+
 
 	ChampsAPI.prototype.getChamp = function(req, res){
 

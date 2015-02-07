@@ -33,7 +33,20 @@ var util = require('util');
         // app.post('/dossierOeuvreAPI/post/ajouter', filters.authorize, this.ajouter); 
         app.get('/dossierOeuvreAPI/getByOeuvreId/:oeuvreId', this.getByOeuvre);
         app.post('/dossierOeuvreAPI/post/majVal', this.majVal);
-        app.post('/dossierOeuvreAPI/post/ajouter', this.ajouter); 
+        app.post('/dossierOeuvreAPI/post/ajouter', this.ajouter);
+
+        // route v0.1.0
+        app.get("/api/dossieroeuvre/:id", this.undef); //@TODO
+        app.get("/api/dossieroeuvre/oeuvre/:oeuvreId", this.getByOeuvre);
+
+        app.post("/api/dossieroeuvre", this.ajouter);
+        app.put("/api/dossieroeuvre", this.majVal);
+        app.delete("/api/dossieroeuvre", this.undef); //@TODO
+
+    };
+
+    DossierOeuvreAPI.prototype.undef = function(){
+        return {"message":"unhandled route"};
     };
 
     DossierOeuvreAPI.prototype.getByOeuvre = function(req, res){

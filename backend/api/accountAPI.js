@@ -18,9 +18,17 @@ var UserDal           = require('../dal/userDal');
 		// app.post('/accountAPI/login', this.authenticate);
 		// app.post('/accountAPI/register', this.register);
 		// app.get('/accountAPI/logout', this.logout);
+
+        app.post('/api/account/inscription', this.register);
+        app.post('/api/account/connexion', this.login);
+        app.post('/api/account/deconnexion', this.logout);
 	};
 
 	AccountAPI.prototype.login = function(req, res){
+        var user = req.body.user;
+        var authString = req.body.authString;
+
+
 
 	}
 
@@ -39,20 +47,17 @@ var UserDal           = require('../dal/userDal');
                         newUser.password = hashedpassword;
 
                         userDal.save(newUser, function (data) {
-                            req.flash('flash', 'Enregistrement accompli avec succès!');
-                            res.redirect('/account/login');
+                            res.send(data);
                         });
                     });
                 }
                 else {
-                    req.flash('flash', 'email déjà enregistré');
-                    res.redirect('/account/register');
+                    res.send({ "message": "utilisateur déjà existant..."});
                 }
             });
         }
         else {
-            req.flash('flash', 'Mot de passe trop court!');
-            res.redirect('/account/register');
+            res.send({"message":"mot de passe non valide"});
         }
 	}
 
@@ -76,6 +81,14 @@ var UserDal           = require('../dal/userDal');
 	        return callback(result);
 	    });
 	}
+
+    var authorizeUser = function(username, authString){
+
+        userDal.getByUsername(username, function(user){
+
+
+        });
+    }
 
 
 	module.exports = AccountAPI;

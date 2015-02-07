@@ -36,6 +36,22 @@ var  util = require('util');
         app.get('/imagesAPI/getAll/:oeuvreId', this.getInfoByOeuvre);
         app.post('/imagesAPI/upload', this.upload);   
         app.get('/imagesAPI/delete/:id', this.remove);
+
+        // route v0.1.0
+
+        app.get("/api/images/", this.undef ); //TODO
+        app.get("/api/images/oeuvre/:oeuvreId", this.getInfoByOeuvre);
+        app.get("/api/images/detail/:imageId", this.getInfo);
+        app.get("/api/images/fichier/:imageId", this.image);
+
+        app.post("/api/images", this.upload);
+        app.put("/api/images", this.undef); //TODO
+        app.delete("/api/images", this.undef); // TODO this.remove est une methode GET pour le moment
+
+    };
+
+    ImagesAPI.prototype.undef = function(){
+        return {"message":"unhandled route"};
     };
 
     ImagesAPI.prototype.image = function(req, res){
