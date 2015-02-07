@@ -2,7 +2,7 @@
 * Module dependencies.
 */
 var bcrypt = require('bcrypt-nodejs');
-var UserDal = require('../app/dal/userDal');
+var UserDal = require('../backend/dal/userDal');
 
 /**
 * Membership class

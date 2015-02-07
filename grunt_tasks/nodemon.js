@@ -10,6 +10,6 @@ module.exports = {
     	]
     },
     application: {
-        script: ['app.js']
+        script: ['museionServer.js']
     }
 }

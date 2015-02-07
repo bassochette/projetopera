@@ -45,25 +45,26 @@ module.exports = {
 	scripts:{
 		files:[
 			// assets scripts
-	  		{expand: true, cwd: '<%= config.assets %>/scripts/', src: ['**'], dest: '<%= config.public %>/scripts/'}
+	  		{expand: true, cwd: '<%= config.frontend %>/scripts/', src: ['**'], dest: '<%= config.public %>/scripts/'}
 		]
 	},
 	html:{
 		files: [
-			{expand: true, cwd:'<%= config.assets %>/html/', src:['**'], dest: '<%= config.public %>/html/'}
+			{expand: true, cwd:'<%= config.frontend %>/html/', src:['**'], dest: '<%= config.public %>/html/'},
+            {src: '<%= config.frontend %>/index.html', dest: '<%=config.public %>/index.html'}
 		]
 	},
 	images:{
 		files:[
 			// assets images
-	  		{expand: true, cwd: '<%= config.assets %>/images/', src: ['**'], dest: '<%= config.public %>/images/'},
+	  		{expand: true, cwd: '<%= config.frontend %>/images/', src: ['**'], dest: '<%= config.public %>/images/'},
 	  		{expand: true, cwd: '<%= config.bower %>/img/', src: ['**'], dest: '<%= config.public %>/images/'},
 	  		{expand: true, cwd: '<%= config.bower %>/DataTables/media/images/', src: ['**'], dest:'<%=config.public %>/images/'}
 		]
 	},
 	fonts: {
 		files:[
-			{expand: true, cwd: '<%=config.assets %>/fonts/', src: ['**'], dest: '<%= config.public %>/fonts/'}
+			{expand: true, cwd: '<%=config.frontend %>/fonts/', src: ['**'], dest: '<%= config.public %>/fonts/'}
 		]
 	}
 }

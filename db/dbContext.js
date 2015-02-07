@@ -3,7 +3,7 @@
 */
 (function () {
 
-    var modelsPath = __dirname + '/../app/models/';
+    var modelsPath = __dirname + '/../backend/models/';
 
     /**
     * Constructor.

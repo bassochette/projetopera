@@ -21,15 +21,19 @@ var membership = new Membership(passport, LocalStrategy);
  */
 app.configure(function(){
     app.set('port', process.env.PORT || 3000);
+
+    // Web server
     app.use(express.favicon(__dirname + '/public/images/favicon.png'));
     app.use(express.static(path.join(__dirname, 'public')));
 
-    app.set('views', __dirname + '/app/views/');  
-    app.set('view engine', 'ejs');
-    app.set('layout', 'layout');
 
-    app.engine('ejs', engine);
-    app.locals({_layoutFile: true});
+
+    //app.set('views', __dirname + '/app/views/');
+    //app.set('view engine', 'ejs');
+    //app.set('layout', 'layout');
+
+    //app.engine('ejs', engine);
+    //app.locals({_layoutFile: true});
     require('express-helpers')(app);
 
     app.use(function (req, res, next) {
@@ -83,5 +87,5 @@ app.use(require('./middleware/errorHandler')(errorOptions));
  * Run server.
  */
 var server = http.createServer(app).listen(app.get('port'), function(){
-    console.log("\n microscope server listening on port " + app.get('port'));
+    console.log("\n museion server listening on port " + app.get('port'));
 });

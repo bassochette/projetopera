@@ -1,14 +1,18 @@
 module.exports = {
 	styles: {
-    	files: ['app/assets/**/*.styl'],
+    	files: ['frontend/**/*.styl'],
     	tasks: ['stylus:dev']
   	},
 	scripts: {
-		files: ['app/assets/**/*.js'],
+		files: ['frontend/**/*.js'],
 		tasks: ['copy:scripts']
 	},
     assets:{
-        files: ['app/assets/images/**/*'],
+        files: ['frontend/images/**/*'],
         tasks: ['copy:images']
+    },
+    html: {
+        files: ['frontend/**/*.html'],
+        tasks: ['copy:html']
     }
 };

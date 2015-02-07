@@ -1,9 +1,9 @@
 {
   "name": "microscope_application",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node museionServer"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

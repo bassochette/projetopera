@@ -17,25 +17,17 @@ var engine   = require('ejs-locals');
 	 * @param {express} app.
 	 */
 	function Bootloader(app) {
-		this.loadControllers(app);
 		this.loadApiControllers(app);
 	}
 
-	/**
-	 * load module controllers
-	 * @param  {express} module
-	 */
-	Bootloader.prototype.loadControllers = function (app) {
-		var controllerFolder =  __dirname + '/app/controllers/';
-		loadControllerFromFolder(controllerFolder, app);
-	};
+
 
 	/**
 	 * load module api controller s
 	 * @param  {express} app
 	 */
 	Bootloader.prototype.loadApiControllers = function (app) {
-		var apiFolder = __dirname + '/app/api/';
+		var apiFolder = __dirname + '/backend/api/';
 		loadControllerFromFolder(apiFolder, app);
 	};
 

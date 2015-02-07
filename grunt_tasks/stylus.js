@@ -4,7 +4,7 @@ module.exports = {
 			compress : false
 		},
 		files: {
-			'<%= config.public %>/styles/application.css': '<%= config.assets %>/stylus/application.styl'
+			'<%= config.public %>/styles/application.css': '<%= config.frontend %>/stylus/application.styl'
 		}
 	},
 	release:{
@@ -12,7 +12,7 @@ module.exports = {
 			compress : true
 		},
 		files: {
-			'<%= config.public %>/styles/application.css': '<%= config.assets %>/stylus/application.styl'
+			'<%= config.public %>/styles/application.css': '<%= config.frontend %>/stylus/application.styl'
 		}	
 	}
 };
