@@ -24,38 +24,111 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
 
     OeuvreAPI.prototype.routes = function(app) {
-        // app.get('/oeuvreAPI', filters.authorize,  this.oeuvres);  
-        // app.get('/oeuvreAPI/recentlyUpdated', filters.authorize, this.recentlyUpdated);   
-        //app.get('/oeuvreAPI',  this.oeuvres);
-        //app.get('/oeuvreAPI/recentlyUpdated', this.recentlyUpdated);
 
         // route v0.1.0
-        app.get("/api/oeuvre", this.undef);//TODO
-        app.get("/api/oeuvre/liste", this.undef);//TODO
-        app.get("/api/oeuvre/liste/:pageSize/:offset", this.undef);//TODO
+        app.get("/api/oeuvre", this.liste);
+        app.get("/api/oeuvre/liste", this.liste);
+        app.get("/api/oeuvre/liste/:pageSize/:offset", this.listePaged);
+        app.get("/api/oeuvre/recent", this.recentlyUpdated);
+        app.get("/api/oeuvre/compte", this.compte);
+        app.get("/api/oeuvre/detail/:oeuvreId", this.detail);
 
-        app.post("/api/oeuvre", this.undef);//TODO
-        app.put("/api/oeuvre", this.undef);//TODO
-        app.delete("/api/oeuvre", this.undef);//TODO
+        app.post("/api/oeuvre", this.ajout);
+        app.put("/api/oeuvre", this.update);
+        app.delete("/api/oeuvre/:oeuvreId", this.delete);
 
     };
 
-
-    OeuvreAPI.prototype.oeuvres= function(req, res) {    
-
-        oeuvreDAL.getAll(function(data){
+    //retourne les details d'une oeuvre
+    OeuvreAPI.prototype.detail = function(req, res){
+        oeuvreDAL.get(req.params.oeuvreId, function(data){
             res.send(data);
-        }); 
-    }; 
+        });
+    };
 
-    OeuvreAPI.prototype.recentlyUpdated = function(req, res){
-        oeuvreDAL.getRecentlyUpdated(20, function(data){
+    // Ajoute une oeuvre
+    OeuvreAPI.prototype.ajout = function(req, res){
+
+        var oeuvre = req.body.oeuvre;
+
+        oeuvreDAL.save(oeuvre, function(data){
             res.send(data);
+        });
+
+    };
+
+    // Mise à jour d'une oeuvre
+    OeuvreAPI.prototype.update = function(req, res){
+
+        var oeuvre = req.body.oeuvre;
+        console.log("[oeuvreAPI] update "+oeuvre+" \ntype "+ typeof oeuvre);
+
+        var t = JSON.parse(oeuvre);
+        console.log("[oeuvreAPI] parsed update "+JSON.stringify(t)+" \ntype "+typeof t);
+
+        oeuvreDAL.update(oeuvre, function(data){
+            res.send(data);
+        });
+
+
+    }
+
+    // Suppression d'une oeuvre
+    OeuvreAPI.prototype.delete = function(req, res){
+
+        var oeuvreId = req.params.oeuvreId;
+        console.log("[oeuvreAPI] params suppression "+JSON.stringify(req.params));
+        console.log("[oeuvreAPI] body suppression "+JSON.stringify(req.body));
+        console.log("[oeuvreAPI] suppression oeuvre "+oeuvreId);
+
+        oeuvreDAL.remove(oeuvreId, function(err){
+            if(err){
+                res.send(err);
+            } else {
+                res.send({suppression : true});
+            }
         });
     }
 
+    // Retourne la liste complète des oeuvres
+    OeuvreAPI.prototype.liste= function(req, res) {
+        oeuvreDAL.getAll(function(data){
+            res.send(data);
+        }); 
+    };
+
+    // retourne une liste paginé et limité des oeuvres
+    OeuvreAPI.prototype.listePaged = function(req, res){
+
+        var offset = req.params.offset;
+        var pageSize = req.params.pageSize;
+
+        oeuvreDAL.pagedList(offset, pageSize, function(data){
+            res.send(data);
+        });
+    };
+
+    // retourne le compte des oeuvres
+    OeuvreAPI.prototype.compte = function(req, res){
+        oeuvreDAL.count(function(data){
+            console.log("[oeuvreAPI] compte "+data);
+            res.send({"compte":data});
+        });
+    };
+
+
+    // retourne les 50 dernières oeuvres modifié
+    OeuvreAPI.prototype.recentlyUpdated = function(req, res){
+        oeuvreDAL.getRecentlyUpdated(function(data){
+            res.send(data);
+        });
+    };
+
+
+
+    // Pas de d'accès à la route
     OeuvreAPI.prototype.undef = function(){
-        return {"message":"unhandled route"};
+        return {"message":"route en chantier."};
     };
     
 

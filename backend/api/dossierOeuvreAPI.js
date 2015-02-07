@@ -36,12 +36,12 @@ var util = require('util');
         app.post('/dossierOeuvreAPI/post/ajouter', this.ajouter);
 
         // route v0.1.0
-        app.get("/api/dossieroeuvre/:id", this.undef); //@TODO
+        app.get("/api/dossieroeuvre/:id", this.undef); //TODO
         app.get("/api/dossieroeuvre/oeuvre/:oeuvreId", this.getByOeuvre);
 
         app.post("/api/dossieroeuvre", this.ajouter);
         app.put("/api/dossieroeuvre", this.majVal);
-        app.delete("/api/dossieroeuvre", this.undef); //@TODO
+        app.delete("/api/dossieroeuvre", this.undef); //TODO
 
     };
 

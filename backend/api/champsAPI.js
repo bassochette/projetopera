@@ -33,10 +33,11 @@ var ChampsDAL = require('../dal/champsDAL');
         // route v0.1.0
         app.get("/api/champs", this.getAll);
         app.get("/api/champs/detail/:id", this.getChamp);
+        app.get("/api/champs/compte", this.undef); // todo
 
         app.post("/api/champs", this.creer);
-        app.put("/api/champs", this.undef);
-        app.delete("/api/champs", this.undef);
+        app.put("/api/champs", this.undef); //todo
+        app.delete("/api/champs", this.undef); //todo
 
 	};
 
@@ -63,8 +64,8 @@ var ChampsDAL = require('../dal/champsDAL');
 	ChampsAPI.prototype.creer = function(req, res){
 
 		var chmps = {};
-		chmps.nom = req.body.nom;
-		chmps.type = req.body.type;
+		chmps.nom = req.params.nom;
+		chmps.type = req.params.type;
 
 		champsDAL.save(chmps, function(data){
 			res.send(200, JSON.stringify(data));

@@ -3,6 +3,7 @@
  */
 var express       = require('express');
 var http          = require('http');
+var https         = require('https');
 var path          = require('path');
 var url           = require('url');
 var engine        = require('ejs-locals');

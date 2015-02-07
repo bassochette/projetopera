@@ -19,9 +19,10 @@ var UserDal           = require('../dal/userDal');
 		// app.post('/accountAPI/register', this.register);
 		// app.get('/accountAPI/logout', this.logout);
 
-        app.post('/api/account/inscription', this.register);
-        app.post('/api/account/connexion', this.login);
-        app.post('/api/account/deconnexion', this.logout);
+        app.get("/api/utilisateur/compte", this.undef); // todo
+        app.post('/api/utilisateur/inscription', this.undef); //todo
+        app.post('/api/utilisateur/connexion', this.undef); //todo
+        app.post('/api/utilisateur/deconnexion', this.undef); //todo
 	};
 
 	AccountAPI.prototype.login = function(req, res){
@@ -90,6 +91,9 @@ var UserDal           = require('../dal/userDal');
         });
     }
 
+    AccountAPI.prototype.undef = function(){
+        return {"message":"route en chantier."};
+    };
 
 	module.exports = AccountAPI;
 

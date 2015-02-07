@@ -50,14 +50,10 @@ var DbContext = require('../../db/dbContext');
         }); 
     }
 
-    oeuvreDAL.prototype.getParAuteur = function(callback) {
-        dbContext.oeuvre.findAll({order: 'auteur ASC'}).success(function(oeuvres) {
-            callback(oeuvres);
-        });
-    };
-    oeuvreDAL.prototype.getParNom = function(callback) {
-        dbContext.oeuvre.findAll({order: 'designation ASC'}).success(function(oeuvres) {
-            callback(oeuvres);
+    oeuvreDAL.prototype.pagedList = function ( offset, pageSize, next){
+
+        dbContext.oeuvre.findAll({ "limit": pageSize, "offset": offset}).success(function(data){
+            next(data);
         });
     };
 
@@ -67,6 +63,14 @@ var DbContext = require('../../db/dbContext');
                             callback(oeuvres);
                         });
     };
+
+    oeuvreDAL.prototype.count = function(next){
+
+        dbContext.oeuvre.count().success(function(data){
+            next(data);
+        });
+    };
+
     /**
      * save oeuvre
      * @param  {Object}   oeuvre
@@ -97,10 +101,23 @@ var DbContext = require('../../db/dbContext');
      * @param  {[type]}   attributes
      * @param  {Function} callback
      */
-    oeuvreDAL.prototype.update = function(oeuvre, attributes, callback){
-        oeuvre.updateAttributes(attributes).success(function (updatedoeuvre) { 
-            callback(updatedoeuvre);
-        }); 
+    oeuvreDAL.prototype.update = function(update, next){
+
+        console.log("[oeuvreDAL] demande de mise à jour "+JSON.stringify(update)+" \n type "+typeof update);
+
+        update = JSON.parse(update);
+
+        dbContext.oeuvre.find(update.id).success(function(oeuvre){
+
+            console.log("[oeuvreDAL] oeuvre à mettre à jour trouvé dans la base "+JSON.stringify(oeuvre));
+
+            oeuvre.updateAttributes(update).success(function (updatedoeuvre) {
+                next(updatedoeuvre);
+            });
+
+        });
+
+
     };
 
     /**
@@ -108,12 +125,21 @@ var DbContext = require('../../db/dbContext');
      * @param  {Integer}   oeuvreId
      * @param  {Function} callback
      */
-    oeuvreDAL.prototype.remove = function(oeuvreId, callback) {   
+    oeuvreDAL.prototype.remove = function(oeuvreId, next) {
+
         dbContext.oeuvre.find(oeuvreId).success(function(oeuvre) {
-			oeuvre.destroy().success(function() {
-				callback();
-			});
-        })
+			if(oeuvre){
+                oeuvre.destroy().success(function() {
+                    next();
+                });
+            } else {
+                next({"message": "Oeuvre inexistante"});
+            }
+
+        }).error(function() {
+                next({"message": "Oeuvre inexistante"});
+            }
+        );
     };
 
     
@@ -123,7 +149,7 @@ var DbContext = require('../../db/dbContext');
             oeuvre.set("verrou", true);
             oeuvre.set("dateInscriptionInventaire", new Date());
             oeuvre.save();
-            callback(oeuvre.id);
+            callback(oeuvre);
         });
     }
     

@@ -27,6 +27,12 @@ var MembershipFilters = require('../../middleware/membershipFilters');
         // app.post('/searchAPI/search', filters.authorize,  this.search);    
         app.post('/searchAPI/search',  this.search);     
 
+        // route v0.1.0
+        app.get("/api/search", this.undef); // TODO
+    };
+
+    SearchAPI.prototype.undef = function(){
+        return {"message":"unhandled route"};
     };
 
 
