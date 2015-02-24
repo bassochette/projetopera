@@ -5,52 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3ee8073-078b-4413-8ede-504c330b79ba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/angularApp/controller/oeuvreCtlr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/angularApp/directives/oeuvreDirectives.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/angularApp/route.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/bootstrap-editable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/bootstrap-editable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/address/address.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/address/address.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/lib/typeahead.js-bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/typeaheadjs/typeaheadjs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/bootstrap-wysihtml5-0.0.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysihtml5-0.3.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/bootstrap-wysihtml5-0.0.2/wysiwyg-color.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/bs-editable/inputs-ext/wysihtml5/wysihtml5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/dossierOeuvre.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/editmenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/generic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/myFlatForms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/scripts/selection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/stylus/bs-editable.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/stylus/draganddrop.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/stylus/listing.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/stylus/login.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/stylus/userreport.styl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/scripts/myFlatForms.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Museion.io.iml" afterPath="$PROJECT_DIR$/.idea/Museion.io.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/accountAPI.js" afterPath="$PROJECT_DIR$/backend/api/accountAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/scripts/app.js" afterPath="$PROJECT_DIR$/frontend/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/application.css" afterPath="$PROJECT_DIR$/public/styles/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/stylus/application.styl" afterPath="$PROJECT_DIR$/frontend/stylus/application.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/html/home.html" afterPath="$PROJECT_DIR$/frontend/html/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/imagesAPI.js" afterPath="$PROJECT_DIR$/backend/api/imagesAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/index.html" afterPath="$PROJECT_DIR$/frontend/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/html/oeuvre/inventaire.html" afterPath="$PROJECT_DIR$/frontend/html/oeuvre/inventaire.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/museionServer.js" afterPath="$PROJECT_DIR$/museionServer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/oeuvreAPI.js" afterPath="$PROJECT_DIR$/backend/api/oeuvreAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/dal/oeuvreDAL.js" afterPath="$PROJECT_DIR$/backend/dal/oeuvreDAL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/api/searchAPI.js" afterPath="$PROJECT_DIR$/backend/api/searchAPI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/html/oeuvre/show.html" afterPath="$PROJECT_DIR$/frontend/html/oeuvre/show.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/stylus/spinner.styl" afterPath="$PROJECT_DIR$/frontend/stylus/spinner.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Museion.io.iws" />
@@ -112,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1290">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -141,8 +96,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25240386" vertical-offset="0" max-vertical-offset="416">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -1951,7 +1906,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1961,10 +1916,10 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37367624" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32829046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32829046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24223107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24223107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2361,14 +2316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1290">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootloader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="855">
@@ -2385,10 +2332,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1290">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25240386" vertical-offset="0" max-vertical-offset="416">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
