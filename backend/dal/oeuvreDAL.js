@@ -44,6 +44,19 @@ var DbContext = require('../../db/dbContext');
         });
     };
 
+    oeuvreDAL.prototype.getList = function(next){
+        dbContext.oeuvre.findAll({attributes: ["id",
+            "oeuvreId",
+            "designation",
+            "auteur",
+            "datation",
+            "verrou",
+            "updatedAt"]}).success(function(oeuvres){
+            next(oeuvres);
+        });
+
+    };
+
     oeuvreDAL.prototype.getRecentlyUpdated = function(callback){
         dbContext.oeuvre.findAll({order: 'updatedAt DESC', limit: 50}).success(function(oeuvres){
             callback(oeuvres);

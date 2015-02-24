@@ -69,9 +69,9 @@ var UserDal           = require('../dal/userDal');
 	        bcrypt.hash(password, salt, null, function(err, cryptedPassWord) {
 	            if(err){ throw err; }
 	            else{
-	                callback(cryptedPassWord);  
 	            }
-	        });
+                callback(cryptedPassWord);
+            });
 	    });
 	}
 

@@ -54,15 +54,11 @@ app.configure(function(){
     app.use(express.session({ secret: 'napoleon' }));
     app.use(express.errorHandler());
 
-    app.use(require('./middleware/deviceHandler'));
+    //app.use(require('./middleware/deviceHandler'));
     app.use(passport.initialize());
     app.use(passport.session());
 
-    app.use(flash());
-    app.use(function(req, res, next){
-        res.locals.flash = req.flash('flash');
-        next();
-    });
+
     app.use(app.router);
 });
 

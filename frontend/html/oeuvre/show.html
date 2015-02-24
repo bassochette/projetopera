@@ -1,5 +1,5 @@
 
-<div id="inventaire" ng-controller="OeuvreController as oeuvre">
+<div>
 
 	<!-- Navbar -->
 
@@ -8,7 +8,7 @@
 			<a href="#inventaireTabContent" role="tab" data-toggle="tab" id="inventaireTabLink">Inventaire</a>
 		</li>
 		
-		<li id="dossierTab" >
+		<li id="dossierTab" ng-show="oCtlr.hasId()">
 			<a href="#dossierOeuvreTabContent" role="tab" data-toggle="tab" id='dossierOeuvreTabLink'>Dossier</a>
 		</li>
 
@@ -29,7 +29,7 @@
 			
 
 			<!-- carousel + upload form -->
-			<carroussel ></carroussel>
+			<carroussel ng-show="oCtlr.hasId()"></carroussel>
 
 			<!-- body inventaire -->
 			<inventaire>
@@ -40,11 +40,17 @@
 		</div>
 
 		<!-- tab content onglet 2 --> 
-		<div class="tab-pane fade" id="dossierOeuvreTabContent">
+		<div class="tab-pane fade" id="dossierOeuvreTabContent" >
 			<!-- dossier oeuvres -->
 			
 			<!---- Dossier Oeuvre ----> 
 			<h3>Dossier oeuvre</h3>
+
+            <champs>
+
+            </champs>
+
+
 			
 		</div>
 	</div>

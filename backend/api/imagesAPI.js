@@ -42,7 +42,7 @@ var  util = require('util');
         app.get("/api/images/", this.undef ); //TODO
         app.get("/api/images/oeuvre/:oeuvreId", this.getInfoByOeuvre);
         app.get("/api/images/detail/:imageId", this.getInfo);
-        app.get("/api/images/fichier/:imageId", this.image);
+        app.get("/api/images/:oeuvreId/:digest", this.image);
 
         app.post("/api/images", this.upload);
         app.put("/api/images", this.undef); //TODO
@@ -51,7 +51,7 @@ var  util = require('util');
     };
 
     ImagesAPI.prototype.undef = function(){
-        return {"message":"unhandled route"};
+        return {"message":"route en chantier..."};
     };
 
     ImagesAPI.prototype.image = function(req, res){

@@ -5,3 +5,4 @@ public
 upload/images/*
 tmpUpload/*
 data_seeds
+.idea

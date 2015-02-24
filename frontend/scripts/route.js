@@ -3,18 +3,20 @@ app.config( ['$routeProvider', '$locationProvider', function($routeProvider, $lo
 	$locationProvider.html5Mode(true);
 
 	$routeProvider.when('/', {
-		templateUrl : '/html/home.html',
-		controller : 'home'
+		redirectTo: "/oeuvre/nouvelle"
 	})
 	.when('/oeuvre/nouvelle', {
 		templateUrl:  '/html/oeuvre/show.html',
-		controller: 'oeuvreController'
+		controller: 'oeuvreCtlr as oCtlr'
 	})
-	.when('/oeuvre/:id', {
+	.when('/oeuvre/detail/:id', {
 		templateUrl: '/html/oeuvre/show.html',
-		controller: 'oeuvreController'
-	})
+		controller: 'oeuvreCtlr as oCtlr'
+	}).when('/oeuvre/liste', {
+            templateUrl: 'html/oeuvre/liste.html',
+            controller:'listeCtlr'
+        })
 	.otherwise({
-		redirectTo: "/"
+		redirectTo: "/oeuvre/nouvelle"
 	});
 }]);

@@ -10,78 +10,11 @@
     <link rel="stylesheet" href="/styles/bootstrap.css" media="screen">
     <link rel="stylesheet" type="text/css" href="/styles/animate.css">
     <link rel="stylesheet" type="text/css" href="/styles/application.css">
-    <link rel="stylesheet" type="text/css" href="/styles/pickadate.css">
-    <link rel="stylesheet" type="text/css" href="/styles/pickadate.date.css">
-    <link rel="stylesheet" type="text/css" href="/styles/jquery.dataTables.css">
 
 
-    <script src="/scripts/angular.js"></script>
-    <script src="/scripts/angular-route.js"></script>
-    <script src="/scripts/app.js"></script>
-    <!--- Controller  -->
-    <script src="/scripts/angularApp/controller/oeuvreCtlr.js"></script>
-    <!-- Directives -->
-    <script src-"/scripts/angularApp/directives/oeuvreDirectives.js"></script>
-
-
-    <link href="/styles/bs-editable.css" rel="stylesheet">
-
-        <!-- CSS Danny Coulombe -->
-    <style type="text/css">
-    .sidebar-nav > .sidebar-brand {
-        height: auto;
-    }
-    .table > thead > tr > th,
-    .table > tbody > tr > th,
-    .table > tfoot > tr > th,
-    .table > thead > tr > td,
-    .table > tbody > tr > td,
-    .table > tfoot > tr > td {
-        border: 0px;
-    }
-    #myTabBar {
-        margin-top: 15px;
-        margin-left: 25px;
-    }
-    #sidebar-wrapper {
-        box-shadow: 5px 0px 0px rgba(0, 0,  0, 0.15);
-    }
-    .sidebar-brand a {
-        display: block;
-        padding: 15px 15px;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.15);
-    }
-    .sidebar-nav > .sidebar-brand a:hover {
-        background-color: rgba(0, 0, 0, 0.25);
-    }
-    .sidebar-nav li a {
-        border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
-        padding: 5px 15px;
-        font-weight: 300;
-    }
-    .sidebar-nav li a:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-    }
-    #editMenu {
-        top: 8px;
-        right: 0px;
-        margin-right: 25px;
-    }
-    .invMisc input,
-    .invItems input,
-    .invMisc input:focus,
-    .invItems input:focus {
-        border-radius: 3px;
-        padding: 5px 10px;
-        font-size: 1.5em;
-        background-color: rgba(0, 0, 0, 0.025);
-        border: #ccc solid 1px;
-        margin-top: 5px;
-    }
-
-    </style>
     </head>
+
+
     <body>
 
     <div id="wrapper">
@@ -105,7 +38,7 @@
 
     </li>
 
-    <br/><br/><br/>
+
     <!-- <li>
     <a href="/utilisateur/ajout">Ajouter un utilisateur</a>
     </li> -->
@@ -122,27 +55,15 @@
 
 
     </ul>
-    </div>
 
-    <div class="page-content-wrapper">
-    <div class="container-fluid body">
-    <ng-view onload="" autoscroll="">
-    <div class="row">
-    <div class="col-lg-12">
-    <div id="notif" >
-    </div>
-    <% if(flash !== undefined && flash != ""	){ %>
-    <div class="alert alert-warning" ><%-flash %>
-        </div>
-        <% } %>
-    <%- body %>
 
     </div>
-    </div>
-    </ng-view>
 
-    </div>
-    </div>
+     <div class="page-content-wrapper">
+            <div class="container-fluid body">
+                <ng-view onload="" autoscroll="">
+                </ng-view>
+            </div>
 
     </div>
 
@@ -154,28 +75,23 @@
         <!-- fondamentale -->
     <script src="/scripts/vendors/jquery.js"></script>
     <script src="/scripts/vendors/bootstrap.js"></script>
-    <script src="/scripts/bs-editable/bootstrap-editable.js"></script>
 
 
+    <!-- Angular -->
+    <script src="/scripts/angular.js"></script>
+    <script src="/scripts/angular-route.js"></script>
+    <script src="/scripts/app.js"></script>
 
+    <!-- Routes -->
+    <script src="/scripts/route.js"></script>
+    <!--- Controller  -->
+    <script src="/scripts/controller/oeuvreCtlr.js"></script>
+    <!-- Directives -->
+    <script src="/scripts/directives/oeuvreDirectives.js"></script>
 
-    <!-- jquery data tables -->
-    <script src="/scripts/jquery.dataTables.js"></script>
-
-
-    <!-- pickadate -->
-    <script src="/scripts/pickadate/picker.js"></script>
-    <script src="/scripts/pickadate/picker.date.js"></script>
 
     <!-- Wysiwyg -->
     <script src="/scripts/tinymce/tinymce.min.js"></script>
-
-
-    <!-- Truc à moi -->
-    <script src="/scripts/generic.js"></script>
-    <script src="/scripts/myFlatForms.js"></script>
-    <script src="/scripts/carousel.js"></script>
-    <script src="/scripts/dossierOeuvre.js"></script>
 
 
 

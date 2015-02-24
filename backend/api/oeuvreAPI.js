@@ -35,6 +35,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
         app.post("/api/oeuvre", this.ajout);
         app.put("/api/oeuvre", this.update);
+        app.patch("/api/oeuvre", this.undef); // Verrouillage Todo
         app.delete("/api/oeuvre/:oeuvreId", this.delete);
 
     };
@@ -92,9 +93,13 @@ var MembershipFilters = require('../../middleware/membershipFilters');
 
     // Retourne la liste complète des oeuvres
     OeuvreAPI.prototype.liste= function(req, res) {
-        oeuvreDAL.getAll(function(data){
+        //oeuvreDAL.getAll(function(data){
+        //    res.send(data);
+        //});
+        oeuvreDAL.getList(function(data){
+
             res.send(data);
-        }); 
+        });
     };
 
     // retourne une liste paginé et limité des oeuvres

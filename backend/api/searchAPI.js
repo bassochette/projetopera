@@ -32,7 +32,7 @@ var MembershipFilters = require('../../middleware/membershipFilters');
     };
 
     SearchAPI.prototype.undef = function(){
-        return {"message":"unhandled route"};
+        return {"message":"route en chantier..."};
     };
 
 

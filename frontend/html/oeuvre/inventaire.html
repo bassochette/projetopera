@@ -1,1 +1,113 @@
-<h1>inventaire.html</h1>
+<div id="editMenu">
+
+    <button class="btn btn-info" ng-click="oCtlr.sauvegarde()">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+    </button>
+
+    <button class="btn btn-success" ng-click="oCtlr.sauvegardeEtNouvelle()">
+        <span class="glyphicon glyphicon-plus"></span>
+    </button>
+
+</div>
+
+<div class="col-md-12">
+    <form>
+    <!-- Informations -->
+    <div class="col-md-12">
+
+        <div class="col-md-6">
+            <label>Identifiant : </label>
+            <input ng-model="oCtlr.oeuvre.oeuvreId"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Désignation : </label>
+            <input ng-model="oCtlr.oeuvre.designation"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Auteur(s) :</label>
+            <input ng-model="oCtlr.oeuvre.auteur"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Datation : </label>
+            <input ng-model="oCtlr.oeuvre.datation"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Matériaux : </label>
+            <input ng-model="oCtlr.oeuvre.materiaux"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Mesures :</label>
+            <input ng-model="oCtlr.oeuvre.mesures"></input>
+        </div>
+
+
+    </div>
+
+    <!-- seáparateur -->
+    <div class="col-md-12">
+
+    </div>
+
+    <!-- Détails technique -->
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <label>Provenance :</label>
+            <input ng-model="oCtlr.oeuvre.provenance"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Mode d'acquisition : </label>
+            <input ng-model="oCtlr.oeuvre.modeAcquisition"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Technique(s) :</label>
+            <input ng-model="oCtlr.oeuvre.techniques"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Nom donateur/legs/vendeur :</label>
+            <input ng-model="oCtlr.oeuvre.nomDonnateur"></input>
+        </div>
+        <div class="col-md-6">
+            <label>État :</label>
+            <input ng-model="oCtlr.oeuvre.indicationEtat"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Date d'acquisition : </label>
+            <input ng-model="oCtlr.oeuvre.dateAcquisition"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Marques et inscriptions :</label>
+            <input ng-model="oCtlr.oeuvre.marquesInscription"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Avis des instances scientifiques :</label>
+            <input ng-model="oCtlr.oeuvre.avisScientifique"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Fonction d'usage :</label>
+            <input ng-model="oCtlr.oeuvre.fonction"></input>
+        </div>
+        <div class="col-md-6">
+            <label>Prix d'achat :</label>
+            <input ng-model="oCtlr.oeuvre.prix"></input>
+        </div>
+
+    </div>
+
+    <!-- separateur -->
+    <div class="col-md-12">
+
+    </div>
+
+    <!-- Obersevation -->
+
+    <div class="col-md-12">
+        <div class="col-md-12 invObs">
+            <label>Observations:</label>
+            <textarea id="oeuvre[observations]" name="oeuvre[observations]" class="desc wysiwyg" ng-model="oCtlr.oeuvre.observations" >
+            </textarea>
+        </div>
+    </div>
+
+    </form>
+
+</div>
